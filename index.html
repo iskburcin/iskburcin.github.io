@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Burçin Işık's Personal Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/assets/styles/style_main.css" />
+  </head>
+  <body>
     <header>
-        <h1>Welcome to My Website</h1>
+      <h1 id="main-entry">Welcome to My Hell</h1>
     </header>
+    <div class="side-page-link hidden" id="left-link">
+      <a href="/pages/travel_blog.html">My Travel Side</a>
+    </div>
     <main>
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! I'm Burçin Işık, an Erasmus student and a Flutter developer. Welcome to my personal page!</p>
-        </section>
-        <section>
-            <h2>Projects</h2>
-            <p>Check out my latest work and contributions.</p>
-        </section>
+      <div>
+        <div style="margin: 10%; font-size: 18px">
+          ← Are You Left or Right? Choose your side. →
+        </div>
+      </div>
+      <nav id="pages-links-section">
+        <div class="mid-page-link">
+          <a href="/pages/about.html">About Me</a>
+        </div>
+        <div class="mid-page-link">
+          <a href="/pages/contact.html">Contact Me</a>
+        </div>
+      </nav>
     </main>
+    <div class="side-page-link hidden" id="right-link">
+      <a href="/pages/tech_blog.html">My Tech Side</a>
+    </div>
     <footer>
-        <p>© 2024 Burçin Işık</p>
+      <p>Burçin Işık Represents</p>
     </footer>
-</body>
+  </body>
+  <script src="/script.js"></script>
 </html>
