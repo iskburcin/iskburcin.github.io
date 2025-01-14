@@ -1,5 +1,8 @@
 * {
-    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Saira Condensed", monospace;
 }
 
 header {
@@ -11,8 +14,6 @@ body {
     text-align: center;
     background-color: rgb(48, 48, 48);
     color: #ffffff;
-    margin: 0%;
-    padding: 0%;
 }
 
 #pages-links-section {
@@ -82,4 +83,258 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/*** ABOUT ME SIDE */
+html,
+body {
+    height: 100%;
+    overflow: hidden;
+}
+
+#fullpage {
+    height: 100%;
+}
+
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+    transform: translateY(20px);
+    /* Initial small offset for the section */
+}
+
+.section h1 {
+    font-size: 3rem;
+    color: #333;
+}
+
+.section .bio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.profile-photo {
+    margin: 15px;
+}
+
+.profile-photo img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+.bio-text h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.intro-card {
+    margin: 10%;
+    padding: 5%;
+    width: 80%;
+    height: 60%;
+    align-content: center;
+    text-align: center;
+    border-radius: 50px;
+    background: #2b2b2b;
+    box-shadow: 20px 20px 60px #4b4b4b,
+        -20px -20px 60px #1a1a1a;
+}
+
+.projects {
+    padding: 50px;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.grid {
+    position: relative;
+    width: 380px;
+    height: 480px;
+    border-radius: 14px;
+    z-index: 1111;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 15px 15px 60px #696969, -15px -15px 60px #696969;
+}
+
+.card {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 370px;
+    height: 470px;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.829);
+    backdrop-filter: blur(24px);
+    border-radius: 8px;
+    overflow: hidden;
+    outline: 2px solid white;
+    color: #252525;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h4 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.blob {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 380px;
+    height: 480px;
+    border-radius: 50%;
+    background-color: #ff0000;
+    opacity: 1;
+    filter: blur(12px);
+    animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+    0% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+
+    25% {
+        transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+    }
+
+    50% {
+        transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+    }
+
+    75% {
+        transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: translate(-100%, -100%) translate3d(0, 0, 0);
+    }
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .glass {
+    position: relative;
+    width: 180px;
+    height: 200px;
+    background: linear-gradient(#fff2, transparent);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+}
+
+.container .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.container .glass svg {
+    font-size: 2.5em;
+    fill: #fff;
+}
+
+
+/* Section Fade-in and Fade-out */
+.section.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0);
+    /* Section comes into place */
+}
+
+.section.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Section moves down a bit while fading out */
+}
+
+#section1 {
+    background-color: #f0f0f0;
+}
+
+#section2 {
+    color: #333;
+    background-color: #e3e3e3;
+}
+
+#section3 {
+    background-color: #dcdcdc;
+}
+
+#section4 {
+    color: #000000;
+    background-color: #252525;
+}
+
+#section5 {
+    background-color: #ffffff;
+}
+
+#section6 {
+    padding: 0 20%;
+    color: #333;
+    background-color: #d9d9d9;
+}
+
+#section7 {
+    background-color: #2b2b2b;
+}
+
+i {
+    font-size: 60px;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
 }
