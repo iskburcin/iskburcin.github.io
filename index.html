@@ -4,59 +4,143 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Burçin Işık's Personal Website</title>
-    <link rel="stylesheet" href="/assets/styles/style_main.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
   </head>
   <body>
+    <nav>
+      <a href="/index.html">Home</a>
+      <a href="/pages/about.html">About</a>
+      <a href="/pages/tech_blog.html">Tech</a>
+      <a href="/pages/travel_blog.html">My World</a>
+      <a href="/pages/contact.html">Contact</a>
+      <div class="animation start-home"></div>
+    </nav>
     <header>
-      <h1 id="main-entry">Welcome to My Hell</h1>
-    </header>
-    <div class="side-page-link hidden" id="left-link">
-      <a href="/pages/travel_blog.html">My Travel Side</a>
-    </div>
-    <main>
-      <div>
-        <div style="margin: 10%; font-size: 18px">
-          ← Are You Left or Right? Choose your side. →
+      <div class="container">
+        <div>
+          <h1>Welcome to My Website</h1>
+          <p>
+            This is a space where I share my journey in learning, traveling, and
+            coding.
+          </p>
         </div>
       </div>
-      <nav id="pages-links-section">
-        <div class="mid-page-link">
-          <a href="/pages/about.html">About Me</a>
+    </header>
+
+    <section class="intro">
+      <div class="container">
+        <div>
+          <h2>About This Website</h2>
+          <p>
+            Here, you’ll find everything about my passions, hobbies, and
+            projects. This site is a space for me to share my learning journey,
+            my coding snippets, travel memories, and everything that makes me
+            who I am. Take a tour and discover my world!
+          </p>
         </div>
-        <div class="mid-page-link">
-          <a href="/pages/contact.html">Contact Me</a>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <div>
+          <img
+            src="https://ik.imagekit.io/iskburcin/hg/img27.jpg?updatedAt=1736845518536"
+            alt="Burçin Işık"
+            class="about-img"
+          />
         </div>
-      </nav>
-    </main>
-    <div class="side-page-link hidden" id="right-link">
-      <a href="/pages/tech_blog.html">My Tech Side</a>
-    </div>
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I'm Burçin, a Computer Engineering student with a deep passion for
+            technology, learning, and exploring new things. I believe that
+            curiosity and persistence are the keys to growth, and I strive to
+            keep learning every day. I enjoy coding, problem-solving, and diving
+            into new programming languages and technologies.
+          </p>
+          <p>
+            Alongside my academic journey, I'm on an Erasmus adventure in Opole,
+            Poland, which has broadened my horizons both academically and
+            personally. When I'm not immersed in tech, I love to travel, read,
+            and explore different cultures. My goal is to become a developer and
+            contribute to the world of machine learning and AI while continually
+            improving myself in every area of life.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="tech">
+      <div class="container">
+        <div>
+          <h2>Tech - My Code Snippets</h2>
+          <p>
+            This is where I compile the coding snippets I've encountered during
+            my learning process. These are pieces of code I don't want to
+            forget, and I think they could be helpful to others too. Whether
+            it's a clever CSS trick, a useful Python function, or an innovative
+            Flutter solution, you'll find a variety of code samples that have
+            helped me on my journey. I encourage you to explore and learn from
+            these snippets as they represent the small yet impactful milestones
+            in my development process.
+          </p>
+        </div>
+        <div>
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_LYQISI-unYLAFsQg_AwCDzwAhB7Ip2nk9A&s"
+            alt="Burçin Işık"
+            class="about-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="world">
+      <div class="container">
+        <div>
+          <img
+            src="https://ik.imagekit.io/iskburcin/hg/img28.jpg?updatedAt=1736845510343"
+            alt="Burçin Işık"
+            class="about-img"
+          />
+        </div>
+        <div>
+          <h2>My World - Traveling & Memories</h2>
+          <p>
+            As a child, I always dreamed of traveling the world. Now, with the
+            incredible opportunity of Erasmus, I'm starting to make those dreams
+            a reality! I’ve begun my journey by coloring my map with places I’ve
+            visited. The colored spots represent the destinations I’ve explored,
+            and each place holds unique memories.
+          </p>
+          <p>
+            Feel free to click on <strong>My Memories</strong> to see the
+            stories and experiences I’ve collected along the way. In
+            <strong>My Routes</strong>, you can find the pinned locations of
+            these places on Google Maps, so you can follow my travels in more
+            detail.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <div>
+          <h2>Contact</h2>
+          <p>
+            If you'd like to get in touch, feel free to send me an email! I’m
+            always open to feedback, collaboration opportunities, or just a
+            friendly chat. You can reach me at my contact email below. I look
+            forward to hearing from you!
+          </p>
+        </div>
+      </div>
+    </section>
     <footer>
       <p>Burçin Işık Represents</p>
     </footer>
   </body>
-  <script src="/script.js"></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    const firebaseConfig = {
-      apiKey: "AIzaSyBh0lzids3CYhoc0G53z2T66ZV1bP4SAYM",
-      authDomain: "iskburcin-web.firebaseapp.com",
-      projectId: "iskburcin-web",
-      storageBucket: "iskburcin-web.firebasestorage.app",
-      messagingSenderId: "18787669655",
-      appId: "1:18787669655:web:f0c59cbf0b2d3c649d3bd2",
-      measurementId: "G-Q8JWK6S2ZN",
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
-  </script>
+  <!-- <script src="/script.js"></script> -->
 </html>

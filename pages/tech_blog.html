@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech</title>
     <link rel="stylesheet" href="/assets/styles/style_tech.css" />
+    <link rel="stylesheet" href="/assets/styles/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,15 +14,130 @@
     />
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <canvas id="wheel"></canvas>
+    <nav>
+      <a href="/index.html" class="category-card">Home</a>
+      <a href="#" class="category-card" onclick="showCategory('python')"
+        >Python</a
+      >
+      <a href="#" class="category-card" onclick="showCategory('flutter')"
+        >Flutter</a
+      >
+      <a href="#" class="category-card" onclick="showCategory('ml')"
+        >Machine Learning</a
+      >
+      <a href="#" class="category-card" onclick="showCategory('web')"
+        >Web Development</a
+      >
+      <div class="animation start-home"></div>
+    </nav>
+
+    <div id="python" class="category-content" style="display: none">
+      <h2>Python Snippets</h2>
+      <div class="snippet">
+        <h3>Basic Python Function</h3>
+        <pre><code class="function">def greet(name):</code>
+        <code class="function">    print(f"Hello, {name}!")</code></pre>
+        <h4>
+          This snippet demonstrates a simple Python function that greets the
+          user by name.
+        </h4>
+      </div>
+      <div class="snippet">
+        <h3>List Comprehension</h3>
+        <pre><code class="variable">squares = [x**2 for x in range(10)]</code></pre>
+        <h4>
+          List comprehension for generating squares of numbers from 0 to 9.
+        </h4>
+      </div>
+      <div class="snippet">
+        <h3>Reading Files</h3>
+        <pre><code class="string">with open('file.txt', 'r') as file:</code>
+        <code class="variable">    content = file.read()</code></pre>
+        <h4>This snippet shows how to read a file in Python.</h4>
       </div>
     </div>
+
+    <div id="flutter" class="category-content" style="display: none">
+      <h2>Flutter Snippets</h2>
+      <div class="snippet">
+        <h3>Simple Button</h3>
+        <pre><code class="function">RaisedButton(</code>
+        <code class="variable">  onPressed: () {</code>
+        <code class="comment">    print('Button pressed');</code>
+        <code class="variable">  },</code>
+        <code class="string">  child: Text('Press Me'),</code>
+        <code class="function">)</code></pre>
+        <h4>
+          This snippet demonstrates how to create a simple button in Flutter.
+        </h4>
+      </div>
+      <div class="snippet">
+        <h3>Container with Padding</h3>
+        <pre><code class="function">Container(</code>
+        <code class="variable">  padding: EdgeInsets.all(10),</code>
+        <code class="string">  child: Text('Hello, Flutter!'),</code>
+        <code class="function">)</code></pre>
+        <h4>Basic usage of `Container` widget with padding in Flutter.</h4>
+      </div>
+      <div class="snippet">
+        <h3>Basic State Management</h3>
+        <pre><code class="function">class MyWidget extends StatefulWidget {</code></pre>
+        <pre><code class="variable">  @override</code></pre>
+        <pre><code class="function">  _MyWidgetState createState() => _MyWidgetState();</code></pre>
+        <pre><code class="function">}</code></pre>
+        <h4>This snippet demonstrates state management in Flutter.</h4>
+      </div>
+    </div>
+
+    <div id="ml" class="category-content" style="display: none">
+      <h2>Machine Learning Snippets</h2>
+      <div class="snippet">
+        <h3>Simple Linear Regression</h3>
+        <pre><code class="function">from sklearn.linear_model import LinearRegression</code></pre>
+        <pre><code class="variable">model = LinearRegression()</code></pre>
+        <pre><code class="function">model.fit(X_train, y_train)</code></pre>
+        <h4>
+          Example of fitting a linear regression model using scikit-learn.
+        </h4>
+      </div>
+      <div class="snippet">
+        <h3>KNN Classification</h3>
+        <pre><code class="function">from sklearn.neighbors import KNeighborsClassifier</code></pre>
+        <pre><code class="variable">knn = KNeighborsClassifier(n_neighbors=3)</code></pre>
+        <pre><code class="function">knn.fit(X_train, y_train)</code></pre>
+        <h4>Using KNN classifier for classification in machine learning.</h4>
+      </div>
+    </div>
+
+    <div id="web" class="category-content" style="display: none">
+      <h2>Web Development Snippets</h2>
+      <div class="snippet">
+        <h3>Simple HTML Page</h3>
+        <pre><code class="string">&lt;html&gt;</code></pre>
+        <pre><code class="string">  &lt;head&gt;&lt;/head&gt;</code></pre>
+        <pre><code class="string">  &lt;body&gt;&lt;/body&gt;</code></pre>
+        <pre><code class="string">&lt;/html&gt;</code></pre>
+        <h4>Basic structure of an HTML page.</h4>
+      </div>
+      <div class="snippet">
+        <h3>CSS Flexbox</h3>
+        <pre><code class="function">display: flex;</code></pre>
+        <pre><code class="variable">justify-content: center;</code></pre>
+        <pre><code class="variable">align-items: center;</code></pre>
+        <h4>Using Flexbox to center elements in CSS.</h4>
+      </div>
+    </div>
+
+    <script>
+      function showCategory(category) {
+        const categories = document.querySelectorAll(".category-content");
+        categories.forEach((cat) => {
+          cat.style.display = "none";
+        });
+        document.getElementById(category).style.display = "block";
+      }
+    </script>
+
+    <script src="/utils/tech_script.js"></script>
   </body>
-  <!-- Chart JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-  <!-- Chart JS Plugin for displaying text over chart -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
-  <script src="/utils/tech_script.js"></script>
 </html>
