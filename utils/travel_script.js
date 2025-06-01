@@ -1,7 +1,15 @@
-function $(elem, from = document) {
-    return from.querySelector(elem);
+function $(elem, from = document, isAll = false) {
+    return isAll ? from.querySelectorAll(elem) : from.querySelector(elem);
 }
 
+const countVisitedCountries = () => {
+    const countries = $(".visited", document, true)
+    const counter = Object.keys(countries).length
+    console.log("countries", countries)
+    console.log("count", counter)
+    $("#visited-count").innerHTML = counter
+}
+countVisitedCountries()
 let allCountries = document.querySelectorAll("path");
 allCountries.forEach((country) => {
     country.addEventListener("click", () => {

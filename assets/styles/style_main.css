@@ -161,7 +161,7 @@ body {
 .grid {
     position: relative;
     width: 380px;
-    height: 480px;
+    height: 380px;
     border-radius: 14px;
     z-index: 1111;
     overflow: hidden;
@@ -177,7 +177,7 @@ body {
     top: 5px;
     left: 5px;
     width: 370px;
-    height: 470px;
+    height: 370px;
     z-index: 2;
     background: rgba(255, 255, 255, 0.829);
     backdrop-filter: blur(24px);
@@ -192,13 +192,13 @@ body {
 }
 
 .card h4 {
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
 .card p {
     font-size: 1em;
-    line-height: 1.5;
+    line-height: 1.2;
 }
 
 .blob {
@@ -207,7 +207,7 @@ body {
     top: 50%;
     left: 50%;
     width: 380px;
-    height: 480px;
+    height: 380px;
     border-radius: 50%;
     background-color: #ff0000;
     opacity: 1;
