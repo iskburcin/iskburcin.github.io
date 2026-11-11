@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title.journey">Journey · Burçin Işık</title>
+    <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+    <script type="module" src="/assets/js/journey.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="page-head">
+        <h1 data-i18n="journey.title">My journey</h1>
+        <p data-i18n="journey.intro"></p>
+      </section>
+      <!-- Steps come from /data/timeline.json -->
+      <div class="journey">
+        <ol class="timeline" id="timeline"></ol>
+        <aside class="journey-map card" aria-hidden="true">
+          <div class="jmap" id="jmap"></div>
+          <div class="jmap-caption" id="jmap-caption"></div>
+        </aside>
+      </div>
+    </main>
+  </body>
+</html>

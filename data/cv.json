@@ -1,0 +1,322 @@
+{
+  "_help": "My CV, shown at /pages/cv.html (?lang=en or ?lang=tr). Print it with 'Save as PDF'. No phone number on purpose. Texts can be { \"en\": \"...\", \"tr\": \"...\" }; **bold** works inside texts.",
+  "name": "BURÇİN IŞIK",
+  "title": {
+    "en": "Computer Engineer · Software Developer",
+    "tr": "Bilgisayar Mühendisi · Yazılım Geliştirici"
+  },
+  "photo": "https://ik.imagekit.io/iskburcin/czk/img7.jpg?tr=w-400",
+  "email": "mrs.isikburcin@gmail.com",
+  "location": {
+    "en": "Alanya, Antalya · Türkiye",
+    "tr": "Alanya, Antalya · Türkiye"
+  },
+  "links": [
+    {
+      "label": {
+        "en": "Website",
+        "tr": "Web sitesi"
+      },
+      "href": "https://iskburcin.github.io",
+      "text": "iskburcin.github.io"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/iskburcin",
+      "text": "github.com/iskburcin"
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/iskburcin/",
+      "text": "in/iskburcin"
+    }
+  ],
+  "headings": {
+    "about": {
+      "en": "About",
+      "tr": "Hakkımda"
+    },
+    "experience": {
+      "en": "Experience",
+      "tr": "Deneyim"
+    },
+    "education": {
+      "en": "Education",
+      "tr": "Eğitim"
+    },
+    "projects": {
+      "en": "Projects",
+      "tr": "Projeler"
+    },
+    "skills": {
+      "en": "Skills",
+      "tr": "Yetenekler"
+    },
+    "languages": {
+      "en": "Languages",
+      "tr": "Diller"
+    },
+    "interests": {
+      "en": "Interests",
+      "tr": "İlgi alanları"
+    },
+    "contact": {
+      "en": "Contact",
+      "tr": "İletişim"
+    }
+  },
+  "about": {
+    "en": "Final-year **Computer Engineering** student at Düzce University, working as a **Software Support Specialist** in a hotel's IT department, where I completed the infrastructure of an in-house application built from scratch. Experienced in **full-stack web** (Next.js, Express, Java), **mobile** (Flutter, Firebase) and **AI** projects, with an Erasmus semester in Poland. Looking for a **full-time software developer** role.",
+    "tr": "Düzce Üniversitesi'nde son sınıf **Bilgisayar Mühendisliği** öğrencisiyim; bir otelin IT departmanında **Yazılım Destek Uzmanı** olarak çalışıyor, sıfırdan geliştirilen şirket içi bir uygulamanın altyapısını tamamladım. **Full-stack web** (Next.js, Express, Java), **mobil** (Flutter, Firebase) ve **yapay zekâ** projelerinde deneyimliyim; bir dönemi Erasmus ile Polonya'da okudum. **Tam zamanlı yazılım geliştirici** pozisyonu arıyorum."
+  },
+  "experience": [
+    {
+      "role": {
+        "en": "Software Support Specialist",
+        "tr": "Yazılım Destek Uzmanı"
+      },
+      "org": {
+        "en": "Hotel IT Department · Alanya",
+        "tr": "Otel IT Departmanı · Alanya"
+      },
+      "date": {
+        "en": "Jun 2026 – Present",
+        "tr": "Haz 2026 – Devam"
+      },
+      "text": {
+        "en": "Completed the **infrastructure of Orwion**, an in-house application developed from scratch; provide software support for hotel systems.",
+        "tr": "Sıfırdan geliştirilen şirket içi uygulama **Orwion'un altyapısını tamamladım**; otel sistemlerine yazılım desteği veriyorum."
+      }
+    },
+    {
+      "role": {
+        "en": "Software Intern (remote)",
+        "tr": "Yazılım Stajyeri (uzaktan)"
+      },
+      "org": {
+        "en": "HR software project",
+        "tr": "İK yazılım projesi"
+      },
+      "date": {
+        "en": "Aug 2026",
+        "tr": "Ağu 2026"
+      },
+      "text": {
+        "en": "Upgraded libraries, set up **automated deployment (CI/CD)** and contributed to the **frontend** of an HR product.",
+        "tr": "Bir İK ürününde kütüphane güncellemeleri, **otomatik deploy (CI/CD)** süreçleri ve **frontend** geliştirmeye katkı sağladım."
+      }
+    },
+    {
+      "role": {
+        "en": "Web Frontend Team Lead (volunteer)",
+        "tr": "Web Frontend Takım Lideri (gönüllü)"
+      },
+      "org": {
+        "en": "Community Volunteers Foundation (TOG) · Digital Team",
+        "tr": "Toplum Gönüllüleri Vakfı (TOG) · Dijital Ekip"
+      },
+      "date": {
+        "en": "2025 – 2026",
+        "tr": "2025 – 2026"
+      },
+      "text": {
+        "en": "Led the web frontend team: planned tasks and coordinated development.",
+        "tr": "Web frontend ekibini yönettim; görevleri planlayıp geliştirmeyi koordine ettim."
+      }
+    },
+    {
+      "role": {
+        "en": "Software Intern",
+        "tr": "Yazılım Stajyeri"
+      },
+      "org": {
+        "en": "BRM Software · Bursa",
+        "tr": "BRM Yazılım · Bursa"
+      },
+      "date": {
+        "en": "Jul – Aug 2024",
+        "tr": "Tem – Ağu 2024"
+      },
+      "text": {
+        "en": "Built an **AI-powered mobile app** from scratch in a team, with **Flutter** frontend and **Firebase** backend.",
+        "tr": "Ekip içinde sıfırdan **yapay zekâ destekli bir mobil uygulama** geliştirdim; frontend **Flutter**, backend **Firebase**."
+      }
+    }
+  ],
+  "education": [
+    {
+      "school": {
+        "en": "Düzce University",
+        "tr": "Düzce Üniversitesi"
+      },
+      "degree": {
+        "en": "B.Sc. Computer Engineering (English) · GPA 3.64/4",
+        "tr": "Bilgisayar Mühendisliği Lisans (İngilizce) · Ortalama 3.64/4"
+      },
+      "date": {
+        "en": "2025 – 2027 (expected)",
+        "tr": "2025 – 2027 (beklenen)"
+      },
+      "note": {
+        "en": "Transferred from Alanya University. Thesis: Get-Your-Map. Graduation project: Ekinci (in progress).",
+        "tr": "Alanya Üniversitesi'nden yatay geçiş. Tez: Get-Your-Map. Bitirme projesi: Ekinci (devam ediyor)."
+      }
+    },
+    {
+      "school": "Politechnika Opolska",
+      "degree": {
+        "en": "Erasmus+ Exchange · Opole, Poland",
+        "tr": "Erasmus+ Değişim · Opole, Polonya"
+      },
+      "date": {
+        "en": "Sep 2024 – Mar 2025",
+        "tr": "Eyl 2024 – Mar 2025"
+      }
+    },
+    {
+      "school": {
+        "en": "Alanya University",
+        "tr": "Alanya Üniversitesi"
+      },
+      "degree": {
+        "en": "B.Sc. Computer Engineering (English) · 100% scholarship",
+        "tr": "Bilgisayar Mühendisliği Lisans (İngilizce) · %100 burslu"
+      },
+      "date": "2021 – 2025"
+    },
+    {
+      "school": {
+        "en": "Karacabey Anatolian High School",
+        "tr": "Karacabey Anadolu Lisesi"
+      },
+      "degree": {
+        "en": "Science & Math · 93.92/100",
+        "tr": "Sayısal · 93.92/100"
+      },
+      "date": "2016 – 2020"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Get-Your-Map",
+      "tech": "Next.js · Express · Ollama · Docker",
+      "href": "https://github.com/iskburcin/Get-Your-Map",
+      "text": {
+        "en": "Graduation thesis. GitHub profile explorer and **code quality analyser**: native Tree-sitter parsing, complexity metrics and **AI code reviews with local LLMs**.",
+        "tr": "Bitirme tezi. GitHub profil gezgini ve **kod kalitesi analizcisi**: native Tree-sitter ayrıştırma, karmaşıklık metrikleri ve **yerel LLM'lerle yapay zekâ kod incelemesi**."
+      }
+    },
+    {
+      "name": "Nefora",
+      "tech": "Java · Docker",
+      "href": "https://github.com/iskburcin/Nefora",
+      "text": {
+        "en": "Monorepo of a full **Java** application with backend, **mobile app** and **web admin panel**.",
+        "tr": "Backend, **mobil uygulama** ve **web yönetim paneli** içeren tam bir **Java** uygulamasının monoreposu."
+      }
+    },
+    {
+      "name": "Courier Route Optimizer",
+      "tech": "Python",
+      "href": "https://4-genetic-algo-based-courier-optimizer.vercel.app",
+      "text": {
+        "en": "Optimizes delivery routes with **genetic algorithms** to reduce travel cost.",
+        "tr": "**Genetik algoritmalarla** teslimat rotalarını optimize ederek maliyeti düşürür."
+      }
+    },
+    {
+      "name": "AiEmo · YUZUG",
+      "tech": "Flutter · Python",
+      "href": "https://github.com/iskburcin/DemoAiEmo",
+      "text": {
+        "en": "AI-powered mobile app that **detects emotions** and recommends mood-improving activities, with a trained **recommender model**.",
+        "tr": "**Duygu algılayıp** ruh halini iyileştirecek aktiviteler öneren, eğitilmiş bir **öneri modeli** kullanan yapay zekâ destekli mobil uygulama."
+      }
+    }
+  ],
+  "skills": [
+    {
+      "group": {
+        "en": "Languages",
+        "tr": "Diller"
+      },
+      "items": "Java, JavaScript, TypeScript, Python, Dart, C, C#, SQL"
+    },
+    {
+      "group": {
+        "en": "Web & backend",
+        "tr": "Web ve backend"
+      },
+      "items": "Next.js, React, Node.js/Express, Tailwind CSS, Flask, Tomcat"
+    },
+    {
+      "group": {
+        "en": "Mobile",
+        "tr": "Mobil"
+      },
+      "items": "Flutter, Firebase"
+    },
+    {
+      "group": {
+        "en": "AI & data",
+        "tr": "Yapay zekâ ve veri"
+      },
+      "items": "scikit-learn, TensorFlow, pandas, NumPy, OpenCV, Ollama"
+    },
+    {
+      "group": {
+        "en": "Tools",
+        "tr": "Araçlar"
+      },
+      "items": "Git, Docker, CI/CD, Postman, MS SQL, Vercel"
+    }
+  ],
+  "languages": [
+    {
+      "en": "Turkish · Native",
+      "tr": "Türkçe · Anadil"
+    },
+    {
+      "en": "English · B1+ (YDS 2025/1: 67.5)",
+      "tr": "İngilizce · B1+ (YDS 2025/1: 67.5)"
+    },
+    {
+      "en": "German · A1",
+      "tr": "Almanca · A1"
+    }
+  ],
+  "interests": [
+    {
+      "en": "Running",
+      "tr": "Koşu"
+    },
+    {
+      "en": "LEGO",
+      "tr": "Lego"
+    },
+    {
+      "en": "Podcasts: tech, history, politics",
+      "tr": "Podcast: teknoloji, tarih, gündem"
+    },
+    {
+      "en": "Travel",
+      "tr": "Seyahat"
+    },
+    {
+      "en": "Reading",
+      "tr": "Kitap"
+    },
+    {
+      "en": "Music",
+      "tr": "Müzik"
+    },
+    {
+      "en": "Cooking",
+      "tr": "Yemek"
+    },
+    {
+      "en": "Knitting",
+      "tr": "Örgü"
+    }
+  ]
+}

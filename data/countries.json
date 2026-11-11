@@ -1,0 +1,569 @@
+{
+  "_help": "Capital, languages, population and currency are loaded live from Wikidata. id = 2-letter code used in the map (assets/src/world.svg); adding a country colors it automatically. cities: every city you visited, with lat/lon (Google Maps: right-click a place to copy them). A country with 2+ cities opens its own zoomed map with city dots. A city can have its own 'route' link. photos.base + '/img' + n + '.jpg' for n = 1..photos.count, split evenly between the groups in places. Each place has a 'city' id and an optional 'name' (a landmark); without a name the city name is shown. Texts can be { \"en\": \"...\", \"tr\": \"...\" }.",
+  "home": "TR",
+  "countries": [
+    {
+      "id": "TR",
+      "name": {
+        "en": "Türkiye",
+        "tr": "Türkiye"
+      },
+      "note": {
+        "en": "Home. Bursa, Istanbul, Izmir and the Aegean & Mediterranean coasts.",
+        "tr": "Memleketim. Bursa, İstanbul, İzmir ve Ege ile Akdeniz kıyıları."
+      },
+      "route": "",
+      "cities": [
+        {
+          "id": "bursa",
+          "name": "Bursa",
+          "lat": 40.1885,
+          "lon": 29.061
+        },
+        {
+          "id": "istanbul",
+          "name": {
+            "en": "Istanbul",
+            "tr": "İstanbul"
+          },
+          "lat": 41.0082,
+          "lon": 28.9784
+        },
+        {
+          "id": "izmir",
+          "name": {
+            "en": "Izmir",
+            "tr": "İzmir"
+          },
+          "lat": 38.4237,
+          "lon": 27.1428
+        },
+        {
+          "id": "ankara",
+          "name": "Ankara",
+          "lat": 39.9334,
+          "lon": 32.8597
+        },
+        {
+          "id": "aydin",
+          "name": "Aydın",
+          "lat": 37.856,
+          "lon": 27.8416
+        },
+        {
+          "id": "antalya",
+          "name": "Antalya",
+          "lat": 36.8969,
+          "lon": 30.7133
+        }
+      ]
+    },
+    {
+      "id": "PL",
+      "name": {
+        "en": "Poland",
+        "tr": "Polonya"
+      },
+      "note": {
+        "en": "My Erasmus home at Politechnika Opolska.",
+        "tr": "Politechnika Opolska'daki Erasmus evim."
+      },
+      "route": "https://maps.app.goo.gl/ondbBgKwouxXczn48",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/pl/pl",
+        "count": 36
+      },
+      "places": [
+        {
+          "city": "krakow"
+        },
+        {
+          "city": "opole"
+        },
+        {
+          "city": "opole"
+        },
+        {
+          "city": "wroclaw"
+        },
+        {
+          "city": "wroclaw"
+        },
+        {
+          "city": "warsaw"
+        }
+      ],
+      "cities": [
+        {
+          "id": "krakow",
+          "name": {
+            "en": "Kraków",
+            "tr": "Krakov"
+          },
+          "lat": 50.0647,
+          "lon": 19.945
+        },
+        {
+          "id": "opole",
+          "name": "Opole",
+          "lat": 50.6751,
+          "lon": 17.9213
+        },
+        {
+          "id": "wroclaw",
+          "name": "Wrocław",
+          "lat": 51.1079,
+          "lon": 17.0385
+        },
+        {
+          "id": "warsaw",
+          "name": {
+            "en": "Warsaw",
+            "tr": "Varşova"
+          },
+          "lat": 52.2297,
+          "lon": 21.0122
+        }
+      ]
+    },
+    {
+      "id": "CZ",
+      "name": {
+        "en": "Czechia",
+        "tr": "Çekya"
+      },
+      "route": "https://maps.app.goo.gl/iw4n8CYKau5oqjXz7",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/czk",
+        "count": 30
+      },
+      "places": [
+        {
+          "name": {
+            "en": "Powder Tower",
+            "tr": "Barut Kulesi"
+          },
+          "city": "prague"
+        },
+        {
+          "name": {
+            "en": "Astronomical Clock",
+            "tr": "Astronomik Saat"
+          },
+          "city": "prague"
+        },
+        {
+          "name": "Staré Město",
+          "city": "prague"
+        },
+        {
+          "name": {
+            "en": "Synagogues",
+            "tr": "Sinagoglar"
+          },
+          "city": "prague"
+        },
+        {
+          "name": {
+            "en": "Charles Bridge",
+            "tr": "Karl Köprüsü"
+          },
+          "city": "prague"
+        },
+        {
+          "name": {
+            "en": "St. Vitus Cathedral",
+            "tr": "Aziz Vitus Katedrali"
+          },
+          "city": "prague"
+        }
+      ],
+      "cities": [
+        {
+          "id": "prague",
+          "name": {
+            "en": "Prague",
+            "tr": "Prag"
+          },
+          "lat": 50.0755,
+          "lon": 14.4378
+        }
+      ]
+    },
+    {
+      "id": "HU",
+      "name": {
+        "en": "Hungary",
+        "tr": "Macaristan"
+      },
+      "route": "https://maps.app.goo.gl/UK4a2nqTon37Z2Nt7",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/hg",
+        "count": 30
+      },
+      "places": [
+        {
+          "name": {
+            "en": "Hungarian National Museum",
+            "tr": "Macar Ulusal Müzesi"
+          },
+          "city": "budapest"
+        },
+        {
+          "name": "Hősök tere",
+          "city": "budapest"
+        },
+        {
+          "name": "Duna-parton",
+          "city": "budapest"
+        },
+        {
+          "name": {
+            "en": "St. Stephen's Basilica",
+            "tr": "Aziz Stefan Bazilikası"
+          },
+          "city": "budapest"
+        },
+        {
+          "name": "Budavári Palota",
+          "city": "budapest"
+        },
+        {
+          "name": {
+            "en": "Chain Bridge",
+            "tr": "Zincirli Köprü"
+          },
+          "city": "budapest"
+        }
+      ],
+      "cities": [
+        {
+          "id": "budapest",
+          "name": {
+            "en": "Budapest",
+            "tr": "Budapeşte"
+          },
+          "lat": 47.4979,
+          "lon": 19.0402
+        }
+      ]
+    },
+    {
+      "id": "AT",
+      "name": {
+        "en": "Austria",
+        "tr": "Avusturya"
+      },
+      "route": "https://maps.app.goo.gl/jMnwziXCbJnTUTX57",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/aus",
+        "count": 30
+      },
+      "places": [
+        {
+          "name": "Großes Bassin",
+          "city": "vienna"
+        },
+        {
+          "name": "Sigmund Freud",
+          "city": "vienna"
+        },
+        {
+          "name": {
+            "en": "Votiv Church",
+            "tr": "Votiv Kilisesi"
+          },
+          "city": "vienna"
+        },
+        {
+          "name": {
+            "en": "Sisi Museum",
+            "tr": "Sisi Müzesi"
+          },
+          "city": "vienna"
+        },
+        {
+          "name": {
+            "en": "Column of Pest",
+            "tr": "Veba Sütunu"
+          },
+          "city": "vienna"
+        },
+        {
+          "name": {
+            "en": "Belvedere Palace",
+            "tr": "Belvedere Sarayı"
+          },
+          "city": "vienna"
+        }
+      ],
+      "cities": [
+        {
+          "id": "vienna",
+          "name": {
+            "en": "Vienna",
+            "tr": "Viyana"
+          },
+          "lat": 48.2082,
+          "lon": 16.3738
+        }
+      ]
+    },
+    {
+      "id": "SK",
+      "name": {
+        "en": "Slovakia",
+        "tr": "Slovakya"
+      },
+      "route": "https://maps.app.goo.gl/MY3chgLvSgrwgFhi9",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/sk",
+        "count": 20
+      },
+      "places": [
+        {
+          "name": "Čumil",
+          "city": "bratislava"
+        },
+        {
+          "name": {
+            "en": "National Park",
+            "tr": "Milli Park"
+          },
+          "city": "bratislava"
+        },
+        {
+          "name": {
+            "en": "Bratislava Castle",
+            "tr": "Bratislava Kalesi"
+          },
+          "city": "bratislava"
+        },
+        {
+          "name": {
+            "en": "St. Martin's Cathedral",
+            "tr": "Aziz Martin Katedrali"
+          },
+          "city": "bratislava"
+        },
+        {
+          "name": {
+            "en": "Michael's Gate",
+            "tr": "Mihail Kapısı"
+          },
+          "city": "bratislava"
+        },
+        {
+          "name": "Most SNP",
+          "city": "bratislava"
+        }
+      ],
+      "cities": [
+        {
+          "id": "bratislava",
+          "name": "Bratislava",
+          "lat": 48.1486,
+          "lon": 17.1077
+        }
+      ]
+    },
+    {
+      "id": "NL",
+      "name": {
+        "en": "Netherlands",
+        "tr": "Hollanda"
+      },
+      "route": "https://maps.app.goo.gl/FerRWCSmJPWNAi1MA",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/nl",
+        "count": 30
+      },
+      "places": [
+        {
+          "name": "Erasmusbrug",
+          "city": "rotterdam"
+        },
+        {
+          "name": {
+            "en": "St. Lawrence Church",
+            "tr": "Aziz Lawrence Kilisesi"
+          },
+          "city": "rotterdam"
+        },
+        {
+          "name": {
+            "en": "Cube Houses",
+            "tr": "Küp Evler"
+          },
+          "city": "rotterdam"
+        },
+        {
+          "name": "Euromast",
+          "city": "rotterdam"
+        },
+        {
+          "name": "Vondelpark",
+          "city": "amsterdam"
+        },
+        {
+          "name": "Grachtengordel",
+          "city": "amsterdam"
+        }
+      ],
+      "cities": [
+        {
+          "id": "rotterdam",
+          "name": "Rotterdam",
+          "lat": 51.9244,
+          "lon": 4.4777
+        },
+        {
+          "id": "amsterdam",
+          "name": "Amsterdam",
+          "lat": 52.3676,
+          "lon": 4.9041
+        }
+      ]
+    },
+    {
+      "id": "BE",
+      "name": {
+        "en": "Belgium",
+        "tr": "Belçika"
+      },
+      "route": "https://maps.app.goo.gl/U3Dh7nyu3f49DttK6",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/be",
+        "count": 12
+      },
+      "places": [
+        {
+          "name": "Rue Neuve",
+          "city": "brussels"
+        },
+        {
+          "name": {
+            "en": "Town Hall",
+            "tr": "Belediye Binası"
+          },
+          "city": "brussels"
+        },
+        {
+          "name": {
+            "en": "St. Michael & St. Gudula",
+            "tr": "Aziz Mikail ve Aziz Gudula Katedrali"
+          },
+          "city": "brussels"
+        },
+        {
+          "name": "Manneken Pis",
+          "city": "brussels"
+        },
+        {
+          "name": {
+            "en": "Palais Royal",
+            "tr": "Kraliyet Sarayı"
+          },
+          "city": "brussels"
+        },
+        {
+          "name": "Grand-Place",
+          "city": "brussels"
+        }
+      ],
+      "cities": [
+        {
+          "id": "brussels",
+          "name": {
+            "en": "Brussels",
+            "tr": "Brüksel"
+          },
+          "lat": 50.8503,
+          "lon": 4.3517
+        }
+      ]
+    },
+    {
+      "id": "FR",
+      "name": {
+        "en": "France",
+        "tr": "Fransa"
+      },
+      "route": "https://maps.app.goo.gl/TnwtUWtx3P1dMATD9",
+      "photos": {
+        "base": "https://ik.imagekit.io/iskburcin/fr",
+        "count": 25
+      },
+      "places": [
+        {
+          "name": {
+            "en": "Louvre Museum",
+            "tr": "Louvre Müzesi"
+          },
+          "city": "paris"
+        },
+        {
+          "name": "Panthéon",
+          "city": "paris"
+        },
+        {
+          "name": "Notre-Dame",
+          "city": "paris"
+        },
+        {
+          "name": {
+            "en": "Arc de Triomphe",
+            "tr": "Zafer Takı"
+          },
+          "city": "paris"
+        },
+        {
+          "name": "Champs-Élysées",
+          "city": "paris"
+        },
+        {
+          "name": {
+            "en": "Eiffel Tower",
+            "tr": "Eyfel Kulesi"
+          },
+          "city": "paris"
+        }
+      ],
+      "cities": [
+        {
+          "id": "paris",
+          "name": "Paris",
+          "lat": 48.8566,
+          "lon": 2.3522
+        }
+      ]
+    },
+    {
+      "id": "DE",
+      "name": {
+        "en": "Germany",
+        "tr": "Almanya"
+      },
+      "route": "",
+      "cities": []
+    },
+    {
+      "id": "CH",
+      "name": {
+        "en": "Switzerland",
+        "tr": "İsviçre"
+      },
+      "route": "",
+      "cities": []
+    },
+    {
+      "id": "IT",
+      "name": {
+        "en": "Italy",
+        "tr": "İtalya"
+      },
+      "route": "",
+      "cities": []
+    }
+  ]
+}

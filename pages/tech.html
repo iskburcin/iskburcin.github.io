@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title.tech">Tech · Burçin Işık</title>
+    <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira+Condensed:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/dart.min.js"></script>
+    <script type="module" src="/assets/js/tech.js"></script>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="page-head">
+        <h1 data-i18n="tech.title">Tech · my code snippets</h1>
+        <p data-i18n="tech.intro">Pieces of code I don't want to forget, collected while learning. A clever CSS trick, a useful Python function, a Flutter solution: small but impactful milestones. Feel free to copy them!</p>
+      </section>
+
+      <div class="toolbar">
+        <label class="search">
+          <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+          <span class="sr-only" data-i18n="tech.search">Search snippets</span>
+          <input id="q" type="search" data-i18n-attr="placeholder:tech.placeholder" placeholder="Search snippets, tags or code…  ( / )" autocomplete="off" />
+        </label>
+      </div>
+      <div class="toolbar" id="filters" role="group" aria-label="Filter by category" data-i18n-attr="aria-label:tech.filter"></div>
+      <p class="result-count" id="count" aria-live="polite"></p>
+      <!-- Snippets come from /data/snippets.json + files in /snippets -->
+      <section class="snippets" id="snippets"></section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+{
+  "_help": "socials with \"group\": \"coding\" show in the home page coding-profiles box; simpleIcon = slug from simpleicons.org. Any text can be a plain string (same in every language) or { \"en\": \"...\", \"tr\": \"...\" }.",
+  "name": "Burçin Işık",
+  "shortName": "Burçin",
+  "role": {
+    "en": "Final-year Computer Engineering student · Software Support Specialist",
+    "tr": "Son sınıf Bilgisayar Mühendisliği öğrencisi · Yazılım Destek Uzmanı"
+  },
+  "tagline": {
+    "en": "I build web, mobile and AI-powered apps. Here I share my journey, projects, code snippets and travel memories.",
+    "tr": "Web, mobil ve yapay zekâ destekli uygulamalar geliştiriyorum. Burada yolculuğumu, projelerimi, kod parçalarımı ve gezi anılarımı paylaşıyorum."
+  },
+  "avatar": "https://ik.imagekit.io/iskburcin/czk/img7.jpg?updatedAt=1736847927586",
+  "location": { "en": "Alanya, Türkiye", "tr": "Alanya, Türkiye" },
+  "timezone": "Europe/Istanbul",
+  "githubUser": "iskburcin",
+  "cv": { "en": "/assets/src/burcin-isik-cv-en.pdf", "tr": "/assets/src/burcin-isik-cv-tr.pdf" },
+  "cvPage": "/pages/cv.html",
+  "email": "mrs.isikburcin@gmail.com",
+
+  "socials": [
+    { "id": "github",   "label": "GitHub",   "handle": "@iskburcin", "url": "https://github.com/iskburcin",             "icon": "fa-brands fa-github",   "color": "#24292f" },
+    { "id": "linkedin", "label": "LinkedIn", "handle": "in/iskburcin", "url": "https://www.linkedin.com/in/iskburcin/", "icon": "fa-brands fa-linkedin", "color": "#0a66c2" },
+    { "id": "bento",    "label": "bento.me", "handle": "bento.me/iskburcin", "url": "https://bento.me/iskburcin",     "icon": "fa-solid fa-table-cells-large", "color": "#111111" },
+    { "id": "email",    "label": { "en": "Email", "tr": "E-posta" }, "handle": "mrs.isikburcin@gmail.com", "url": "mailto:mrs.isikburcin@gmail.com", "icon": "fa-solid fa-envelope", "color": "#ea4335" },
+
+    { "id": "medium",        "group": "coding", "label": "Medium",          "handle": "@iskburcin", "url": "https://medium.com/@iskburcin",                       "simpleIcon": "medium" },
+    { "id": "dailydev",      "group": "coding", "label": "daily.dev",       "handle": "iskburcin",  "url": "https://daily.dev/iskburcin",                          "simpleIcon": "dailydotdev" },
+    { "id": "leetcode",      "group": "coding", "label": "LeetCode",        "handle": "iskburcin",  "url": "https://leetcode.com/iskburcin/",                      "simpleIcon": "leetcode" },
+    { "id": "hackerrank",    "group": "coding", "label": "HackerRank",      "handle": "iskburcin",  "url": "https://www.hackerrank.com/profile/iskburcin",         "simpleIcon": "hackerrank" },
+    { "id": "freecodecamp",  "group": "coding", "label": "freeCodeCamp",    "handle": "iskburcin",  "url": "https://www.freecodecamp.org/iskburcin",               "simpleIcon": "freecodecamp" },
+    { "id": "stackoverflow", "group": "coding", "label": "Stack Overflow",  "handle": "iskburcin",  "url": "https://stackoverflow.com/users/23169980/iskburcin",   "simpleIcon": "stackoverflow" },
+    { "id": "odin",          "group": "coding", "label": "The Odin Project","handle": { "en": "learning paths", "tr": "öğrenme yolları" }, "url": "https://www.theodinproject.com/paths", "simpleIcon": "theodinproject" },
+    { "id": "roadmap",       "group": "coding", "label": "roadmap.sh",      "handle": { "en": "roadmaps", "tr": "yol haritaları" }, "url": "https://roadmap.sh/roadmaps", "simpleIcon": "roadmapdotsh" },
+    { "id": "euler",         "group": "coding", "label": "Project Euler",   "handle": { "en": "progress", "tr": "ilerleme" }, "url": "https://projecteuler.net/progress", "icon": "fa-solid fa-square-root-variable", "color": "#6b4f2c" }
+  ],
+
+  "contact": {
+    "formEndpoint": "https://formspree.io/f/xnpdaprl",
+    "intro": {
+      "en": "I'm looking for my first full-time software developer role. Job opportunities, collaborations, feedback or just a friendly chat: send me a message!",
+      "tr": "İlk tam zamanlı yazılım geliştirici işimi arıyorum. İş fırsatı, iş birliği, geri bildirim ya da sadece samimi bir sohbet için mesaj gönder!"
+    },
+    "availability": {
+      "en": "Open to work",
+      "tr": "İşe açığım"
+    },
+    "responseTime": {
+      "en": "I usually reply within 2–3 days.",
+      "tr": "Genellikle 2–3 gün içinde dönüş yaparım."
+    },
+    "topics": [
+      { "en": "Collaboration", "tr": "İş birliği" },
+      { "en": "Job opportunity", "tr": "İş fırsatı" },
+      { "en": "Feedback on my site", "tr": "Site hakkında geri bildirim" },
+      { "en": "Just saying hi", "tr": "Sadece merhaba" },
+      { "en": "Other", "tr": "Diğer" }
+    ],
+    "faq": [
+      {
+        "q": { "en": "What can I contact you about?", "tr": "Seninle hangi konularda iletişime geçebilirim?" },
+        "a": { "en": "Job opportunities, projects, collaborations, feedback on my code or just a friendly chat.",
+               "tr": "İş fırsatları, projeler, iş birlikleri, kodlarım hakkında geri bildirim ya da sadece samimi bir sohbet." }
+      },
+      {
+        "q": { "en": "Which languages do you speak?", "tr": "Hangi dilleri konuşuyorsun?" },
+        "a": { "en": "Turkish and English. Feel free to write in either.", "tr": "Türkçe ve İngilizce. İkisinden biriyle yazabilirsin." }
+      },
+      {
+        "q": { "en": "Can I use your code snippets?", "tr": "Kod parçalarını kullanabilir miyim?" },
+        "a": { "en": "Yes! They are on the Tech page for anyone learning. A link back is always appreciated.",
+               "tr": "Elbette! Öğrenen herkes için Teknoloji sayfasındalar. Bir bağlantı verirsen çok sevinirim." }
+      }
+    ]
+  },
+
+  "nav": [
+    { "label": { "en": "Home", "tr": "Ana Sayfa" }, "href": "/index.html" },
+    { "label": { "en": "About", "tr": "Hakkımda" }, "href": "/pages/about.html" },
+    { "label": { "en": "Journey", "tr": "Yolculuk" }, "href": "/pages/journey.html" },
+    { "label": { "en": "Tech", "tr": "Teknoloji" }, "href": "/pages/tech.html" },
+    { "label": { "en": "My World", "tr": "Dünyam" }, "href": "/pages/world.html" },
+    { "label": { "en": "Blog", "tr": "Blog" }, "href": "/pages/blog.html" },
+    { "label": { "en": "Contact", "tr": "İletişim" }, "href": "/pages/contact.html" }
+  ],
+  "oldVersion": "/v1/index.html"
+}

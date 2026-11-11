@@ -1,0 +1,154 @@
+{
+  "_help": "My journey, oldest first. place = an id from 'places' (shown on the moving map). type: education | work | project | travel | milestone | community. date/end: 'YYYY' or 'YYYY-MM'; \"ongoing\": true shows '– present'. links: [{ label, href }] (a blog post: href '/pages/post.html?p=<slug>'). Texts can be { \"en\": \"...\", \"tr\": \"...\" }.",
+  "places": {
+    "karacabey": { "name": "Karacabey, Bursa", "lat": 40.2148, "lon": 28.3611 },
+    "bursa":     { "name": "Bursa", "lat": 40.1885, "lon": 29.0610 },
+    "alanya":    { "name": "Alanya", "lat": 36.5444, "lon": 31.9954 },
+    "antalya":   { "name": "Antalya", "lat": 36.8969, "lon": 30.7133 },
+    "denizli":   { "name": "Denizli", "lat": 37.7765, "lon": 29.0864 },
+    "istanbul":  { "name": { "en": "Istanbul", "tr": "İstanbul" }, "lat": 41.0082, "lon": 28.9784 },
+    "opole":     { "name": { "en": "Opole, Poland", "tr": "Opole, Polonya" }, "lat": 50.6751, "lon": 17.9213 },
+    "duzce":     { "name": "Düzce", "lat": 40.8438, "lon": 31.1565 },
+    "remote":    { "name": { "en": "Remote", "tr": "Uzaktan" }, "same": true }
+  },
+  "events": [
+    {
+      "date": "2016", "end": "2020", "place": "karacabey", "type": "education",
+      "title": { "en": "Karacabey Anatolian High School", "tr": "Karacabey Anadolu Lisesi" },
+      "text": {
+        "en": "Science & math track. Graduated with 93.92/100.",
+        "tr": "Sayısal bölüm. 93.92/100 ile mezun oldum."
+      }
+    },
+    {
+      "date": "2020", "place": "karacabey", "type": "milestone",
+      "title": { "en": "A gap year, and the first spark", "tr": "Mezuna kalış ve ilk kıvılcım" },
+      "text": {
+        "en": "I chose not to enroll with my first university exam result and took a gap year. Meanwhile I joined the computer programming course at the Public Education Center. There I started using Excel, something I had always heard of but never needed. As the teacher explained the formulas I kept wondering how a computer could 'know' all this, and I researched it in class and at home. That curiosity was my first real interest in software.",
+        "tr": "İlk YKS sonucumla yerleşmemeyi seçip mezuna kaldım. Bu sürede Halk Eğitim Merkezi'nin bilgisayar programcılığı kursuna gittim. Orada hep duyduğum ama hiç ihtiyaç duymadığım Excel'i kullanmaya başladım. Hoca formülleri anlattıkça bilgisayarın bunları nasıl 'bildiğini' çok merak ettim; kursta da evde de sürekli araştırdım. Yazılıma ilk merakım böyle başladı."
+      }
+    },
+    {
+      "date": "2021", "place": "alanya", "type": "education",
+      "title": { "en": "Only computer engineering on my list", "tr": "Tercih listemde sadece bilgisayar mühendisliği" },
+      "text": {
+        "en": "Encouraged by teachers who said engineering suited me, I filled my 2021 university list only with computer and software engineering. My first list was too ambitious, so I was placed in the additional round: Alanya University, with a 100% scholarship. I moved from Bursa to Alanya and started with the English preparatory year (2021–2022).",
+        "tr": "Mühendisliğin bana daha uygun olduğunu söyleyen hocalarımın desteğiyle 2021 YKS tercih listemi sadece bilgisayar ve yazılım mühendisliğiyle doldurdum. İlk listem fazla iddialıydı, ek tercihte Alanya Üniversitesi'ne %100 burslu yerleştim. Bursa'dan Alanya'ya taşınıp hazırlık sınıfıyla (2021–2022) başladım."
+      }
+    },
+    {
+      "date": "2022-09", "end": "2023-01", "place": "alanya", "type": "education",
+      "title": { "en": "First year: falling for algorithms", "tr": "1. sınıf: algoritmalara vurulmak" },
+      "text": {
+        "en": "Among the introductory engineering courses, the Algorithms course, where we learned Java, caught my interest the most. On my teacher's advice I read Y. Daniel Liang's Introduction to Java Programming in my free time and solved almost all of its exercises.",
+        "tr": "Mühendisliğe giriş dersleri arasında Java öğrenerek başladığımız Algoritmalar dersi en çok ilgimi çeken oldu. Hocamın tavsiyesiyle boş zamanlarımda Y. Daniel Liang'ın Introduction to Java Programming kitabını okuyup alıştırmalarının neredeyse hepsini çözdüm."
+      }
+    },
+    {
+      "date": "2023-02", "end": "2023-06", "place": "bursa", "type": "education",
+      "title": { "en": "Remote semester: the foundations", "tr": "Uzaktan dönem: temeller" },
+      "text": {
+        "en": "After the 6 February earthquakes, universities moved online and I followed my classes from home in Bursa. In that remote semester I loved Data Structures and Discrete Mathematics, and understood how they form the foundations of programming.",
+        "tr": "6 Şubat depremlerinin ardından üniversiteler uzaktan eğitime geçti, ben de derslere Bursa'daki evimden katıldım. O dönem aldığım Veri Yapıları ve Ayrık Matematik derslerini çok sevdim; programlamanın temellerini nasıl oluşturduklarını kavradım."
+      }
+    },
+    {
+      "date": "2023-09", "end": "2024-06", "place": "alanya", "type": "community",
+      "title": { "en": "Second year: Teknofest, Arduino and career fairs", "tr": "2. sınıf: Teknofest, Arduino ve kariyer fuarları" },
+      "text": {
+        "en": "With a group of friends and our electronics professor as advisor, we focused on a project for Teknofest's unmanned surface vehicle (İDA) category, opened that year for the first time. I got curious about hardware and did beginner work with Arduino, with support from the Deneyap workshop at the Alanya Youth Center. Our team was formed and well supported, but we weren't accepted. We also went to career fairs in Antalya and Denizli and a Google event in Istanbul to learn about the industry and widen our vision.",
+        "tr": "Bir grup arkadaşımla, elektronik hocamızın danışmanlığında Teknofest'in o yıl ilk kez açılan İDA (insansız deniz aracı) kategorisinde bir projeye odaklandık. Donanıma merak salıp Arduino ile başlangıç seviyesinde çalıştım; Alanya Gençlik Merkezi'ndeki Deneyap atölyesinin desteğiyle daha da derine indik. Takımımız kurulmuş, desteğimiz arkamızdaydı ama kabul alamadık. Sektörü tanımak için Antalya ve Denizli'deki kariyer fuarlarına ve İstanbul'daki Google etkinliğine katıldık."
+      },
+      "stops": ["antalya", "denizli", "istanbul"]
+    },
+    {
+      "date": "2024-07", "end": "2024-08", "place": "bursa", "type": "work",
+      "title": { "en": "Intern · BRM Software", "tr": "Stajyer · BRM Yazılım" },
+      "text": {
+        "en": "My 30-day internship. I worked in a team building an AI-powered mobile app from scratch, with Flutter on the frontend and Firebase on the backend. It was my first time building a real application, and it changed how I saw coding. At the same time I collected the documents for my Erasmus application.",
+        "tr": "30 günlük stajım. Sıfırdan yapay zekâ destekli bir mobil uygulama geliştiren ekipte yer aldım; frontend'de Flutter, backend'de Firebase kullandık. İlk gerçek uygulama deneyimimdi ve kodlamaya bakışımı değiştirdi. Bir yandan da Erasmus başvurumun belgelerini topluyordum."
+      }
+    },
+    {
+      "date": "2024-09", "end": "2025-03", "place": "opole", "type": "travel",
+      "title": { "en": "Erasmus · Politechnika Opolska", "tr": "Erasmus · Politechnika Opolska" },
+      "text": {
+        "en": "I spent the fall semester of my third year in Opole, Poland, with three friends from my university. The Artificial Intelligence and Microprocessors courses added the most to me; my hardware experience and algorithm background made them feel easy while I traveled. Inspired by my internship, I built Erasmus Money Manager for myself, plus MissionTimer to track my work sessions. And I colored 11 countries on my map.",
+        "tr": "3. sınıfın güz dönemini üniversitemden üç arkadaşımla Polonya'nın Opole şehrinde geçirdim. Bana en çok Yapay Zekâ ve Mikroişlemciler dersleri kattı; daha önce donanımla uğraşmış olmam ve algoritma temelim sayesinde gezerken derslerde zorlanmadım. Stajdan gelen uygulama yapma hevesiyle kendime Erasmus Money Manager'ı, işlerimi takip etmek için de MissionTimer'ı yazdım. Haritamda 11 ülkeyi boyadım."
+      },
+      "links": [
+        { "label": { "en": "My World", "tr": "Dünyam" }, "href": "/pages/world.html#PL" },
+        { "label": "MissionTimer", "href": "https://iskburcin.github.io/MissionTimer/" }
+      ]
+    },
+    {
+      "date": "2025-03", "end": "2025-06", "place": "alanya", "type": "education",
+      "title": { "en": "Back to Alanya", "tr": "Alanya'ya dönüş" },
+      "text": {
+        "en": "Erasmus ended on 10 March; I was back in mid-March, one or two weeks before the midterms of the spring semester, and completed the semester without trouble.",
+        "tr": "Erasmus 10 Mart'ta bitti; bahar döneminin vizelerine 1-2 hafta kala, Mart ortasında döndüm ve dönemi rahatça tamamladım."
+      }
+    },
+    {
+      "date": "2025-07", "place": "duzce", "type": "milestone",
+      "title": { "en": "A radical decision: transfer", "tr": "Radikal bir karar: yatay geçiş" },
+      "text": {
+        "en": "At the end of my third year I decided to transfer, for many good reasons. Options were limited at that stage; among the universities with open quotas, Düzce was the closest and academically the strongest.",
+        "tr": "3. sınıfın sonunda, birçok geçerli sebeple yatay geçiş yapmaya karar verdim. O aşamada seçenekler çok azdı; kontenjanı olan üniversiteler arasında Düzce hem en yakın hem de akademik olarak en donanımlısıydı."
+      }
+    },
+    {
+      "date": "2025-09", "end": "2026-06", "place": "duzce", "type": "education",
+      "title": { "en": "Düzce University: an academic mindset", "tr": "Düzce Üniversitesi: akademik bakış" },
+      "text": {
+        "en": "A year that gave me a lot. In Java Programming, Mobile Programming and Advanced Java with Abdullah Talha Kabakuş, I met many software principles, learned how to follow an industry where new technology appears every day, and got hands-on with Docker, Ollama, Tomcat and more. With his guidance I built my graduation thesis, Get-Your-Map.",
+        "tr": "Bana çok şey katan, dolu dolu bir yıl. Abdullah Talha Kabakuş hocamızdan Java Programlama, Mobil Programlama ve İleri Java derslerini alarak birçok yazılım prensibiyle tanıştım; her gün yenisi çıkan teknolojileri nasıl takip edeceğimizi öğrendim, Docker, Ollama, Tomcat gibi teknolojilerle çalıştım. Onun bilgi birikimiyle bitirme tezim Get-Your-Map'i ortaya çıkardım."
+      }
+    },
+    {
+      "date": "2026-05", "place": "duzce", "type": "project",
+      "title": { "en": "Graduation thesis · Get-Your-Map", "tr": "Bitirme tezi · Get-Your-Map" },
+      "text": {
+        "en": "A full-stack platform that explores GitHub profiles and analyses code quality: Next.js and TypeScript on the frontend, an Express server with native Tree-sitter parsing, complexity metrics and AI code reviews from local LLMs via Ollama, all runnable with Docker. I learned a lot more while building it; I'll write about that on the blog.",
+        "tr": "GitHub profillerini keşfeden ve kod kalitesini analiz eden full-stack bir platform: frontend'de Next.js ve TypeScript; backend'de native Tree-sitter ayrıştırma, karmaşıklık metrikleri ve Ollama üzerinden yerel LLM'lerle yapay zekâ kod incelemesi yapan bir Express sunucusu; hepsi Docker ile çalışıyor. Geliştirirken çok daha fazlasını öğrendim, bunları blogda anlatacağım."
+      },
+      "links": [
+        { "label": "GitHub", "href": "https://github.com/iskburcin/Get-Your-Map" },
+        { "label": "Live demo", "href": "https://get-your-map.vercel.app" }
+      ]
+    },
+    {
+      "date": "2025-10", "end": "2026-08", "place": "remote", "type": "community",
+      "title": { "en": "Web Frontend Team Lead · TOG", "tr": "Web Frontend Takım Lideri · TOG" },
+      "text": {
+        "en": "Volunteer team lead for the web frontend in the digital team of the Community Volunteers Foundation (TOG).",
+        "tr": "Toplum Gönüllüleri Vakfı'nın (TOG) dijital ekibinde web frontend takım lideri olarak işleri yürüttüm."
+      }
+    },
+    {
+      "date": "2026-06", "ongoing": true, "place": "alanya", "type": "work",
+      "title": { "en": "Software Support Specialist · hotel IT", "tr": "Yazılım Destek Uzmanı · otel IT" },
+      "text": {
+        "en": "My degree wasn't finished in 2026: one internship and three courses were left because of my credit limit. So I started working in the IT department of a hotel in Alanya. It's where I grew most as a junior; with what I'd learned at Düzce, I completed the infrastructure of an application we built there from scratch, Orwion. More about it soon.",
+        "tr": "2026'da mezun olamadım: kredi limitim yüzünden 1 stajım ve 3 dersim kaldı. 4. sınıf bitince Alanya'da bir otelin IT departmanında yazılım destek uzmanı olarak çalışmaya başladım. Junior olarak en çok burada tecrübe kazandım; Düzce'de edindiklerimle burada sıfırdan geliştirdiğimiz Orwion uygulamasının altyapısını tamamladım. Detaylarını yakında anlatacağım."
+      }
+    },
+    {
+      "date": "2026-08", "place": "remote", "type": "work",
+      "title": { "en": "Intern · HR software project (remote)", "tr": "Stajyer · İK yazılım projesi (uzaktan)" },
+      "text": {
+        "en": "While working at the hotel, I started a remote internship at a company I met through TOG, supporting their HR product: library upgrades, automated deployment (CI/CD) and frontend work.",
+        "tr": "Otelde çalışırken, TOG aracılığıyla tanıştığım bir şirkette uzaktan stajıma başladım ve İK ürünlerine destek oldum: kütüphane güncellemeleri, otomatik deploy (CI/CD) süreçleri ve frontend geliştirme."
+      }
+    },
+    {
+      "date": "2026-09", "place": "alanya", "type": "education",
+      "title": { "en": "Now: last courses and the Ekinci app", "tr": "Şimdi: son dersler ve Ekinci uygulaması" },
+      "text": {
+        "en": "Still working at the hotel, I'm finishing my last three courses, all close to my interests: Introduction to Machine Learning, Digital Image Processing with Pakize Erdoğmuş (whose Deep Learning course I followed voluntarily the previous term, and whose vision I look up to), and Graph Theory with Sultan Zavrak. For my graduation project, advised by Abdullah Talha Kabakuş, we're building Ekinci, an app for farmers. And I'm looking for my first full-time role.",
+        "tr": "Otelde çalışmaya devam ederken kalan üç dersimi tamamlıyorum, üçü de ilgi alanımla bağlantılı: Makine Öğrenmesine Giriş, Pakize Erdoğmuş hocamızdan Sayısal Görüntü İşleme (bir önceki dönem Derin Öğrenme dersini de gönüllü takip ettim, vizyonunu örnek alıyorum) ve Sultan Zavrak hocamızdan Çizge Teorisi. Danışmanım Abdullah Talha Kabakuş ile bitirme projesi olarak çiftçiler için Ekinci uygulamasını geliştiriyoruz. Bir yandan da ilk tam zamanlı işimi arıyorum."
+      },
+      "now": true
+    }
+  ]
+}

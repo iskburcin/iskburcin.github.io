@@ -1,0 +1,260 @@
+{
+  "_help": "Add a code file under /snippets/ and one entry here. lang = highlight.js language (python, dart, javascript, css, xml for html). category must match one of categories[].id. title/description can be { \"en\": \"...\", \"tr\": \"...\" }.",
+  "categories": [
+    {
+      "id": "python",
+      "label": {
+        "en": "Python",
+        "tr": "Python"
+      },
+      "icon": "fa-brands fa-python"
+    },
+    {
+      "id": "flutter",
+      "label": {
+        "en": "Flutter",
+        "tr": "Flutter"
+      },
+      "icon": "fa-solid fa-mobile-screen"
+    },
+    {
+      "id": "ml",
+      "label": {
+        "en": "Machine Learning",
+        "tr": "Makine Öğrenmesi"
+      },
+      "icon": "fa-solid fa-brain"
+    },
+    {
+      "id": "web",
+      "label": {
+        "en": "Web",
+        "tr": "Web"
+      },
+      "icon": "fa-solid fa-globe"
+    }
+  ],
+  "snippets": [
+    {
+      "title": {
+        "en": "Basic Python function",
+        "tr": "Basit Python fonksiyonu"
+      },
+      "category": "python",
+      "lang": "python",
+      "file": "/snippets/python/greet.py",
+      "description": {
+        "en": "A simple function with type hints and an f-string.",
+        "tr": "Tip ipuçları ve f-string kullanan basit bir fonksiyon."
+      },
+      "tags": [
+        "basics",
+        "functions"
+      ]
+    },
+    {
+      "title": {
+        "en": "List comprehension",
+        "tr": "Liste üreteci (list comprehension)"
+      },
+      "category": "python",
+      "lang": "python",
+      "file": "/snippets/python/list_comprehension.py",
+      "description": {
+        "en": "Build a list in one line, optionally with a filter.",
+        "tr": "Tek satırda, istersen filtreyle liste oluştur."
+      },
+      "tags": [
+        "basics",
+        "lists"
+      ]
+    },
+    {
+      "title": {
+        "en": "Reading files",
+        "tr": "Dosya okuma"
+      },
+      "category": "python",
+      "lang": "python",
+      "file": "/snippets/python/read_file.py",
+      "description": {
+        "en": "Read a whole file or line by line with a context manager.",
+        "tr": "Bağlam yöneticisiyle dosyanın tamamını ya da satır satır oku."
+      },
+      "tags": [
+        "files",
+        "io"
+      ]
+    },
+    {
+      "title": {
+        "en": "Bulk-rename images",
+        "tr": "Toplu resim yeniden adlandırma"
+      },
+      "category": "python",
+      "lang": "python",
+      "file": "/snippets/python/rename_images.py",
+      "description": {
+        "en": "The script I use to name my travel photos img1.jpg, img2.jpg… for this website.",
+        "tr": "Bu site için seyahat fotoğraflarımı img1.jpg, img2.jpg… diye adlandırdığım betik."
+      },
+      "tags": [
+        "files",
+        "automation"
+      ]
+    },
+    {
+      "title": {
+        "en": "Simple button",
+        "tr": "Basit buton"
+      },
+      "category": "flutter",
+      "lang": "dart",
+      "file": "/snippets/flutter/button.dart",
+      "description": {
+        "en": "ElevatedButton, the modern replacement of RaisedButton.",
+        "tr": "RaisedButton'ın modern karşılığı ElevatedButton."
+      },
+      "tags": [
+        "widgets",
+        "ui"
+      ]
+    },
+    {
+      "title": {
+        "en": "Container with padding",
+        "tr": "Boşluklu Container"
+      },
+      "category": "flutter",
+      "lang": "dart",
+      "file": "/snippets/flutter/container_padding.dart",
+      "description": {
+        "en": "Basic Container usage with EdgeInsets.",
+        "tr": "EdgeInsets ile temel Container kullanımı."
+      },
+      "tags": [
+        "widgets",
+        "layout"
+      ]
+    },
+    {
+      "title": {
+        "en": "StatefulWidget counter",
+        "tr": "StatefulWidget sayaç"
+      },
+      "category": "flutter",
+      "lang": "dart",
+      "file": "/snippets/flutter/stateful_widget.dart",
+      "description": {
+        "en": "Local state with setState, the simplest state management.",
+        "tr": "setState ile yerel durum: en basit durum yönetimi."
+      },
+      "tags": [
+        "state"
+      ]
+    },
+    {
+      "title": {
+        "en": "Linear regression",
+        "tr": "Doğrusal regresyon"
+      },
+      "category": "ml",
+      "lang": "python",
+      "file": "/snippets/ml/linear_regression.py",
+      "description": {
+        "en": "Split data, fit a model and score it with scikit-learn.",
+        "tr": "scikit-learn ile veriyi böl, modeli eğit ve puanla."
+      },
+      "tags": [
+        "scikit-learn",
+        "regression"
+      ]
+    },
+    {
+      "title": {
+        "en": "KNN classification",
+        "tr": "KNN sınıflandırma"
+      },
+      "category": "ml",
+      "lang": "python",
+      "file": "/snippets/ml/knn.py",
+      "description": {
+        "en": "k-nearest neighbours classifier.",
+        "tr": "k-en yakın komşu sınıflandırıcısı."
+      },
+      "tags": [
+        "scikit-learn",
+        "classification"
+      ]
+    },
+    {
+      "title": {
+        "en": "HTML boilerplate",
+        "tr": "HTML iskeleti"
+      },
+      "category": "web",
+      "lang": "xml",
+      "file": "/snippets/web/html_boilerplate.html",
+      "description": {
+        "en": "The minimum every HTML page needs.",
+        "tr": "Her HTML sayfasının ihtiyaç duyduğu en temel yapı."
+      },
+      "tags": [
+        "html",
+        "basics"
+      ]
+    },
+    {
+      "title": {
+        "en": "Center anything",
+        "tr": "Her şeyi ortala"
+      },
+      "category": "web",
+      "lang": "css",
+      "file": "/snippets/web/flex_center.css",
+      "description": {
+        "en": "Center with Flexbox or Grid.",
+        "tr": "Flexbox veya Grid ile ortalama."
+      },
+      "tags": [
+        "css",
+        "layout"
+      ]
+    },
+    {
+      "title": {
+        "en": "Bento grid",
+        "tr": "Bento ızgara"
+      },
+      "category": "web",
+      "lang": "css",
+      "file": "/snippets/web/bento_grid.css",
+      "description": {
+        "en": "The CSS Grid behind my home page boxes.",
+        "tr": "Ana sayfamdaki kutuların arkasındaki CSS Grid."
+      },
+      "tags": [
+        "css",
+        "layout",
+        "grid"
+      ]
+    },
+    {
+      "title": {
+        "en": "Fetch JSON",
+        "tr": "JSON çekme"
+      },
+      "category": "web",
+      "lang": "javascript",
+      "file": "/snippets/web/fetch_json.js",
+      "description": {
+        "en": "How every page of this site loads its content.",
+        "tr": "Bu sitenin her sayfası içeriğini böyle yüklüyor."
+      },
+      "tags": [
+        "javascript",
+        "fetch"
+      ]
+    }
+  ]
+}

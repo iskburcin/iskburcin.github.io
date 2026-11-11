@@ -1,0 +1,11 @@
+/* the bento layout of my home page */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  grid-auto-flow: dense; /* fill holes with smaller tiles */
+  gap: 16px;
+}
+.tile--w { grid-column: span 2; }
+.tile--t { grid-row: span 2; }
+.tile--l { grid-column: span 2; grid-row: span 2; }

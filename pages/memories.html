@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n="title.memories">Memories · Burçin Işık</title>
+    <script>try{var t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Saira+Condensed:wght@500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/pages.css" />
+    <script type="module" src="/assets/js/memories.js"></script>
+  </head>
+  <body>
+    <!-- One page for every country: /pages/memories.html?c=PL (data from /data/countries.json) -->
+    <main class="wrap" id="memories"></main>
+    <dialog class="lightbox" id="lightbox" data-i18n-attr="aria-label:mem.viewer">
+      <div class="stage"><img alt="" /></div>
+      <button class="icon-btn lb-btn lb-close" type="button" data-i18n-attr="aria-label:mem.close"><i class="fa-solid fa-xmark"></i></button>
+      <button class="icon-btn lb-btn lb-prev" type="button" data-i18n-attr="aria-label:mem.prev"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="icon-btn lb-btn lb-next" type="button" data-i18n-attr="aria-label:mem.next"><i class="fa-solid fa-chevron-right"></i></button>
+      <span class="lb-count"></span>
+    </dialog>
+  </body>
+</html>

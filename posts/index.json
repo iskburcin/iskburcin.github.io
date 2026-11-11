@@ -1,0 +1,15 @@
+{
+  "_help": "One entry per blog post, newest anywhere (the site sorts by date). slug = folder name in /posts. langs = which files exist: posts/<slug>/tr.md, posts/<slug>/en.md. country = 2-letter code from countries.json, city = a city id from that country (both optional). cover = image URL or a file in the post folder. draft: true hides the post (open blog.html?drafts=1 to preview drafts).",
+  "posts": [
+    {
+      "slug": "nasil-yazilir",
+      "date": "2026-11-11",
+      "langs": ["tr", "en"],
+      "country": "PL",
+      "city": "opole",
+      "cover": "https://ik.imagekit.io/iskburcin/pl/pl/img7.jpg",
+      "tags": ["guide"],
+      "draft": true
+    }
+  ]
+}

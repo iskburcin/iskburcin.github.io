@@ -51,39 +51,39 @@ close.addEventListener("click", () => {
 function visitedCountryLinks(country) {
     switch (country) {
         case "Hungary":
-            myMemories.href = "/countries/hg.html"
+            myMemories.href = "/v1/countries/hg.html"
             bestdestinations.href = "https://maps.app.goo.gl/UK4a2nqTon37Z2Nt7"
             break;
         case "Slovakia":
-            myMemories.href = "/countries/sk.html"
+            myMemories.href = "/v1/countries/sk.html"
             bestdestinations.href = "https://maps.app.goo.gl/MY3chgLvSgrwgFhi9"
             break;
         case "Austria":
-            myMemories.href = "/countries/aus.html"
+            myMemories.href = "/v1/countries/aus.html"
             bestdestinations.href = "https://maps.app.goo.gl/jMnwziXCbJnTUTX57"
             break;
         case "Czech Republic":
-            myMemories.href = "/countries/czk.html"
+            myMemories.href = "/v1/countries/czk.html"
             bestdestinations.href = "https://maps.app.goo.gl/iw4n8CYKau5oqjXz7"
             break;
         case "Poland":
-            myMemories.href = "/countries/pl.html"
+            myMemories.href = "/v1/countries/pl.html"
             bestdestinations.href = "https://maps.app.goo.gl/ondbBgKwouxXczn48"
             break;
         case "Netherlands":
-            myMemories.href = "/countries/nl.html"
+            myMemories.href = "/v1/countries/nl.html"
             bestdestinations.href = "https://maps.app.goo.gl/FerRWCSmJPWNAi1MA"
             break;
         case "Belgium":
-            myMemories.href = "/countries/be.html"
+            myMemories.href = "/v1/countries/be.html"
             bestdestinations.href = "https://maps.app.goo.gl/U3Dh7nyu3f49DttK6"
             break;
         case "France":
-            myMemories.href = "/countries/fr.html"
+            myMemories.href = "/v1/countries/fr.html"
             bestdestinations.href = "https://maps.app.goo.gl/TnwtUWtx3P1dMATD9"
             break;
         case "Turkey":
-            myMemories.href = "/countries/tr.html"
+            myMemories.href = "/v1/countries/tr.html"
             bestdestinations.href = ""
             break;
         default:
