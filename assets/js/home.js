@@ -17,14 +17,25 @@ const arrow = () => icon("fa-solid fa-arrow-up-right tile-arrow");
 /* ---------- One function per tile type (a "registry") ----------
    To add a new kind of box, add a function here and use its name as "type" in home.json. */
 const renderers = {
+  // Big photo on the left, text on the right (stacked on phones)
   profile(t, { site }) {
     return el("div", { class: `tile tile--${t.size || "l"} tile--profile` },
-      el("img", { class: "avatar", src: site.avatar, alt: site.name, loading: "eager" }),
-      el("h2", {}, site.name),
-      el("p", { class: "role" }, L(site.role)),
-      el("p", {}, L(site.tagline)),
-      site.contact?.availability &&
-        el("p", { class: "status" }, el("span", { class: "dot" }), L(site.contact.availability))
+      el("div", { class: "profile-photo" }, el("img", { class: "avatar", src: site.avatar, alt: site.name, loading: "eager" })),
+      el("div", { class: "profile-text" },
+        el("p", { class: "hello" }, tr("home.hello")),
+        el("h2", {}, site.name),
+        el("p", { class: "role" }, L(site.role)),
+        el("p", { class: "tagline" }, L(site.tagline)),
+        t.facts && el("ul", { class: "facts" }, t.facts.map((f) => el("li", {}, icon(f.icon), " ", L(f.text)))),
+        site.contact?.availability &&
+          el("p", { class: "status" }, el("span", { class: "dot" }), L(site.contact.availability)),
+        t.buttons && el("div", { class: "profile-actions" }, t.buttons.map((b) => {
+          const isCV = b.href === "cv";
+          const href = isCV ? L(site.cv) : b.href;
+          return el("a", { class: `btn ${b.primary ? "btn--primary" : ""}`, ...linkAttrs(href), ...(isCV ? { target: "_blank", rel: "noopener" } : {}) },
+            icon(b.icon), L(b.label));
+        }))
+      )
     );
   },
 
@@ -33,7 +44,9 @@ const renderers = {
     if (!s) return null;
     const node = tileBase(t, "tile--social", s.url);
     node.append(
-      el("span", { class: "tile-icon", style: { background: s.color } }, icon(s.icon)),
+      s.simpleIcon
+        ? el("span", { class: "tile-icon tile-icon--brand" }, el("img", { src: `https://cdn.simpleicons.org/${s.simpleIcon}`, alt: "" }))
+        : el("span", { class: "tile-icon", style: { background: s.color } }, icon(s.icon)),
       el("span", { class: "tile-title" }, L(s.label)),
       el("span", { class: "tile-sub" }, L(s.handle)),
       arrow()

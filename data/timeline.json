@@ -145,8 +145,8 @@
       "date": "2026-09", "place": "alanya", "type": "education",
       "title": { "en": "Now: last courses and the Ekinci app", "tr": "Şimdi: son dersler ve Ekinci uygulaması" },
       "text": {
-        "en": "Still working at the hotel, I'm finishing my last three courses, all close to my interests: Introduction to Machine Learning, Digital Image Processing with Pakize Erdoğmuş (whose Deep Learning course I followed voluntarily the previous term, and whose vision I look up to), and Graph Theory with Sultan Zavrak. For my graduation project, advised by Abdullah Talha Kabakuş, we're building Ekinci, an app for farmers. And I'm looking for my first full-time role.",
-        "tr": "Otelde çalışmaya devam ederken kalan üç dersimi tamamlıyorum, üçü de ilgi alanımla bağlantılı: Makine Öğrenmesine Giriş, Pakize Erdoğmuş hocamızdan Sayısal Görüntü İşleme (bir önceki dönem Derin Öğrenme dersini de gönüllü takip ettim, vizyonunu örnek alıyorum) ve Sultan Zavrak hocamızdan Çizge Teorisi. Danışmanım Abdullah Talha Kabakuş ile bitirme projesi olarak çiftçiler için Ekinci uygulamasını geliştiriyoruz. Bir yandan da ilk tam zamanlı işimi arıyorum."
+        "en": "Still working at the hotel, I'm finishing my last three courses, all close to my interests: Introduction to Machine Learning, Digital Image Processing with Pakize Erdoğmuş (whose Deep Learning course I followed voluntarily the previous term, and whose vision I look up to), and Graph Theory with Sultan Zavrak. For my graduation project, advised by Abdullah Talha Kabakuş, we're building Ekinci, an app for farmers.",
+        "tr": "Otelde çalışmaya devam ederken kalan üç dersimi tamamlıyorum, üçü de ilgi alanımla bağlantılı: Makine Öğrenmesine Giriş, Pakize Erdoğmuş hocamızdan Sayısal Görüntü İşleme (bir önceki dönem Derin Öğrenme dersini de gönüllü takip ettim, vizyonunu örnek alıyorum) ve Sultan Zavrak hocamızdan Çizge Teorisi. Danışmanım Abdullah Talha Kabakuş ile bitirme projesi olarak çiftçiler için Ekinci uygulamasını geliştiriyoruz."
       },
       "now": true
     }

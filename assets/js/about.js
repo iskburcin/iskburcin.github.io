@@ -55,16 +55,31 @@ async function main() {
       ))
     );
 
+    // "The Future": a roadmap from now to long term, then the job-seeking note
+    const f = data.future;
+    const roadmap = el("section", { class: "about-block", id: "future" },
+      el("h2", {}, L(f.title)),
+      el("p", { class: "future-intro" }, L(f.intro)),
+      el("ol", { class: "roadmap" }, f.steps.map((st, i) =>
+        el("li", { class: "card road-step" },
+          el("span", { class: "road-icon" }, icon(st.icon)),
+          el("div", {},
+            el("span", { class: "road-when" }, `${String(i + 1).padStart(2, "0")} · ${L(st.when)}`),
+            el("h3", {}, L(st.title)),
+            el("p", {}, L(st.text)))
+        )))
+    );
+
     const future = el("section", { class: "about-block card cta" },
       el("h2", {}, t("about.next")),
-      el("p", {}, L(data.future)),
+      el("p", {}, L(f.closing)),
       el("div", { class: "row" },
         el("a", { class: "btn btn--primary", ...linkAttrs(L(site.cv)), target: "_blank", rel: "noopener" }, icon("fa-solid fa-file-pdf"), t("about.cv")),
         el("a", { class: "btn", href: "/pages/contact.html" }, icon("fa-solid fa-envelope"), t("about.contact"))
       )
     );
 
-    root.replaceChildren(hero, ...sections, projects, skills, future);
+    root.replaceChildren(hero, ...sections, projects, skills, roadmap, future);
     reveal(root.querySelectorAll(".about-block, .card-grid > *"));
   } catch (err) {
     showError(root, err);

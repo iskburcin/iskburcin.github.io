@@ -46,7 +46,7 @@
       "home.seeRepos": "See my repositories →",
       "about.projects": "Projects",
       "about.skills": "Skills",
-      "about.next": "What's next?",
+      "about.next": "Let's work together",
       "about.cv": "Download my CV",
       "about.contact": "Contact me",
       "tech.title": "Tech · my code snippets",
@@ -158,7 +158,8 @@
       "type.travel": "Abroad",
       "type.milestone": "Milestone",
       "type.community": "Community",
-      "about.journeyLink": "See my whole journey"
+      "about.journeyLink": "See my whole journey",
+      "home.hello": "Hi, I'm"
     },
     "tr": {
       "title.home": "Burçin Işık",
@@ -192,7 +193,7 @@
       "home.seeRepos": "Repolarımı gör →",
       "about.projects": "Projeler",
       "about.skills": "Yetenekler",
-      "about.next": "Sırada ne var?",
+      "about.next": "Birlikte çalışalım",
       "about.cv": "Özgeçmişimi indir",
       "about.contact": "Bana ulaş",
       "tech.title": "Teknoloji · kod parçalarım",
@@ -304,7 +305,8 @@
       "type.travel": "Yurt dışı",
       "type.milestone": "Dönüm noktası",
       "type.community": "Topluluk",
-      "about.journeyLink": "Tüm yolculuğumu gör"
+      "about.journeyLink": "Tüm yolculuğumu gör",
+      "home.hello": "Merhaba, ben"
     }
   }
 }

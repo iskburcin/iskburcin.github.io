@@ -1,7 +1,10 @@
 {
   "_help": "Texts can be a plain string or { \"en\": \"...\", \"tr\": \"...\" }. Projects: links = [{ label, href }], status = \"in progress\" shows a badge.",
   "hero": {
-    "title": { "en": "Who am I?", "tr": "Ben kimim?" },
+    "title": {
+      "en": "Who am I?",
+      "tr": "Ben kimim?"
+    },
     "intro": {
       "en": "I don't even know. I also try to know me. So, let's say simply, I'm Burçin.",
       "tr": "Ben de tam bilmiyorum, kendimi tanımaya çalışıyorum. O yüzden basitçe söyleyelim: Ben Burçin."
@@ -10,12 +13,15 @@
   "sections": [
     {
       "id": "me",
-      "title": { "en": "About me", "tr": "Hakkımda" },
+      "title": {
+        "en": "About me",
+        "tr": "Hakkımda"
+      },
       "image": "https://ik.imagekit.io/iskburcin/czk/img7.jpg?updatedAt=1736847927586",
       "paragraphs": [
         {
-          "en": "I'm Burçin, a final-year Computer Engineering student at Düzce University, working as a Software Support Specialist in the IT department of a hotel in Alanya. I'm finishing my last courses and my graduation project, and I'm open to full-time software developer roles.",
-          "tr": "Ben Burçin; Düzce Üniversitesi'nde son sınıf Bilgisayar Mühendisliği öğrencisiyim ve Alanya'da bir otelin IT departmanında Yazılım Destek Uzmanı olarak çalışıyorum. Son derslerimi ve bitirme projemi tamamlıyorum; tam zamanlı yazılım geliştirici pozisyonlarına açığım."
+          "en": "I'm Burçin, a final-year Computer Engineering student at Düzce University, working as a Software Support Specialist in the IT department of a hotel in Alanya. I'm finishing my last courses and my graduation project, and I'm open to good offers, preferably remote.",
+          "tr": "Ben Burçin; Düzce Üniversitesi'nde son sınıf Bilgisayar Mühendisliği öğrencisiyim ve Alanya'da bir otelin IT departmanında Yazılım Destek Uzmanı olarak çalışıyorum. Son derslerimi ve bitirme projemi tamamlıyorum; güzel tekliflere, tercihen uzaktan çalışmaya açığım."
         },
         {
           "en": "My path into software started with a simple question during a gap year: how does Excel 'know' all those formulas? Since then I've built mobile apps with Flutter, full-stack web apps with Next.js and Express, Java backends, and ML projects, and studied a semester abroad with Erasmus in Poland. I'm most interested in AI, full-stack and mobile development.",
@@ -26,99 +32,468 @@
           "tr": "Kod yazmadığım zamanlarda koşuya çıkmayı, lego yapmayı, podcast dinlemeyi (teknoloji, tarih, gündem-siyaset), seyahat etmeyi, kitap okumayı, müzik dinlemeyi, yemek yapmayı ve son zamanlarda yeni edindiğim bir hobi olan örgü örmeyi seviyorum."
         }
       ],
-      "link": { "label": { "en": "See my whole journey →", "tr": "Tüm yolculuğumu gör →" }, "href": "/pages/journey.html" }
+      "link": {
+        "label": {
+          "en": "See my whole journey →",
+          "tr": "Tüm yolculuğumu gör →"
+        },
+        "href": "/pages/journey.html"
+      }
     },
     {
       "id": "pages",
-      "title": { "en": "What you'll find here", "tr": "Burada neler bulacaksın" },
+      "title": {
+        "en": "What you'll find here",
+        "tr": "Burada neler bulacaksın"
+      },
       "cards": [
-        { "icon": "fa-solid fa-route",
-          "title": { "en": "Journey", "tr": "Yolculuk" },
-          "text": { "en": "From a gap year to my final year: the cities, schools and jobs that shaped me, on a moving map.",
-                    "tr": "Mezuna kalıştan son sınıfa: beni şekillendiren şehirler, okullar ve işler, hareket eden bir harita üzerinde." },
-          "href": "/pages/journey.html" },
-        { "icon": "fa-solid fa-code",
-          "title": { "en": "Tech · code snippets", "tr": "Teknoloji · kod parçaları" },
-          "text": { "en": "Pieces of code I don't want to forget, collected while learning.",
-                    "tr": "Öğrenirken topladığım, unutmak istemediğim kod parçaları." },
-          "href": "/pages/tech.html" },
-        { "icon": "fa-solid fa-earth-europe",
-          "title": { "en": "My World · travel", "tr": "Dünyam · seyahat" },
-          "text": { "en": "Every country and city I've visited, with photos and city maps.",
-                    "tr": "Gezdiğim her ülke ve şehir; fotoğraflar ve şehir haritalarıyla." },
-          "href": "/pages/world.html" },
-        { "icon": "fa-solid fa-feather",
-          "title": { "en": "Blog", "tr": "Blog" },
-          "text": { "en": "Travel memories and what I learn while building things.",
-                    "tr": "Gezi anılarım ve bir şeyler geliştirirken öğrendiklerim." },
-          "href": "/pages/blog.html" }
+        {
+          "icon": "fa-solid fa-route",
+          "title": {
+            "en": "Journey",
+            "tr": "Yolculuk"
+          },
+          "text": {
+            "en": "From a gap year to my final year: the cities, schools and jobs that shaped me, on a moving map.",
+            "tr": "Mezuna kalıştan son sınıfa: beni şekillendiren şehirler, okullar ve işler, hareket eden bir harita üzerinde."
+          },
+          "href": "/pages/journey.html"
+        },
+        {
+          "icon": "fa-solid fa-code",
+          "title": {
+            "en": "Tech · code snippets",
+            "tr": "Teknoloji · kod parçaları"
+          },
+          "text": {
+            "en": "Pieces of code I don't want to forget, collected while learning.",
+            "tr": "Öğrenirken topladığım, unutmak istemediğim kod parçaları."
+          },
+          "href": "/pages/tech.html"
+        },
+        {
+          "icon": "fa-solid fa-earth-europe",
+          "title": {
+            "en": "My World · travel",
+            "tr": "Dünyam · seyahat"
+          },
+          "text": {
+            "en": "Every country and city I've visited, with photos and city maps.",
+            "tr": "Gezdiğim her ülke ve şehir; fotoğraflar ve şehir haritalarıyla."
+          },
+          "href": "/pages/world.html"
+        },
+        {
+          "icon": "fa-solid fa-feather",
+          "title": {
+            "en": "Blog",
+            "tr": "Blog"
+          },
+          "text": {
+            "en": "Travel memories and what I learn while building things.",
+            "tr": "Gezi anılarım ve bir şeyler geliştirirken öğrendiklerim."
+          },
+          "href": "/pages/blog.html"
+        }
       ]
     }
   ],
   "projects": [
-    { "title": "Get-Your-Map",
-      "text": { "en": "My graduation thesis: a full-stack platform that explores GitHub profiles and analyses code quality with native Tree-sitter parsing, complexity metrics and AI code reviews from local LLMs (Ollama).",
-                "tr": "Bitirme tezim: GitHub profillerini keşfeden; native Tree-sitter ayrıştırma, karmaşıklık metrikleri ve yerel LLM'lerle (Ollama) yapay zekâ kod incelemesi yaparak kod kalitesini analiz eden full-stack bir platform." },
-      "tags": ["Next.js", "TypeScript", "Express", "Ollama", "Docker"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/Get-Your-Map" }, { "label": "Demo", "href": "https://get-your-map.vercel.app" } ] },
-    { "title": "Ekinci",
-      "text": { "en": "My graduation project, advised by Abdullah Talha Kabakuş: an application for farmers. Details coming soon.",
-                "tr": "Abdullah Talha Kabakuş danışmanlığındaki bitirme projem: çiftçiler için bir uygulama. Detaylar yakında." },
-      "tags": [], "status": { "en": "in progress", "tr": "devam ediyor" } },
-    { "title": "Orwion",
-      "text": { "en": "An application we built from scratch in the hotel's IT department; I completed its infrastructure. Details coming soon.",
-                "tr": "Otelin IT departmanında sıfırdan geliştirdiğimiz uygulama; altyapısını ben tamamladım. Detaylar yakında." },
-      "tags": [], "status": { "en": "at work", "tr": "iş yerinde" } },
-    { "title": "Nefora",
-      "text": { "en": "A monorepo of a fully functional Java application: backend, mobile app and a web admin panel.",
-                "tr": "Tamamen çalışan bir Java uygulamasının monoreposu: backend, mobil uygulama ve web yönetim paneli." },
-      "tags": ["Java", "Docker"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/Nefora" } ] },
-    { "title": "Courier Route Optimizer",
-      "text": { "en": "Optimizes delivery routes with a genetic algorithm to find short paths and reduce travel cost.",
-                "tr": "Genetik algoritma ile teslimat rotalarını optimize ederek kısa yolları bulur ve maliyeti düşürür." },
-      "tags": ["Python", { "en": "Genetic algorithms", "tr": "Genetik algoritmalar" }],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/4.GeneticAlgo-Based-Courier-Optimizer" }, { "label": "Demo", "href": "https://4-genetic-algo-based-courier-optimizer.vercel.app" } ] },
-    { "title": "AiEmo · YUZUG",
-      "text": { "en": "An AI-powered mobile app that detects the user's emotion from their face and recommends activities to improve their mood.",
-                "tr": "Kullanıcının yüzünden duygusunu algılayıp ruh halini iyileştirecek aktiviteler öneren yapay zekâ destekli mobil uygulama." },
-      "tags": ["Flutter", "Python", "ML"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/DemoAiEmo" } ] },
-    { "title": { "en": "Recommender System", "tr": "Öneri Sistemi" },
-      "text": { "en": "A model that recommends personalized activities from a user's emotion, age, job and preferences.",
-                "tr": "Kullanıcının duygu, yaş, meslek ve tercihlerine göre kişiselleştirilmiş aktiviteler öneren model." },
-      "tags": ["Python", "scikit-learn"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/RecommenderSystemModelTraining" } ] },
-    { "title": "Erasmus Money Manager",
-      "text": { "en": "Born from a personal need: tracks money in multiple currencies with live exchange rates and shows how much I can spend daily, weekly and monthly until Erasmus ends.",
-                "tr": "Kişisel bir ihtiyaçtan doğdu: birden fazla para birimini canlı kurlarla takip eder, Erasmus bitene kadar günlük, haftalık ve aylık ne kadar harcayabileceğimi gösterir." },
-      "tags": ["Flutter", "Dart"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/erasmusmoneymanager" } ] },
-    { "title": "MissionTimer",
-      "text": { "en": "A productivity web app: start, pause and end work sessions per task and see the history on a calendar.",
-                "tr": "Verimlilik web uygulaması: görev bazında çalışma oturumu başlat, böl, bitir ve geçmişi takvimde gör." },
-      "tags": ["JavaScript"],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/MissionTimer" }, { "label": "Demo", "href": "https://iskburcin.github.io/MissionTimer/" } ] },
-    { "title": { "en": "Turkish Dishes Expert System", "tr": "Türk Yemekleri Uzman Sistemi" },
-      "text": { "en": "An expert system that suggests Turkish dishes from user preferences using fuzzy logic.",
-                "tr": "Bulanık mantık kullanarak kullanıcı tercihlerine göre Türk yemekleri öneren uzman sistem." },
-      "tags": ["Python", { "en": "Fuzzy logic", "tr": "Bulanık mantık" }],
-      "links": [ { "label": "GitHub", "href": "https://github.com/iskburcin/Turkish-Dishes-Expert-System-Based-On-Fuzzy-Reasoning" } ] },
-    { "title": { "en": "First ML models", "tr": "İlk ML modellerim" },
-      "text": { "en": "Iris flower classification and handwritten digit recognition: where my machine learning practice started.",
-                "tr": "İris çiçeği sınıflandırma ve el yazısı rakam tanıma: makine öğrenmesi pratiğimin başladığı yer." },
-      "tags": ["scikit-learn", "TensorFlow"],
-      "links": [ { "label": "Iris", "href": "https://github.com/iskburcin/1.IrishFlowerClassification" }, { "label": "Digits", "href": "https://github.com/iskburcin/2.Handwritten-Digit-Recognition-Model-Training" } ] }
+    {
+      "title": "Get-Your-Map",
+      "text": {
+        "en": "My graduation thesis: a full-stack platform that explores GitHub profiles and analyses code quality with native Tree-sitter parsing, complexity metrics and AI code reviews from local LLMs (Ollama).",
+        "tr": "Bitirme tezim: GitHub profillerini keşfeden; native Tree-sitter ayrıştırma, karmaşıklık metrikleri ve yerel LLM'lerle (Ollama) yapay zekâ kod incelemesi yaparak kod kalitesini analiz eden full-stack bir platform."
+      },
+      "tags": [
+        "Next.js",
+        "TypeScript",
+        "Express",
+        "Ollama",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/Get-Your-Map"
+        },
+        {
+          "label": "Demo",
+          "href": "https://get-your-map.vercel.app"
+        }
+      ]
+    },
+    {
+      "title": "Ekinci",
+      "text": {
+        "en": "My graduation project, advised by Abdullah Talha Kabakuş: an application for farmers. Details coming soon.",
+        "tr": "Abdullah Talha Kabakuş danışmanlığındaki bitirme projem: çiftçiler için bir uygulama. Detaylar yakında."
+      },
+      "tags": [],
+      "status": {
+        "en": "in progress",
+        "tr": "devam ediyor"
+      }
+    },
+    {
+      "title": "Orwion",
+      "text": {
+        "en": "An application we built from scratch in the hotel's IT department; I completed its infrastructure. Details coming soon.",
+        "tr": "Otelin IT departmanında sıfırdan geliştirdiğimiz uygulama; altyapısını ben tamamladım. Detaylar yakında."
+      },
+      "tags": [],
+      "status": {
+        "en": "at work",
+        "tr": "iş yerinde"
+      }
+    },
+    {
+      "title": "Nefora",
+      "text": {
+        "en": "A monorepo of a fully functional Java application: backend, mobile app and a web admin panel.",
+        "tr": "Tamamen çalışan bir Java uygulamasının monoreposu: backend, mobil uygulama ve web yönetim paneli."
+      },
+      "tags": [
+        "Java",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/Nefora"
+        }
+      ]
+    },
+    {
+      "title": "Courier Route Optimizer",
+      "text": {
+        "en": "Optimizes delivery routes with a genetic algorithm to find short paths and reduce travel cost.",
+        "tr": "Genetik algoritma ile teslimat rotalarını optimize ederek kısa yolları bulur ve maliyeti düşürür."
+      },
+      "tags": [
+        "Python",
+        {
+          "en": "Genetic algorithms",
+          "tr": "Genetik algoritmalar"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/4.GeneticAlgo-Based-Courier-Optimizer"
+        },
+        {
+          "label": "Demo",
+          "href": "https://4-genetic-algo-based-courier-optimizer.vercel.app"
+        }
+      ]
+    },
+    {
+      "title": "AiEmo · YUZUG",
+      "text": {
+        "en": "An AI-powered mobile app that detects the user's emotion from their face and recommends activities to improve their mood.",
+        "tr": "Kullanıcının yüzünden duygusunu algılayıp ruh halini iyileştirecek aktiviteler öneren yapay zekâ destekli mobil uygulama."
+      },
+      "tags": [
+        "Flutter",
+        "Python",
+        "ML"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/DemoAiEmo"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Recommender System",
+        "tr": "Öneri Sistemi"
+      },
+      "text": {
+        "en": "A model that recommends personalized activities from a user's emotion, age, job and preferences.",
+        "tr": "Kullanıcının duygu, yaş, meslek ve tercihlerine göre kişiselleştirilmiş aktiviteler öneren model."
+      },
+      "tags": [
+        "Python",
+        "scikit-learn"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/RecommenderSystemModelTraining"
+        }
+      ]
+    },
+    {
+      "title": "Erasmus Money Manager",
+      "text": {
+        "en": "Born from a personal need: tracks money in multiple currencies with live exchange rates and shows how much I can spend daily, weekly and monthly until Erasmus ends.",
+        "tr": "Kişisel bir ihtiyaçtan doğdu: birden fazla para birimini canlı kurlarla takip eder, Erasmus bitene kadar günlük, haftalık ve aylık ne kadar harcayabileceğimi gösterir."
+      },
+      "tags": [
+        "Flutter",
+        "Dart"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/erasmusmoneymanager"
+        }
+      ]
+    },
+    {
+      "title": "MissionTimer",
+      "text": {
+        "en": "A productivity web app: start, pause and end work sessions per task and see the history on a calendar.",
+        "tr": "Verimlilik web uygulaması: görev bazında çalışma oturumu başlat, böl, bitir ve geçmişi takvimde gör."
+      },
+      "tags": [
+        "JavaScript"
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/MissionTimer"
+        },
+        {
+          "label": "Demo",
+          "href": "https://iskburcin.github.io/MissionTimer/"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "Turkish Dishes Expert System",
+        "tr": "Türk Yemekleri Uzman Sistemi"
+      },
+      "text": {
+        "en": "An expert system that suggests Turkish dishes from user preferences using fuzzy logic.",
+        "tr": "Bulanık mantık kullanarak kullanıcı tercihlerine göre Türk yemekleri öneren uzman sistem."
+      },
+      "tags": [
+        "Python",
+        {
+          "en": "Fuzzy logic",
+          "tr": "Bulanık mantık"
+        }
+      ],
+      "links": [
+        {
+          "label": "GitHub",
+          "href": "https://github.com/iskburcin/Turkish-Dishes-Expert-System-Based-On-Fuzzy-Reasoning"
+        }
+      ]
+    },
+    {
+      "title": {
+        "en": "First ML models",
+        "tr": "İlk ML modellerim"
+      },
+      "text": {
+        "en": "Iris flower classification and handwritten digit recognition: where my machine learning practice started.",
+        "tr": "İris çiçeği sınıflandırma ve el yazısı rakam tanıma: makine öğrenmesi pratiğimin başladığı yer."
+      },
+      "tags": [
+        "scikit-learn",
+        "TensorFlow"
+      ],
+      "links": [
+        {
+          "label": "Iris",
+          "href": "https://github.com/iskburcin/1.IrishFlowerClassification"
+        },
+        {
+          "label": "Digits",
+          "href": "https://github.com/iskburcin/2.Handwritten-Digit-Recognition-Model-Training"
+        }
+      ]
+    }
   ],
   "skills": [
-    { "group": { "en": "Languages", "tr": "Programlama dilleri" }, "items": ["Java", "JavaScript", "TypeScript", "Python", "Dart", "C", "C#", "SQL", "HTML / CSS"] },
-    { "group": { "en": "Web & backend", "tr": "Web ve backend" }, "items": ["Next.js", "React", "Node.js / Express", "Tailwind CSS", "Flask", "Tomcat"] },
-    { "group": { "en": "Mobile", "tr": "Mobil" }, "items": ["Flutter", "Firebase"] },
-    { "group": { "en": "AI & data", "tr": "Yapay zekâ ve veri" }, "items": ["scikit-learn", "TensorFlow", "pandas", "NumPy", "OpenCV", "Ollama (local LLMs)", { "en": "Fuzzy logic", "tr": "Bulanık mantık" }, { "en": "Genetic algorithms", "tr": "Genetik algoritmalar" }] },
-    { "group": { "en": "DevOps & tools", "tr": "DevOps ve araçlar" }, "items": ["Git / GitHub", "Docker", "CI/CD", "Postman", "Microsoft SQL", "Vercel / Render"] }
+    {
+      "group": {
+        "en": "Languages",
+        "tr": "Programlama dilleri"
+      },
+      "items": [
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "Dart",
+        "C",
+        "C#",
+        "SQL",
+        "HTML / CSS"
+      ]
+    },
+    {
+      "group": {
+        "en": "Web & backend",
+        "tr": "Web ve backend"
+      },
+      "items": [
+        "Next.js",
+        "React",
+        "Node.js / Express",
+        "Tailwind CSS",
+        "Flask",
+        "Tomcat"
+      ]
+    },
+    {
+      "group": {
+        "en": "Mobile",
+        "tr": "Mobil"
+      },
+      "items": [
+        "Flutter",
+        "Firebase"
+      ]
+    },
+    {
+      "group": {
+        "en": "AI & data",
+        "tr": "Yapay zekâ ve veri"
+      },
+      "items": [
+        "scikit-learn",
+        "TensorFlow",
+        "pandas",
+        "NumPy",
+        "OpenCV",
+        "Ollama (local LLMs)",
+        {
+          "en": "Fuzzy logic",
+          "tr": "Bulanık mantık"
+        },
+        {
+          "en": "Genetic algorithms",
+          "tr": "Genetik algoritmalar"
+        }
+      ]
+    },
+    {
+      "group": {
+        "en": "DevOps & tools",
+        "tr": "DevOps ve araçlar"
+      },
+      "items": [
+        "Git / GitHub",
+        "Docker",
+        "CI/CD",
+        "Postman",
+        "Microsoft SQL",
+        "Vercel / Render"
+      ]
+    }
   ],
   "future": {
-    "en": "I'm looking for my first full-time role as a software developer, ideally in full-stack, mobile or AI-focused teams. I learn fast, I like building things end to end, and I want to grow with a team that cares about good engineering.",
-    "tr": "Yazılım geliştirici olarak ilk tam zamanlı işimi arıyorum; tercihen full-stack, mobil ya da yapay zekâ odaklı ekiplerde. Hızlı öğrenirim, bir şeyi baştan sona inşa etmeyi severim ve iyi mühendisliğe önem veren bir ekiple birlikte büyümek istiyorum."
+    "title": {
+      "en": "The Future · What's next for me?",
+      "tr": "Gelecek · Sırada ne var?"
+    },
+    "intro": {
+      "en": "I don't see my career as a single job, but as a road: build real products, keep studying, learn from strong teams, and one day build something of my own. Here is the road I'm planning.",
+      "tr": "Kariyerimi tek bir iş olarak değil, bir yol olarak görüyorum: gerçek ürünler geliştirmek, okumaya devam etmek, güçlü ekiplerden öğrenmek ve bir gün kendi işimi kurmak. Planladığım yol şöyle:"
+    },
+    "steps": [
+      {
+        "icon": "fa-solid fa-seedling",
+        "when": {
+          "en": "Now",
+          "tr": "Şimdi"
+        },
+        "title": {
+          "en": "Finish strong, build my own products",
+          "tr": "Güçlü bitirmek, kendi ürünlerimi geliştirmek"
+        },
+        "text": {
+          "en": "Graduate, then keep developing Ekinci and Nefora on my own until real people use them every day. Agriculture deserves good software, and Ekinci is my first step there. I'll share what I learn on the way on this blog.",
+          "tr": "Mezun olmak, ardından Ekinci ve Nefora'yı kendi çapımda, insanların her gün kullandığı ürünlere dönüşene kadar geliştirmek. Tarım iyi yazılımı hak ediyor ve Ekinci bu alandaki ilk adımım. Yolda öğrendiklerimi bu blogda paylaşacağım."
+        }
+      },
+      {
+        "icon": "fa-solid fa-hotel",
+        "when": {
+          "en": "Next",
+          "tr": "Yakında"
+        },
+        "title": {
+          "en": "From one hotel to the whole industry",
+          "tr": "Bir otelden tüm sektöre"
+        },
+        "text": {
+          "en": "Turn the application we built for our hotel into a product other hotels can use. Alanya is one of Türkiye's tourism capitals; I want to build tools that make hotel operations simpler, starting right here.",
+          "tr": "Otelimiz için geliştirdiğimiz uygulamayı başka otellerin de kullanabileceği bir ürüne dönüştürmek. Alanya Türkiye'nin turizm başkentlerinden biri; otel operasyonlarını kolaylaştıran araçları tam da buradan başlayarak geliştirmek istiyorum."
+        }
+      },
+      {
+        "icon": "fa-solid fa-book-open",
+        "when": {
+          "en": "In parallel",
+          "tr": "Paralelde"
+        },
+        "title": {
+          "en": "A master's degree in Alanya, and Erasmus once more",
+          "tr": "Alanya'da yüksek lisans ve bir kez daha Erasmus"
+        },
+        "text": {
+          "en": "While building these products, do a master's degree in Alanya, deepening machine learning and image processing and turning real problems into research. And if I can, try Erasmus again: my first exchange taught me how much a new country can change the way you think.",
+          "tr": "Bu ürünleri geliştirirken Alanya'da yüksek lisans yapmak; makine öğrenmesi ve görüntü işlemede derinleşmek ve gerçek problemleri araştırmaya dönüştürmek. Mümkün olursa bir kez daha Erasmus denemek: ilk değişim programım yeni bir ülkenin insanın düşünme biçimini ne kadar değiştirebildiğini gösterdi."
+        }
+      },
+      {
+        "icon": "fa-solid fa-people-group",
+        "when": {
+          "en": "Then",
+          "tr": "Sonra"
+        },
+        "title": {
+          "en": "Grow inside an experienced team",
+          "tr": "Deneyimli bir ekibin içinde büyümek"
+        },
+        "text": {
+          "en": "With the experience and the income from my own apps, join a company with a strong, well-equipped engineering team, where I can learn how great products are built and run at scale from people who have done it many times.",
+          "tr": "Kendi uygulamalarımdan gelen tecrübe ve kaynakla, güçlü ve donanımlı bir mühendislik ekibi olan bir şirkete katılmak; harika ürünlerin büyük ölçekte nasıl geliştirilip yürütüldüğünü bunu defalarca yapmış insanlardan öğrenmek."
+        }
+      },
+      {
+        "icon": "fa-solid fa-rocket",
+        "when": {
+          "en": "Long term",
+          "tr": "Uzun vadede"
+        },
+        "title": {
+          "en": "My own company",
+          "tr": "Kendi şirketim"
+        },
+        "text": {
+          "en": "Bring together everything I learn from different experienced people to found my own company: one that builds technology for real sectors like tourism and agriculture, and is a good place for young engineers to grow.",
+          "tr": "Farklı tecrübeli insanlardan öğrendiklerimi bir araya getirip kendi şirketimi kurmak: turizm ve tarım gibi gerçek sektörler için teknoloji üreten ve genç mühendislerin büyüyebileceği iyi bir yer."
+        }
+      },
+      {
+        "icon": "fa-solid fa-flag",
+        "when": {
+          "en": "Always",
+          "tr": "Her zaman"
+        },
+        "title": {
+          "en": "Represent, and give back",
+          "tr": "Temsil etmek ve geri vermek"
+        },
+        "text": {
+          "en": "Sign projects that represent my country, my family, my teachers and myself, in Türkiye and abroad. And give back the way others gave to me: mentoring young people like the Deneyap workshop and my professors did for me, volunteering like at TOG, and sharing my work openly.",
+          "tr": "Ülkemi, ailemi, hocalarımı ve kendimi yurt içinde ve yurt dışında temsil edecek projelere imza atmak. Ve bana verileni geri vermek: Deneyap atölyesinin ve hocalarımın bana yaptığı gibi gençlere mentorluk etmek, TOG'daki gibi gönüllü çalışmak ve işlerimi açıkça paylaşmak."
+        }
+      }
+    ],
+    "closing": {
+      "en": "I already have a job I enjoy, so I'm not actively looking. But I never say no to a good offer: if your team works on full-stack, mobile or AI products and cares about good engineering, let's talk. Remote roles are my first preference. I learn fast and I like building things end to end.",
+      "tr": "Severek yaptığım bir işim var, bu yüzden aktif olarak iş aramıyorum. Ama güzel bir teklife de hayır demem: ekibin full-stack, mobil ya da yapay zekâ ürünleri geliştiriyor ve iyi mühendisliğe önem veriyorsa konuşalım. Önceliğim uzaktan (remote) çalışma. Hızlı öğrenirim ve bir şeyi baştan sona inşa etmeyi severim."
+    }
   }
 }

@@ -21,11 +21,10 @@
   "socials": [
     { "id": "github",   "label": "GitHub",   "handle": "@iskburcin", "url": "https://github.com/iskburcin",             "icon": "fa-brands fa-github",   "color": "#24292f" },
     { "id": "linkedin", "label": "LinkedIn", "handle": "in/iskburcin", "url": "https://www.linkedin.com/in/iskburcin/", "icon": "fa-brands fa-linkedin", "color": "#0a66c2" },
-    { "id": "bento",    "label": "bento.me", "handle": "bento.me/iskburcin", "url": "https://bento.me/iskburcin",     "icon": "fa-solid fa-table-cells-large", "color": "#111111" },
     { "id": "email",    "label": { "en": "Email", "tr": "E-posta" }, "handle": "mrs.isikburcin@gmail.com", "url": "mailto:mrs.isikburcin@gmail.com", "icon": "fa-solid fa-envelope", "color": "#ea4335" },
 
     { "id": "medium",        "group": "coding", "label": "Medium",          "handle": "@iskburcin", "url": "https://medium.com/@iskburcin",                       "simpleIcon": "medium" },
-    { "id": "dailydev",      "group": "coding", "label": "daily.dev",       "handle": "iskburcin",  "url": "https://daily.dev/iskburcin",                          "simpleIcon": "dailydotdev" },
+    { "id": "dailydev",                         "label": "daily.dev",       "handle": "iskburcin",  "url": "https://daily.dev/iskburcin",                          "simpleIcon": "dailydotdev" },
     { "id": "leetcode",      "group": "coding", "label": "LeetCode",        "handle": "iskburcin",  "url": "https://leetcode.com/iskburcin/",                      "simpleIcon": "leetcode" },
     { "id": "hackerrank",    "group": "coding", "label": "HackerRank",      "handle": "iskburcin",  "url": "https://www.hackerrank.com/profile/iskburcin",         "simpleIcon": "hackerrank" },
     { "id": "freecodecamp",  "group": "coding", "label": "freeCodeCamp",    "handle": "iskburcin",  "url": "https://www.freecodecamp.org/iskburcin",               "simpleIcon": "freecodecamp" },
@@ -38,12 +37,12 @@
   "contact": {
     "formEndpoint": "https://formspree.io/f/xnpdaprl",
     "intro": {
-      "en": "I'm looking for my first full-time software developer role. Job opportunities, collaborations, feedback or just a friendly chat: send me a message!",
-      "tr": "İlk tam zamanlı yazılım geliştirici işimi arıyorum. İş fırsatı, iş birliği, geri bildirim ya da sadece samimi bir sohbet için mesaj gönder!"
+      "en": "I'm not actively looking, but I'm always happy to hear about interesting roles (remote preferred), collaborations, feedback or just a friendly chat. Send me a message!",
+      "tr": "Aktif olarak iş aramıyorum ama ilginç pozisyonlar (tercihen uzaktan), iş birlikleri, geri bildirim ya da samimi bir sohbet için her zaman buradayım. Mesaj gönder!"
     },
     "availability": {
-      "en": "Open to work",
-      "tr": "İşe açığım"
+      "en": "Open to offers · remote preferred",
+      "tr": "Tekliflere açığım · tercihen uzaktan"
     },
     "responseTime": {
       "en": "I usually reply within 2–3 days.",
@@ -51,7 +50,7 @@
     },
     "topics": [
       { "en": "Collaboration", "tr": "İş birliği" },
-      { "en": "Job opportunity", "tr": "İş fırsatı" },
+      { "en": "Job offer", "tr": "İş teklifi" },
       { "en": "Feedback on my site", "tr": "Site hakkında geri bildirim" },
       { "en": "Just saying hi", "tr": "Sadece merhaba" },
       { "en": "Other", "tr": "Diğer" }
@@ -59,8 +58,8 @@
     "faq": [
       {
         "q": { "en": "What can I contact you about?", "tr": "Seninle hangi konularda iletişime geçebilirim?" },
-        "a": { "en": "Job opportunities, projects, collaborations, feedback on my code or just a friendly chat.",
-               "tr": "İş fırsatları, projeler, iş birlikleri, kodlarım hakkında geri bildirim ya da sadece samimi bir sohbet." }
+        "a": { "en": "Interesting roles (remote preferred), projects, collaborations, feedback on my code or just a friendly chat.",
+               "tr": "İlginç pozisyonlar (tercihen uzaktan), projeler, iş birlikleri, kodlarım hakkında geri bildirim ya da sadece samimi bir sohbet." }
       },
       {
         "q": { "en": "Which languages do you speak?", "tr": "Hangi dilleri konuşuyorsun?" },

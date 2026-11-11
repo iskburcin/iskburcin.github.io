@@ -1,49 +1,177 @@
 {
-  "_help": "Each tile is one box on the home page. size: s = 1x1, w = 2 wide, t = 2 tall, l = 2x2. type: profile | social | profiles | blog | github | photo | note | travel | tech | clock | cv | link. Order in this list = order on the page. Texts can be { \"en\": \"...\", \"tr\": \"...\" }.",
+  "_help": "Each tile is one box on the home page. size: s = 1x1, w = 2 wide, t = 2 tall, l = 2x2. type: profile | social | profiles | blog | github | photo | note | travel | tech | clock | cv | link. Order in this list = order on the page. Texts can be { \"en\": \"...\", \"tr\": \"...\" }. profile: facts = [{icon, text}], buttons = [{label, href, icon, primary}] (href \"cv\" = the CV in the page language).",
   "tiles": [
-    { "type": "profile", "size": "l" },
-
-    { "type": "social", "size": "s", "social": "github" },
-    { "type": "social", "size": "s", "social": "linkedin" },
-
-    { "type": "photo", "size": "t",
+    {
+      "type": "profile",
+      "size": "l",
+      "facts": [
+        {
+          "icon": "fa-solid fa-location-dot",
+          "text": {
+            "en": "Alanya, Türkiye",
+            "tr": "Alanya, Türkiye"
+          }
+        },
+        {
+          "icon": "fa-solid fa-graduation-cap",
+          "text": {
+            "en": "Computer Engineering · Düzce University",
+            "tr": "Bilgisayar Mühendisliği · Düzce Üniversitesi"
+          }
+        },
+        {
+          "icon": "fa-solid fa-briefcase",
+          "text": {
+            "en": "Software Support Specialist · hotel IT",
+            "tr": "Yazılım Destek Uzmanı · otel IT"
+          }
+        }
+      ],
+      "buttons": [
+        {
+          "label": {
+            "en": "My journey",
+            "tr": "Yolculuğum"
+          },
+          "href": "/pages/journey.html",
+          "icon": "fa-solid fa-route",
+          "primary": true
+        },
+        {
+          "label": {
+            "en": "CV",
+            "tr": "CV"
+          },
+          "href": "cv",
+          "icon": "fa-solid fa-file-pdf"
+        },
+        {
+          "label": {
+            "en": "Contact",
+            "tr": "İletişim"
+          },
+          "href": "/pages/contact.html",
+          "icon": "fa-solid fa-envelope"
+        }
+      ]
+    },
+    {
+      "type": "social",
+      "size": "s",
+      "social": "github"
+    },
+    {
+      "type": "social",
+      "size": "s",
+      "social": "linkedin"
+    },
+    {
+      "type": "photo",
+      "size": "t",
       "src": "https://ik.imagekit.io/iskburcin/hg/img27.jpg?updatedAt=1736845518536",
-      "caption": { "en": "Budapest, Hungary", "tr": "Budapeşte, Macaristan" }, "href": "/pages/memories.html?c=HU" },
-
-    { "type": "clock", "size": "s" },
-
-    { "type": "profiles", "size": "w",
-      "title": { "en": "Where I learn & follow tech", "tr": "Teknolojiyi öğrendiğim ve takip ettiğim yerler" },
-      "subtitle": { "en": "Shortcuts for me, a peek for you: the places I learned from and still follow.", "tr": "Benim için kısayol, senin için ipucu: öğrendiğim ve hâlâ takip ettiğim yerler." } },
-
-    { "type": "github", "size": "w", "repos": 3 },
-
-    { "type": "note", "size": "w",
-      "title": { "en": "Currently", "tr": "Şu sıralar" },
+      "caption": {
+        "en": "Budapest, Hungary",
+        "tr": "Budapeşte, Macaristan"
+      },
+      "href": "/pages/memories.html?c=HU"
+    },
+    {
+      "type": "clock",
+      "size": "s"
+    },
+    {
+      "type": "profiles",
+      "size": "w",
+      "title": {
+        "en": "Where I learn & follow tech",
+        "tr": "Teknolojiyi öğrendiğim ve takip ettiğim yerler"
+      },
+      "subtitle": {
+        "en": "Shortcuts for me, a peek for you: the places I learned from and still follow.",
+        "tr": "Benim için kısayol, senin için ipucu: öğrendiğim ve hâlâ takip ettiğim yerler."
+      }
+    },
+    {
+      "type": "social",
+      "size": "s",
+      "social": "dailydev"
+    },
+    {
+      "type": "github",
+      "size": "w",
+      "repos": 3
+    },
+    {
+      "type": "note",
+      "size": "w",
+      "title": {
+        "en": "Currently",
+        "tr": "Şu sıralar"
+      },
       "text": {
         "en": "Working in hotel IT in Alanya, finishing my degree at Düzce with ML, Image Processing and Graph Theory, and building Ekinci, an app for farmers, as my graduation project.",
         "tr": "Alanya'da otel IT'sinde çalışıyor; Düzce'deki son derslerim Makine Öğrenmesi, Görüntü İşleme ve Çizge Teorisi'ni bitiriyor, bitirme projem olarak çiftçiler için Ekinci uygulamasını geliştiriyorum."
       },
-      "href": "/pages/journey.html", "linkText": { "en": "See my journey", "tr": "Yolculuğumu gör" } },
-
-    { "type": "blog", "size": "w" },
-
-    { "type": "travel", "size": "s" },
-    { "type": "tech", "size": "s" },
-
-    { "type": "photo", "size": "w",
+      "href": "/pages/journey.html",
+      "linkText": {
+        "en": "See my journey",
+        "tr": "Yolculuğumu gör"
+      }
+    },
+    {
+      "type": "blog",
+      "size": "w"
+    },
+    {
+      "type": "travel",
+      "size": "s"
+    },
+    {
+      "type": "tech",
+      "size": "s"
+    },
+    {
+      "type": "photo",
+      "size": "w",
       "src": "https://ik.imagekit.io/iskburcin/hg/img28.jpg?updatedAt=1736845510343",
-      "caption": { "en": "My World · travel & memories", "tr": "Dünyam · seyahatler ve anılar" }, "href": "/pages/world.html" },
-
-    { "type": "cv", "size": "s" },
-    { "type": "social", "size": "s", "social": "email" },
-
-    { "type": "photo", "size": "s",
+      "caption": {
+        "en": "My World · travel & memories",
+        "tr": "Dünyam · seyahatler ve anılar"
+      },
+      "href": "/pages/world.html"
+    },
+    {
+      "type": "cv",
+      "size": "s"
+    },
+    {
+      "type": "social",
+      "size": "s",
+      "social": "email"
+    },
+    {
+      "type": "photo",
+      "size": "s",
       "src": "https://ik.imagekit.io/iskburcin/pl/pl/img1.jpg",
-      "caption": { "en": "Poland", "tr": "Polonya" }, "href": "/pages/memories.html?c=PL" },
-
-    { "type": "link", "size": "s", "icon": "fa-solid fa-clock-rotate-left",
-      "title": { "en": "Old version", "tr": "Eski sürüm" },
-      "text": { "en": "My first website (v1)", "tr": "İlk web sitem (v1)" }, "href": "/v1/index.html" }
+      "caption": {
+        "en": "Poland",
+        "tr": "Polonya"
+      },
+      "href": "/pages/memories.html?c=PL"
+    },
+    {
+      "type": "link",
+      "size": "s",
+      "icon": "fa-solid fa-clock-rotate-left",
+      "title": {
+        "en": "Old version",
+        "tr": "Eski sürüm"
+      },
+      "text": {
+        "en": "My first website (v1)",
+        "tr": "İlk web sitem (v1)"
+      },
+      "href": "/v1/index.html"
+    }
   ]
 }
