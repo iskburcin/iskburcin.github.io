@@ -161,7 +161,14 @@
       "about.journeyLink": "See my whole journey",
       "home.hello": "Hi, I'm",
       "home.visits": "site visits",
-      "ui.visits": "{n} visits"
+      "ui.visits": "{n} visits",
+      "journey.open": "Show",
+      "journey.close": "Hide",
+      "journey.steps": "{n} steps",
+      "journey.stories": "{n} stories",
+      "journey.chapterEnd": "End of chapter",
+      "journey.read": "Read",
+      "type.stories": "Stories"
     },
     "tr": {
       "title.home": "Burçin Işık",
@@ -310,7 +317,14 @@
       "about.journeyLink": "Tüm yolculuğumu gör",
       "home.hello": "Merhaba, ben",
       "home.visits": "site ziyareti",
-      "ui.visits": "{n} ziyaret"
+      "ui.visits": "{n} ziyaret",
+      "journey.open": "Göster",
+      "journey.close": "Gizle",
+      "journey.steps": "{n} adım",
+      "journey.stories": "{n} yazı",
+      "journey.chapterEnd": "Bölümün sonu",
+      "journey.read": "Oku",
+      "type.stories": "Yazılar"
     }
   }
 }
