@@ -1,0 +1,517 @@
+{
+  "_help": "Content of /pages/ekinci.html (Ekinci capstone project docs). Any text can be a plain string or { \"en\": \"...\", \"tr\": \"...\" }. Roadmap task status: done | doing | todo (date = day it was finished, YYYY-MM-DD). Progress log: one entry per working day, newest last; 'items' are shown when the day is expanded.",
+  "updated": "2026-11-17",
+  "hero": {
+    "eyebrow": { "en": "Computer Engineering · Capstone project · 2026", "tr": "Bilgisayar Mühendisliği · Bitirme projesi · 2026" },
+    "title": "Ekinci",
+    "subtitle": {
+      "en": "AI-assisted planting planning and crop diversity platform",
+      "tr": "Akıllı Ekim Planlama ve Tarımsal Çeşitlilik Artırma Sistemi"
+    },
+    "intro": {
+      "en": "Ekinci helps farmers decide what to plant, when, where and how much. It brings soil, climate, planting history, regional planting density and market supply-demand together in one place, and answers through a mobile app, a web panel and an AI assistant that speaks Turkish.",
+      "tr": "Ekinci, çiftçinin ne ekeceğine, ne zaman, nereye ve ne kadar ekeceğine karar vermesine yardım eder. Toprak, iklim, ekim geçmişi, bölgesel ekim yoğunluğu ve pazardaki arz-talep verisini tek bir yerde birleştirir; bunu bir mobil uygulama, bir web paneli ve Türkçe konuşan bir yapay zekâ asistanıyla sunar."
+    },
+    "chips": [
+      { "en": "Flutter mobile app", "tr": "Flutter mobil uygulama" },
+      { "en": "Next.js web panel", "tr": "Next.js web paneli" },
+      { "en": "Express + Prisma API", "tr": "Express + Prisma API" },
+      { "en": "FastAPI + local LLM (Ollama)", "tr": "FastAPI + yerel LLM (Ollama)" },
+      { "en": "PostgreSQL + pgvector", "tr": "PostgreSQL + pgvector" },
+      { "en": "Docker", "tr": "Docker" }
+    ],
+    "stats": [
+      { "value": "5", "label": { "en": "layers, one monorepo", "tr": "katman, tek monorepo" } },
+      { "value": "920+", "label": { "en": "automated tests", "tr": "otomatik test" } },
+      { "value": "%100", "label": { "en": "test coverage in every layer", "tr": "her katmanda test kapsamı" } },
+      { "value": "TR · EN", "label": { "en": "every screen in two languages", "tr": "her ekran iki dilde" } }
+    ]
+  },
+  "toc": [
+    { "id": "why", "label": { "en": "Why Türkiye needs it", "tr": "Türkiye için neden gerekli" } },
+    { "id": "purpose", "label": { "en": "Purpose & users", "tr": "Amaç ve kullanıcılar" } },
+    { "id": "how", "label": { "en": "How it works", "tr": "Nasıl çalışır" } },
+    { "id": "stack", "label": { "en": "Tech stack", "tr": "Teknolojiler" } },
+    { "id": "usage", "label": { "en": "How to use", "tr": "Nasıl kullanılır" } },
+    { "id": "roadmap", "label": { "en": "Roadmap & to-do", "tr": "Yol haritası ve yapılacaklar" } },
+    { "id": "log", "label": { "en": "Daily progress", "tr": "Günlük ilerleme" } },
+    { "id": "refs", "label": { "en": "References", "tr": "Kaynaklar" } }
+  ],
+  "why": {
+    "title": { "en": "Why Türkiye needs it", "tr": "Türkiye için neden gerekli?" },
+    "intro": {
+      "en": "Türkiye has rich soil and climate diversity, but planting decisions are still made one farmer at a time, mostly by looking at what paid well last season or what the neighbours plant. The data that could guide them exists, but it is spread across institutions and hard for a farmer to use.",
+      "tr": "Türkiye toprak ve iklim çeşitliliği bakımından çok zengin; ama ekim kararları hâlâ çiftçi çiftçi, çoğunlukla geçen sezon hangi ürün kazandırdıysa ya da komşu ne ektiyse ona bakılarak veriliyor. Bu kararı yönlendirebilecek veri aslında var; ama farklı kurumlara dağılmış durumda ve çiftçinin kullanabileceği bir hâlde değil."
+    },
+    "points": [
+      {
+        "icon": "fa-solid fa-chart-line",
+        "title": { "en": "The boom-and-bust cycle", "tr": "Bolluk-kıtlık döngüsü" },
+        "text": {
+          "en": "When a crop sells at a good price, many farmers plant it the next season. Supply overshoots, the price falls, farmers lose money and turn away from the crop, and next year it becomes scarce and expensive again. Seeing what the region is already planting breaks this loop.",
+          "tr": "Bir ürün iyi fiyata satıldığında ertesi sezon pek çok çiftçi aynı ürünü eker. Arz fazlası oluşur, fiyat düşer, çiftçi zarar edip üründen vazgeçer; bir sonraki yıl ürün yine kıt ve pahalı olur. Bölgede neyin ne kadar ekildiğini önceden görmek bu döngüyü kırar."
+        }
+      },
+      {
+        "icon": "fa-solid fa-layer-group",
+        "title": { "en": "Scattered data", "tr": "Dağınık veri" },
+        "text": {
+          "en": "Farmer and parcel records (ÇKS), weather (MGM), production statistics (TÜİK), wholesale prices (HKS) and land registry (TKGM) all live in separate systems. Ekinci's goal is to bring them together at district and parcel level.",
+          "tr": "Çiftçi ve parsel kayıtları (ÇKS), meteoroloji (MGM), üretim istatistikleri (TÜİK), hal fiyatları (HKS) ve tapu-parsel bilgisi (TKGM) ayrı sistemlerde duruyor. Ekinci'nin hedefi bunları ilçe ve parsel düzeyinde bir araya getirmek."
+        }
+      },
+      {
+        "icon": "fa-solid fa-seedling",
+        "title": { "en": "Crop diversity", "tr": "Ürün çeşitliliği" },
+        "text": {
+          "en": "Recommending the same 'profitable' crop to everyone defeats itself. Ekinci limits how much area it recommends for each crop in each district, so the next farmer gets a different suggestion and the region's crop mix stays balanced.",
+          "tr": "Herkese aynı 'kârlı' ürünü önermek kendi kendini bozar. Ekinci her ilçe ve ürün için önerilebilecek alanı sınırlar; kapasite doldukça sıradaki çiftçiye başka bir ürün önerilir, böylece bölgenin ürün deseni dengede kalır."
+        }
+      },
+      {
+        "icon": "fa-solid fa-cloud-sun-rain",
+        "title": { "en": "Climate and water pressure", "tr": "İklim ve su baskısı" },
+        "text": {
+          "en": "Changing rainfall, drought and late frosts make yesterday's habits risky. Recommendations combine the local climate, the field's soil analysis and irrigation, instead of relying on habit alone.",
+          "tr": "Değişen yağış rejimi, kuraklık ve geç donlar alışkanlıkla ekimi riskli hâle getiriyor. Öneriler yalnızca alışkanlığa değil; bölgenin iklimine, tarlanın toprak analizine ve sulama imkânına dayanır."
+        }
+      },
+      {
+        "icon": "fa-solid fa-user-tie",
+        "title": { "en": "Expertise that scales", "tr": "Uzmanlığı yaygınlaştırmak" },
+        "text": {
+          "en": "An agricultural engineer cannot visit every field. Ekinci gives engineers a panel with the farmers and soil reports of their region, and gives farmers an assistant that is available at any hour, in Turkish.",
+          "tr": "Bir ziraat mühendisi her tarlayı ziyaret edemez. Ekinci, mühendise bölgesindeki çiftçileri ve toprak raporlarını gösteren bir panel; çiftçiye de günün her saatinde Türkçe cevap veren bir asistan sunar."
+        }
+      },
+      {
+        "icon": "fa-solid fa-shield-halved",
+        "title": { "en": "Trust and privacy (KVKK)", "tr": "Güven ve gizlilik (KVKK)" },
+        "text": {
+          "en": "Farm data is personal data. Farmers give explicit consent before their fields and documents are used, regional figures are shown only as anonymous totals, and every sensitive action is written to an audit log.",
+          "tr": "Tarla verisi kişisel veridir. Çiftçi, tarlaları ve belgeleri kullanılmadan önce açık rıza verir; bölgesel rakamlar yalnızca anonim toplamlar olarak gösterilir ve her hassas işlem denetim kaydına yazılır."
+        }
+      }
+    ]
+  },
+  "purpose": {
+    "title": { "en": "Purpose and users", "tr": "Amaç ve kullanıcılar" },
+    "question": {
+      "en": "For this farmer, in this district, this season: which crops (top 3), when, on which parcel, on how much land and for which market?",
+      "tr": "Bu çiftçi, bu ilçede, bu sezonda; HANGİ ürünü (ilk 3), NE ZAMAN, NEREDE (hangi parsel), NE KADAR alana ve HANGİ pazar için ekmeli?"
+    },
+    "intro": {
+      "en": "This is the question the whole platform is built around. Scope: crop production only (no livestock, fisheries or forestry). The analysis unit is the district, the recommendation unit is the parcel. The first pilot is planned in Karacabey (Bursa), with Alanya (Antalya) as the second.",
+      "tr": "Bütün platform bu sorunun etrafında kuruldu. Kapsam yalnızca bitkisel üretim (hayvancılık, su ürünleri ve ormancılık kapsam dışı). Analiz birimi ilçe, öneri birimi parsel/tarla. İlk pilotun Karacabey'de (Bursa), ikincisinin Alanya'da (Antalya) yapılması planlanıyor."
+    },
+    "users": [
+      {
+        "icon": "fa-solid fa-tractor",
+        "title": { "en": "Farmer", "tr": "Çiftçi" },
+        "text": { "en": "Adds fields and soil reports, asks the assistant, gets recommendations (mobile app and web).", "tr": "Tarlalarını ve toprak raporlarını ekler, asistana sorar, öneri alır (mobil uygulama ve web)." }
+      },
+      {
+        "icon": "fa-solid fa-user-graduate",
+        "title": { "en": "Agricultural engineer", "tr": "Ziraat mühendisi" },
+        "text": { "en": "Sees the farmers and fields of their pilot regions, reviews soil analyses and will approve recommendations.", "tr": "Pilot bölgelerindeki çiftçileri ve tarlaları görür, toprak analizlerini inceler; önerilere son onayı verecek." }
+      },
+      {
+        "icon": "fa-solid fa-user-shield",
+        "title": { "en": "Administrator", "tr": "Yönetici" },
+        "text": { "en": "Manages users and roles, regions and the audit log; sees platform-wide statistics.", "tr": "Kullanıcıları, rolleri, bölgeleri ve denetim kaydını yönetir; platform genelindeki istatistikleri görür." }
+      },
+      {
+        "icon": "fa-solid fa-users",
+        "title": { "en": "General public (planned)", "tr": "Genel kullanıcı (planlanıyor)" },
+        "text": { "en": "Will see anonymous regional tables, which also encourages farmers to join.", "tr": "Anonim bölgesel tabloları görecek; bu da çiftçileri katılmaya teşvik edecek." }
+      },
+      {
+        "icon": "fa-solid fa-industry",
+        "title": { "en": "Factory / buyer (future)", "tr": "Fabrika / alıcı (gelecek)" },
+        "text": { "en": "Will announce raw-material demand and meet farmers on a marketplace.", "tr": "Hammadde talebini bildirecek ve bir pazar yerinde çiftçiyle buluşacak." }
+      }
+    ]
+  },
+  "how": {
+    "title": { "en": "How it works", "tr": "Nasıl çalışır?" },
+    "intro": {
+      "en": "Every request goes through the backend: clients never talk to the AI model directly. The backend checks identity, consent and rate limits, then calls the AI service, which runs a local language model and tools that read the farmer's own data.",
+      "tr": "Her istek backend üzerinden geçer; istemciler yapay zekâ modeliyle doğrudan konuşmaz. Backend kimliği, KVKK onayını ve istek sınırlarını kontrol eder, sonra yapay zekâ servisini çağırır; bu servis yerel bir dil modelini ve çiftçinin kendi verisini okuyan araçları çalıştırır."
+    },
+    "flow": [
+      { "icon": "fa-solid fa-mobile-screen", "title": { "en": "Mobile app / web panel", "tr": "Mobil uygulama / web paneli" }, "text": { "en": "Flutter · Next.js", "tr": "Flutter · Next.js" } },
+      { "icon": "fa-solid fa-server", "title": { "en": "Backend API", "tr": "Backend API" }, "text": { "en": "auth, consent, validation, audit", "tr": "kimlik, onay, doğrulama, denetim" } },
+      { "icon": "fa-solid fa-brain", "title": { "en": "AI service", "tr": "Yapay zekâ servisi" }, "text": { "en": "agent + tools + OCR", "tr": "ajan + araçlar + OCR" } },
+      { "icon": "fa-solid fa-microchip", "title": { "en": "Local LLM", "tr": "Yerel LLM" }, "text": { "en": "Ollama · qwen2.5", "tr": "Ollama · qwen2.5" } },
+      { "icon": "fa-solid fa-database", "title": { "en": "PostgreSQL + pgvector", "tr": "PostgreSQL + pgvector" }, "text": { "en": "data + embeddings", "tr": "veri + vektörler" } }
+    ],
+    "steps": [
+      {
+        "icon": "fa-solid fa-map-location-dot",
+        "title": { "en": "1 · Collect", "tr": "1 · Topla" },
+        "text": {
+          "en": "Field location and size, irrigation, soil analysis report (read with OCR), planting history and the farmer's preferences; weather from Open-Meteo today, MGM, TÜİK, HKS and ÇKS in the data pipeline phase.",
+          "tr": "Tarla konumu ve büyüklüğü, sulama, toprak analiz raporu (OCR ile okunur), ekim geçmişi ve çiftçinin tercihleri; hava durumu bugün Open-Meteo'dan, veri hattı fazında ise MGM, TÜİK, HKS ve ÇKS'den."
+        }
+      },
+      {
+        "icon": "fa-solid fa-scale-balanced",
+        "title": { "en": "2 · Score", "tr": "2 · Puanla" },
+        "text": {
+          "en": "Three scores per crop: climate fit (C), soil fit (S) and market balance (M). The final score combines them with weights; the MVP starts with agronomic rules, machine learning follows as real data accumulates.",
+          "tr": "Her ürün için üç puan: iklime uygunluk (C), toprağa uygunluk (S) ve pazar dengesi (M). Final puan bunların ağırlıklı birleşimi; MVP agronomik kurallarla başlıyor, gerçek veri biriktikçe makine öğrenmesine geçilecek."
+        }
+      },
+      {
+        "icon": "fa-solid fa-ranking-star",
+        "title": { "en": "3 · Recommend", "tr": "3 · Öner" },
+        "text": {
+          "en": "The farmer sees a top-3 card: what, when, how much, the score breakdown and a plain 'why this crop?' explanation. An agricultural engineer adds a note and approves.",
+          "tr": "Çiftçi ilk 3 öneriyi bir kartta görür: ne, ne zaman, ne kadar; puan kırılımı ve sade bir 'neden bu ürün?' açıklaması. Ziraat mühendisi not ekler ve onaylar."
+        }
+      },
+      {
+        "icon": "fa-solid fa-rotate",
+        "title": { "en": "4 · Learn", "tr": "4 · Öğren" },
+        "text": {
+          "en": "Planting declarations, harvests and losses (frost, hail) update the regional supply tables and later retrain the models; acceptance rate and deviation from the recommendation are the pilot's main metrics.",
+          "tr": "Ekim beyanları, hasat ve kayıplar (don, dolu) bölgesel arz tablolarını günceller, sonra modelleri yeniden eğitir; öneriyi kabul oranı ve öneriden sapma pilotun ana ölçütleri."
+        }
+      }
+    ],
+    "formula": {
+      "en": "final score = w₁ · climate + w₂ · soil + w₃ · market   (weights to be calibrated with back-tests on past seasons)",
+      "tr": "final puan = w₁ · iklim + w₂ · toprak + w₃ · pazar   (ağırlıklar geçmiş sezonlarla geriye dönük testle kalibre edilecek)"
+    }
+  },
+  "stack": {
+    "title": { "en": "Tech stack", "tr": "Teknolojiler" },
+    "intro": {
+      "en": "One monorepo, five layers, everything in Docker. Every layer has its own linting, tests with 100 % coverage and a Docker image, checked by GitHub Actions on each push.",
+      "tr": "Tek monorepo, beş katman, her şey Docker'da. Her katmanın kendi lint kuralları, %100 kapsamlı testleri ve Docker imajı var; her push'ta GitHub Actions ile kontrol ediliyor."
+    },
+    "groups": [
+      {
+        "icon": "fa-solid fa-mobile-screen-button",
+        "title": { "en": "Mobile app (farmer)", "tr": "Mobil uygulama (çiftçi)" },
+        "items": ["Flutter 3", "Dart", "Riverpod", "go_router", "dio", "Firebase Auth", "Google Sign-In", "geolocator", "file_picker", "flutter_secure_storage", "ARB (tr/en)", "flutter_test"],
+        "note": { "en": "Material 3, light/dark theme, offline-safe session storage, Türkiye map drawn from geoBoundaries data.", "tr": "Material 3, açık/koyu tema, güvenli oturum saklama, geoBoundaries verisinden çizilen Türkiye haritası." }
+      },
+      {
+        "icon": "fa-solid fa-display",
+        "title": { "en": "Web panel", "tr": "Web paneli" },
+        "items": ["Next.js 15 (App Router)", "React 19", "TypeScript", "Tailwind CSS", "next-intl", "next-themes", "Firebase Web SDK", "Turbopack", "Vitest", "Testing Library"],
+        "note": { "en": "One panel for three roles: farmer, agricultural engineer and administrator.", "tr": "Üç rol için tek panel: çiftçi, ziraat mühendisi ve yönetici." }
+      },
+      {
+        "icon": "fa-solid fa-server",
+        "title": { "en": "Backend API", "tr": "Backend API" },
+        "items": ["Node.js 22", "Express 4", "TypeScript (strict)", "Prisma 6", "Zod", "Pino", "node-cron", "argon2id", "firebase-admin", "nodemailer", "Jest", "Supertest", "OpenAPI"],
+        "note": { "en": "JWT access + refresh tokens, role guards, KVKK consent guard, rate limits, structured logs and an audit log.", "tr": "JWT erişim + yenileme token'ları, rol korumaları, KVKK onay kontrolü, istek sınırları, yapılandırılmış loglar ve denetim kaydı." }
+      },
+      {
+        "icon": "fa-solid fa-brain",
+        "title": { "en": "AI service", "tr": "Yapay zekâ servisi" },
+        "items": ["Python 3.12", "FastAPI", "Ollama", "qwen2.5:14b", "tool calling", "pgvector", "Tesseract OCR", "httpx", "pydantic", "pytest"],
+        "note": { "en": "A tool-calling agent that reads the farmer's fields, soil data and documents; answers stay in the user's language.", "tr": "Çiftçinin tarlalarını, toprak verisini ve belgelerini okuyan araç kullanan bir ajan; cevaplar kullanıcının dilinde kalır." }
+      },
+      {
+        "icon": "fa-solid fa-database",
+        "title": { "en": "Data", "tr": "Veri" },
+        "items": ["PostgreSQL 16", "pgvector", "Prisma migrations", "Zod contracts (packages/shared)", "daily pg_dump backups"],
+        "note": { "en": "Shared TypeScript contracts keep the backend and web in sync; the mobile app mirrors them in Dart.", "tr": "Ortak TypeScript sözleşmeleri backend ile webi uyumlu tutar; mobil uygulama bunları Dart'ta aynalar." }
+      },
+      {
+        "icon": "fa-brands fa-docker",
+        "title": { "en": "DevOps", "tr": "DevOps" },
+        "items": ["Docker Compose (watch)", "GitHub Actions", "Mailpit", "hot reload in every service", "per-service npm scripts"],
+        "note": { "en": "npm run dev starts every service with hot reload; one command restarts a single service.", "tr": "npm run dev tüm servisleri sıcak yeniden yükleme ile başlatır; tek bir servis tek komutla yeniden başlatılır." }
+      }
+    ]
+  },
+  "usage": {
+    "title": { "en": "How to use", "tr": "Nasıl kullanılır?" },
+    "tabs": [
+      {
+        "id": "mobile",
+        "icon": "fa-solid fa-mobile-screen-button",
+        "label": { "en": "Mobile app", "tr": "Mobil uygulama" },
+        "intro": { "en": "The farmer's everyday tool (Android, iOS and a web build).", "tr": "Çiftçinin günlük aracı (Android, iOS ve web sürümü)." },
+        "steps": [
+          { "title": { "en": "Sign up or sign in", "tr": "Kayıt ol ya da giriş yap" }, "text": { "en": "Continue with Google, or create an account with e-mail and password. The e-mail is checked while you type and the password strength is shown live. Forgot your password? A 6-digit code is e-mailed to you.", "tr": "Google ile devam et ya da e-posta ve şifreyle hesap aç. E-posta sen yazarken kontrol edilir, şifre gücü anlık gösterilir. Şifreni mi unuttun? E-postana 6 haneli bir kod gelir." } },
+          { "title": { "en": "Complete your account", "tr": "Hesabını tamamla" }, "text": { "en": "Name, phone (+90…), province and district from a list, KVKK consent and optionally your first field. You can skip and finish later; the app never locks you out.", "tr": "Ad, telefon (+90…), listeden il ve ilçe, KVKK onayı ve istersen ilk tarlan. Atlayıp sonra tamamlayabilirsin; uygulama seni hiçbir zaman dışarıda bırakmaz." } },
+          { "title": { "en": "Dashboard", "tr": "Pano" }, "text": { "en": "Weather at your location, sample crop recommendations and the regional crop distribution, plus prompts for anything still missing.", "tr": "Konumundaki hava durumu, örnek ürün önerileri ve bölgesel ürün dağılımı; eksik bir şey varsa onu tamamlaman için kartlar." } },
+          { "title": { "en": "Fields and documents", "tr": "Tarlalar ve belgeler" }, "text": { "en": "Add fields (area in decares, irrigation, location). Upload a soil analysis or land title as PDF or photo; it is read and summarised automatically.", "tr": "Tarla ekle (dekar cinsinden alan, sulama, konum). Toprak analizi ya da tapu belgesini PDF veya fotoğraf olarak yükle; otomatik okunur ve özetlenir." } },
+          { "title": { "en": "Ask the assistant", "tr": "Asistana sor" }, "text": { "en": "Ask in Turkish or English, attach up to three of your documents, pick the model. Conversations are saved; if you leave while an answer is coming, the progress shows again when you return.", "tr": "Türkçe ya da İngilizce sor, en fazla üç belgeni ekle, modeli seç. Sohbetler kaydedilir; cevap gelirken başka ekrana geçersen döndüğünde ilerleme yeniden görünür." } },
+          { "title": { "en": "Regions and profile", "tr": "Bölgeler ve profil" }, "text": { "en": "Explore pilot regions on the Türkiye map. In your profile: language, theme, edit details or delete your account with all its data.", "tr": "Pilot bölgeleri Türkiye haritasında incele. Profilinde dil, tema, bilgilerini düzenleme ya da hesabını tüm verisiyle silme." } }
+        ]
+      },
+      {
+        "id": "web",
+        "icon": "fa-solid fa-display",
+        "label": { "en": "Web panel", "tr": "Web paneli" },
+        "intro": { "en": "One panel; what you see depends on your role.", "tr": "Tek panel; ne gördüğün rolüne göre değişir." },
+        "steps": [
+          { "title": { "en": "Sign in", "tr": "Giriş yap" }, "text": { "en": "Everyone uses the same form (e-mail + password or Google). Admins land on the admin overview, engineers on their farmers, farmers on their dashboard. An unknown e-mail is sent to sign-up.", "tr": "Herkes aynı formu kullanır (e-posta + şifre ya da Google). Yönetici genel bakışa, mühendis çiftçilerine, çiftçi panosuna yönlenir. Kayıtlı olmayan e-posta kayıt sayfasına yönlendirilir." } },
+          { "title": { "en": "Farmer", "tr": "Çiftçi" }, "text": { "en": "The same features as the mobile app: dashboard, fields with documents, assistant with attachments, regions and profile.", "tr": "Mobil uygulamayla aynı özellikler: pano, belgeleriyle tarlalar, belge eklenebilen asistan, bölgeler ve profil." } },
+          { "title": { "en": "Agricultural engineer", "tr": "Ziraat mühendisi" }, "text": { "en": "'Farmers' lists the farmers in your assigned pilot regions (no contact data). Open one to see their fields, documents and the latest soil analysis values.", "tr": "'Çiftçiler' sayfası atandığın pilot bölgelerdeki çiftçileri listeler (iletişim bilgisi olmadan). Birini açınca tarlalarını, belgelerini ve en güncel toprak analizi değerlerini görürsün." } },
+          { "title": { "en": "Administrator", "tr": "Yönetici" }, "text": { "en": "Overview with statistics and where fields are; Users: search, change roles, assign regions, create engineer accounts, delete a user with all data (including their Google record); Audit log of every sensitive action.", "tr": "İstatistikler ve arsaların bulunduğu bölgelerle genel bakış; Kullanıcılar: arama, rol değiştirme, bölge atama, mühendis hesabı açma, kullanıcıyı tüm verisiyle (Google kaydı dahil) silme; her hassas işlemin tutulduğu denetim kaydı." } },
+          { "title": { "en": "Language and theme", "tr": "Dil ve tema" }, "text": { "en": "TR | EN and light | dark | system switches in the corner of every page.", "tr": "Her sayfanın köşesinde TR | EN ve açık | koyu | sistem anahtarları." } }
+        ]
+      },
+      {
+        "id": "dev",
+        "icon": "fa-solid fa-terminal",
+        "label": { "en": "Run it locally", "tr": "Yerelde çalıştır" },
+        "intro": { "en": "For developers: Docker Desktop, Node 22 and Ollama with a chat model.", "tr": "Geliştiriciler için: Docker Desktop, Node 22 ve bir sohbet modeli yüklü Ollama." },
+        "steps": [
+          { "title": { "en": "Prepare", "tr": "Hazırla" }, "text": { "en": "cp .env.example .env · npm install · ollama pull qwen2.5:14b (qwen2.5:7b on smaller machines)", "tr": "cp .env.example .env · npm install · ollama pull qwen2.5:14b (küçük makinelerde qwen2.5:7b)" } },
+          { "title": { "en": "Start", "tr": "Başlat" }, "text": { "en": "npm run dev starts every service with hot reload and pre-compiles the web pages.", "tr": "npm run dev tüm servisleri sıcak yeniden yüklemeyle başlatır ve web sayfalarını önceden derler." } },
+          { "title": { "en": "One service at a time", "tr": "Tek tek servisler" }, "text": { "en": "npm run backend | web | ai | mobile-web restarts only that service; :logs, :stop, :start and :shell variants exist.", "tr": "npm run backend | web | ai | mobile-web yalnızca o servisi yeniden başlatır; :logs, :stop, :start ve :shell türevleri de var." } },
+          { "title": { "en": "Mobile", "tr": "Mobil" }, "text": { "en": "cd apps/mobile · flutter run on an emulator or device.", "tr": "cd apps/mobile · emülatörde ya da cihazda flutter run." } }
+        ]
+      }
+    ]
+  },
+  "roadmap": {
+    "title": { "en": "Roadmap and to-do list", "tr": "Yol haritası ve yapılacaklar" },
+    "intro": {
+      "en": "Three product levels: 1) the AI planting decision system (core), 2) a smart farming assistant, 3) an agricultural marketplace. Below are the phases with their tasks; finished tasks show the day they were completed.",
+      "tr": "Üç ürün seviyesi: 1) yapay zekâ destekli ekim karar sistemi (çekirdek), 2) akıllı tarım asistanı, 3) tarımsal pazar platformu. Aşağıda fazlar ve görevleri var; tamamlanan görevlerde bitirildiği gün yazıyor."
+    },
+    "phases": [
+      {
+        "id": "f0",
+        "title": { "en": "Phase 0 · Discovery", "tr": "Faz 0 · Keşif" },
+        "when": { "en": "≈ 0–2 months", "tr": "≈ 0–2 ay" },
+        "status": "active",
+        "tasks": [
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Architecture and design diagrams D1–D17 (Turkish and English)", "tr": "Mimari ve tasarım diyagramları D1–D17 (Türkçe ve İngilizce)" }, "detail": { "en": "Context, containers, data pipeline, scoring formula, supply-demand model, geographic hierarchy, sign-up flow, documents, trust model, roles, screen flow, coverage loop and roadmap, drawn in Excalidraw.", "tr": "Bağlam, bileşenler, veri hattı, skor formülü, arz-talep modeli, coğrafi hiyerarşi, kayıt akışı, belgeler, güven modeli, roller, ekran akışı, kapsama döngüsü ve yol haritası; Excalidraw ile çizildi." } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Pilot region candidates chosen: Karacabey first, Alanya second", "tr": "Pilot bölge adayları belirlendi: önce Karacabey, sonra Alanya" }, "detail": { "en": "Karacabey: open fields, a clear season and factory demand to test the market model. Alanya: greenhouse module.", "tr": "Karacabey: açık tarla, net sezon ve pazar modelini test etmek için fabrika talebi. Alanya: sera modülü." } },
+          { "status": "doing", "text": { "en": "Data inventory and access: ÇKS, MGM, HKS, TÜİK", "tr": "Veri envanteri ve erişim: ÇKS, MGM, HKS, TÜİK" } },
+          { "status": "todo", "text": { "en": "e-Devlet / ministry protocol talks for identity and farmer records", "tr": "Kimlik ve çiftçi kayıtları için e-Devlet / Bakanlık protokol görüşmeleri" } },
+          { "status": "todo", "text": { "en": "Find 1 agricultural engineer and 3–10 pilot farmers", "tr": "1 ziraat mühendisi ve 3–10 pilot çiftçi bulmak" } },
+          { "status": "todo", "text": { "en": "District crop catalogue for the pilot", "tr": "Pilot ilçe için ürün kataloğu" } }
+        ]
+      },
+      {
+        "id": "f1",
+        "title": { "en": "Phase 1 · MVP", "tr": "Faz 1 · MVP" },
+        "when": { "en": "≈ 2–5 months", "tr": "≈ 2–5 ay" },
+        "status": "active",
+        "tasks": [
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Monorepo, Docker Compose, CI, backups and shared contracts", "tr": "Monorepo, Docker Compose, CI, yedekleme ve ortak sözleşmeler" } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Backend API: auth, onboarding, fields, dashboard, chat gateway, jobs", "tr": "Backend API: kimlik, ilk kurulum, tarlalar, pano, sohbet geçidi, zamanlanmış işler" } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "AI service: Ollama, tool-calling agent, pgvector store", "tr": "Yapay zekâ servisi: Ollama, araç kullanan ajan, pgvector deposu" } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Web panel and Flutter app: sign-in, onboarding, dashboard, chat (tr/en, dark mode)", "tr": "Web paneli ve Flutter uygulaması: giriş, ilk kurulum, pano, sohbet (tr/en, koyu tema)" } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Firebase Authentication with Google", "tr": "Google ile Firebase Authentication" } },
+          { "status": "done", "date": "2026-10-23", "text": { "en": "Fields with address, live weather from Open-Meteo", "tr": "Adresli tarlalar, Open-Meteo'dan canlı hava durumu" } },
+          { "status": "done", "date": "2026-10-24", "text": { "en": "Field documents with OCR analysis, selectable chat models, pilot regions map", "tr": "OCR analizli tarla belgeleri, seçilebilir sohbet modelleri, pilot bölge haritası" } },
+          { "status": "done", "date": "2026-11-11", "text": { "en": "Role-based web panel (farmer, engineer, admin) and chat history", "tr": "Rol bazlı web paneli (çiftçi, mühendis, yönetici) ve sohbet geçmişi" } },
+          { "status": "done", "date": "2026-11-13", "text": { "en": "Non-blocking onboarding, KVKK consent gate, typed inputs", "tr": "Engellemeyen ilk kurulum, KVKK onay kontrolü, tipli girişler" } },
+          { "status": "done", "date": "2026-11-13", "text": { "en": "E-mail accounts, password reset with e-mailed code, admin user deletion", "tr": "E-posta hesapları, e-postayla kodlu şifre sıfırlama, yönetici kullanıcı silme" } },
+          { "status": "done", "date": "2026-11-13", "text": { "en": "Assistant reads the farmer's documents; answers survive leaving the screen", "tr": "Asistan çiftçinin belgelerini okuyor; ekrandan çıkınca cevap kaybolmuyor" } },
+          { "status": "done", "date": "2026-11-13", "text": { "en": "Live validation on every form, province/district lists, brand icons", "tr": "Her formda anlık doğrulama, il/ilçe listeleri, uygulama ikonları" } },
+          { "status": "done", "date": "2026-11-14", "text": { "en": "Faster web development server (Turbopack + warm-up)", "tr": "Daha hızlı web geliştirme sunucusu (Turbopack + ön derleme)" } },
+          { "status": "todo", "text": { "en": "Rule-based soil + climate scoring (the dashboard still shows sample data)", "tr": "Kural tabanlı toprak + iklim puanlaması (pano şu an örnek veri gösteriyor)" } },
+          { "status": "todo", "text": { "en": "Simple market score and the top-3 recommendation card with 'why?'", "tr": "Basit pazar puanı ve 'neden?' açıklamalı ilk 3 öneri kartı" } },
+          { "status": "todo", "text": { "en": "Soil profile card per parcel (Toprak Karnesi)", "tr": "Parsel bazlı Toprak Karnesi" } },
+          { "status": "todo", "text": { "en": "Engineer review queue: approve / revise / reject recommendations", "tr": "Mühendis inceleme kuyruğu: önerileri onayla / düzelt / reddet" } },
+          { "status": "todo", "text": { "en": "Manual document verification by admins", "tr": "Belgelerin yönetici tarafından manuel doğrulanması" } },
+          { "status": "todo", "text": { "en": "Unique phone number per account; e-mail verification at sign-up", "tr": "Hesap başına tekil telefon numarası; kayıtta e-posta doğrulama" } }
+        ]
+      },
+      {
+        "id": "f2",
+        "title": { "en": "Phase 2 · Pilot season", "tr": "Faz 2 · Pilot sezonu" },
+        "when": { "en": "1 season", "tr": "1 sezon" },
+        "status": "next",
+        "tasks": [
+          { "status": "todo", "text": { "en": "Field use with the pilot farmers and engineer", "tr": "Pilot çiftçiler ve mühendisle sahada kullanım" } },
+          { "status": "todo", "text": { "en": "Measure acceptance rate, declaration accuracy, yield and income", "tr": "Kabul oranı, beyan doğruluğu, verim ve gelir karşılaştırması" } },
+          { "status": "todo", "text": { "en": "Planting declarations, harvest and loss reports", "tr": "Ekim beyanı, hasat ve kayıp bildirimleri" } },
+          { "status": "todo", "text": { "en": "Collect feedback and adjust the scoring weights", "tr": "Geri bildirim toplamak ve puan ağırlıklarını ayarlamak" } }
+        ]
+      },
+      {
+        "id": "f3",
+        "title": { "en": "Phase 3 · Whole district", "tr": "Faz 3 · İlçe geneli" },
+        "when": { "en": "after the pilot", "tr": "pilottan sonra" },
+        "status": "later",
+        "tasks": [
+          { "status": "todo", "text": { "en": "Automatic document verification and trust scores", "tr": "Otomatik belge doğrulama ve güven puanları" } },
+          { "status": "todo", "text": { "en": "Public panel with anonymous regional tables", "tr": "Anonim bölgesel tablolarla genel panel" } },
+          { "status": "todo", "text": { "en": "Supply-demand model v1 with capacity allocation per district and crop", "tr": "İlçe ve ürün bazında kapasite tahsisli arz-talep modeli v1" } },
+          { "status": "todo", "text": { "en": "Coverage indicator and confidence band on recommendations", "tr": "Kapsama göstergesi ve önerilerde güven bandı" } },
+          { "status": "todo", "text": { "en": "Data pipeline: MGM, TÜİK, HKS and foreign trade data", "tr": "Veri hattı: MGM, TÜİK, HKS ve dış ticaret verileri" } }
+        ]
+      },
+      {
+        "id": "f4",
+        "title": { "en": "Phase 4 · Province / region", "tr": "Faz 4 · İl / bölge" },
+        "when": { "en": "later", "tr": "ileride" },
+        "status": "later",
+        "tasks": [
+          { "status": "todo", "text": { "en": "Machine-learning models trained on real data (climate, soil, market)", "tr": "Gerçek veriyle eğitilmiş makine öğrenmesi modelleri (iklim, toprak, pazar)" } },
+          { "status": "todo", "text": { "en": "Several districts; partner integrations (ÇKS, TKGM)", "tr": "Birden çok ilçe; partner entegrasyonları (ÇKS, TKGM)" } },
+          { "status": "todo", "text": { "en": "Time-series price forecasts and 'what if everyone plants X?' scenarios", "tr": "Zaman serisi fiyat tahminleri ve 'herkes X ekerse?' senaryoları" } }
+        ]
+      },
+      {
+        "id": "f5",
+        "title": { "en": "Phase 5+ · Levels 2 and 3", "tr": "Faz 5+ · Seviye 2 ve 3" },
+        "when": { "en": "future", "tr": "gelecek" },
+        "status": "later",
+        "tasks": [
+          { "status": "todo", "text": { "en": "Planting, irrigation and fertiliser calendars", "tr": "Ekim, sulama ve gübre takvimleri" } },
+          { "status": "todo", "text": { "en": "Crop disease, pest and stress detection; frost risk analysis", "tr": "Hastalık, zararlı ve stres teşhisi; don riski analizi" } },
+          { "status": "todo", "text": { "en": "Marketplace connecting factories and farmers", "tr": "Fabrikaları ve çiftçileri buluşturan pazar yeri" } },
+          { "status": "todo", "text": { "en": "Online consultancy, educational content and a farmer community", "tr": "Çevrim içi danışmanlık, eğitici içerik ve çiftçi topluluğu" } }
+        ]
+      }
+    ]
+  },
+  "log": {
+    "title": { "en": "Daily progress", "tr": "Günlük ilerleme" },
+    "intro": { "en": "What was done on each working day. Open a day to see the details.", "tr": "Her çalışma gününde neler yapıldı. Ayrıntılar için bir güne tıkla." },
+    "days": [
+      {
+        "date": "2026-10-23",
+        "commits": 13,
+        "title": { "en": "The foundation: one monorepo, five layers", "tr": "Temel atıldı: tek monorepo, beş katman" },
+        "items": [
+          { "en": "Monorepo with the working agreement for people and AI agents (AGENTS.md), Docker Compose, GitHub Actions CI, daily database backups and shared Zod contracts.", "tr": "İnsanlar ve yapay zekâ ajanları için çalışma sözleşmesi (AGENTS.md), Docker Compose, GitHub Actions CI, günlük veritabanı yedekleri ve ortak Zod sözleşmeleriyle monorepo kuruldu." },
+          { "en": "Backend: Express + Prisma API with authentication, onboarding, fields, dashboard, chat gateway and scheduled jobs.", "tr": "Backend: kimlik doğrulama, ilk kurulum, tarlalar, pano, sohbet geçidi ve zamanlanmış işlerle Express + Prisma API." },
+          { "en": "AI service: FastAPI with an Ollama provider, a tool-calling agent and a pgvector store (AI tables in their own schema).", "tr": "Yapay zekâ servisi: Ollama sağlayıcısı, araç kullanan ajan ve pgvector deposu olan FastAPI (yapay zekâ tabloları kendi şemasında)." },
+          { "en": "Web: Next.js panel in Turkish and English with dark mode, sign-in, onboarding, dashboard and chat.", "tr": "Web: Türkçe ve İngilizce, koyu temalı; giriş, ilk kurulum, pano ve sohbet içeren Next.js paneli." },
+          { "en": "Mobile: Flutter farmer app with sign-in, one-time onboarding, dashboard and chat; then a softer Material 3 redesign.", "tr": "Mobil: giriş, tek seferlik ilk kurulum, pano ve sohbet içeren Flutter çiftçi uygulaması; ardından daha yumuşak bir Material 3 tasarımı." },
+          { "en": "Identity moved to Firebase Authentication (Google); fields got an address and full CRUD; live weather at the user's position via Open-Meteo.", "tr": "Kimlik doğrulama Firebase Authentication'a (Google) taşındı; tarlalara adres ve tam CRUD eklendi; kullanıcının konumunda Open-Meteo ile canlı hava durumu." }
+        ]
+      },
+      {
+        "date": "2026-10-24",
+        "commits": 4,
+        "title": { "en": "Documents, model choice and pilot regions", "tr": "Belgeler, model seçimi ve pilot bölgeler" },
+        "items": [
+          { "en": "AI: selectable chat models and document analysis with OCR (soil analysis, land title, lease contract).", "tr": "Yapay zekâ: seçilebilir sohbet modelleri ve OCR ile belge analizi (toprak analizi, tapu, kira sözleşmesi)." },
+          { "en": "Backend and mobile: field documents, account deletion (danger zone), pilot regions and the Türkiye map.", "tr": "Backend ve mobil: tarla belgeleri, hesap silme (tehlikeli bölge), pilot bölgeler ve Türkiye haritası." },
+          { "en": "Answers stay in the user's language; the language is sent with uploads too.", "tr": "Cevaplar kullanıcının dilinde kalıyor; dil, yüklemelerle birlikte de gönderiliyor." }
+        ]
+      },
+      {
+        "date": "2026-11-11",
+        "commits": 4,
+        "title": { "en": "Role-based panel and chat history", "tr": "Rol bazlı panel ve sohbet geçmişi" },
+        "items": [
+          { "en": "Backend: stored chat history, password sign-in for staff, admin and engineer APIs.", "tr": "Backend: kayıtlı sohbet geçmişi, personel için şifreli giriş, yönetici ve mühendis API'leri." },
+          { "en": "Mobile: native Google sign-in, chat history and a rotating 'thinking' status while the model works.", "tr": "Mobil: yerel Google girişi, sohbet geçmişi ve model çalışırken değişen 'düşünüyor' durum satırı." },
+          { "en": "Web: one panel for farmers, agricultural engineers and administrators.", "tr": "Web: çiftçiler, ziraat mühendisleri ve yöneticiler için tek panel." },
+          { "en": "Development: hot reload for every service via docker compose watch.", "tr": "Geliştirme: docker compose watch ile her serviste sıcak yeniden yükleme." }
+        ]
+      },
+      {
+        "date": "2026-11-13",
+        "commits": 11,
+        "title": { "en": "Accounts, password reset, live validation and branding", "tr": "Hesaplar, şifre sıfırlama, anlık doğrulama ve marka" },
+        "items": [
+          { "en": "Live password strength meter; clearer errors when Google sign-in is not configured.", "tr": "Anlık şifre gücü göstergesi; Google girişi yapılandırılmamışsa daha anlaşılır hatalar." },
+          { "en": "AI stability: the chat model stays loaded for 10 minutes and timeouts were extended for large models on CPU.", "tr": "Yapay zekâ kararlılığı: sohbet modeli 10 dakika bellekte tutuluyor, CPU'da çalışan büyük modeller için zaman aşımları uzatıldı." },
+          { "en": "Onboarding never locks the app; KVKK consent is required only where farm data is used; numbers, decares and phone numbers can only be typed in their format.", "tr": "İlk kurulum uygulamayı hiçbir zaman kilitlemiyor; KVKK onayı yalnızca tarla verisinin kullanıldığı yerlerde isteniyor; sayılar, dekar ve telefon yalnızca kendi biçiminde yazılabiliyor." },
+          { "en": "E-mail + password accounts; forgot password with a 6-digit code sent by e-mail (Mailpit in development); sign-in sends unknown e-mails to sign-up and sign-up signs existing users in.", "tr": "E-posta + şifreli hesaplar; e-postayla gelen 6 haneli kodla şifre sıfırlama (geliştirmede Mailpit); girişte kayıtlı olmayan e-posta kayda, kayıtta zaten kayıtlı kullanıcı girişe yönlendiriliyor." },
+          { "en": "Admins can delete a user with all their data, including the Firebase sign-in record, and see a warning when a Google record was removed.", "tr": "Yönetici bir kullanıcıyı Firebase giriş kaydı dahil tüm verisiyle silebiliyor; Google kaydı silinmiş kullanıcılar için uyarı görüyor." },
+          { "en": "The assistant can read the farmer's documents (pick from the list or upload a photo); a pending answer shows again after leaving the chat.", "tr": "Asistan çiftçinin belgelerini okuyabiliyor (listeden seç ya da fotoğraf yükle); sohbetten çıkıp dönünce bekleyen cevabın ilerlemesi yeniden görünüyor." },
+          { "en": "Every form validates while the user types; province and district come from a full list of 81 provinces and 973 districts.", "tr": "Her form kullanıcı yazarken doğruluyor; il ve ilçe, 81 il ve 973 ilçelik tam listeden seçiliyor." },
+          { "en": "App icon, splash screens and favicon generated from one leaf logo.", "tr": "Uygulama ikonu, açılış ekranları ve favicon tek bir yaprak logodan üretildi." }
+        ]
+      },
+      {
+        "date": "2026-11-14",
+        "commits": 1,
+        "title": { "en": "A much faster web panel in development", "tr": "Geliştirmede çok daha hızlı web paneli" },
+        "items": [
+          { "en": "Each page used to compile for about 20 seconds on first visit, which made sign-in and sign-out feel stuck. Switching to Turbopack and pre-compiling the main pages after start brought page loads to about 0.3 seconds.", "tr": "Her sayfa ilk açılışta yaklaşık 20 saniye derleniyordu; bu yüzden giriş ve çıkış takılmış gibi görünüyordu. Turbopack'e geçiş ve başlangıçta ana sayfaların önceden derlenmesiyle sayfalar yaklaşık 0,3 saniyede açılıyor." }
+        ]
+      },
+      {
+        "date": "2026-11-17",
+        "commits": 1,
+        "title": { "en": "Interface polish and this documentation page", "tr": "Arayüz cilası ve bu dokümantasyon sayfası" },
+        "items": [
+          { "en": "Language and theme became one-click switches (TR | EN and light | dark | system) instead of dropdowns.", "tr": "Dil ve tema, açılır menü yerine tek tıkla değişen anahtarlara dönüştü (TR | EN ve açık | koyu | sistem)." },
+          { "en": "This project documentation page was published.", "tr": "Bu proje dokümantasyon sayfası yayınlandı." }
+        ]
+      }
+    ]
+  },
+  "refs": {
+    "title": { "en": "References and resources", "tr": "Kaynaklar ve yararlanılan siteler" },
+    "intro": { "en": "Documentation, data sources and tools we used or plan to use.", "tr": "Kullandığımız ya da kullanmayı planladığımız dokümantasyonlar, veri kaynakları ve araçlar." },
+    "groups": [
+      {
+        "title": { "en": "Frameworks and libraries", "tr": "Çatılar ve kütüphaneler" },
+        "items": [
+          { "label": "Flutter", "href": "https://docs.flutter.dev" },
+          { "label": "Riverpod", "href": "https://riverpod.dev" },
+          { "label": "go_router", "href": "https://pub.dev/packages/go_router" },
+          { "label": "Next.js", "href": "https://nextjs.org/docs" },
+          { "label": "Turbopack", "href": "https://nextjs.org/docs/app/api-reference/turbopack" },
+          { "label": "next-intl", "href": "https://next-intl.dev" },
+          { "label": "Tailwind CSS", "href": "https://tailwindcss.com/docs" },
+          { "label": "Express", "href": "https://expressjs.com" },
+          { "label": "Prisma", "href": "https://www.prisma.io/docs" },
+          { "label": "Zod", "href": "https://zod.dev" },
+          { "label": "FastAPI", "href": "https://fastapi.tiangolo.com" },
+          { "label": "Argon2 (password hashing)", "href": "https://github.com/P-H-C/phc-winner-argon2" }
+        ]
+      },
+      {
+        "title": { "en": "AI, data and infrastructure", "tr": "Yapay zekâ, veri ve altyapı" },
+        "items": [
+          { "label": "Ollama", "href": "https://ollama.com" },
+          { "label": "Qwen2.5", "href": "https://qwenlm.github.io/blog/qwen2.5/" },
+          { "label": "Tesseract OCR", "href": "https://github.com/tesseract-ocr/tesseract" },
+          { "label": "PostgreSQL", "href": "https://www.postgresql.org/docs/" },
+          { "label": "pgvector", "href": "https://github.com/pgvector/pgvector" },
+          { "label": "Firebase Authentication", "href": "https://firebase.google.com/docs/auth" },
+          { "label": "Docker Compose watch", "href": "https://docs.docker.com/compose/how-tos/file-watch/" },
+          { "label": "GitHub Actions", "href": "https://docs.github.com/actions" },
+          { "label": "Mailpit", "href": "https://mailpit.axllent.org" },
+          { "label": "Excalidraw", "href": "https://excalidraw.com" }
+        ]
+      },
+      {
+        "title": { "en": "Open data", "tr": "Açık veri" },
+        "items": [
+          { "label": "Open-Meteo (weather API)", "href": "https://open-meteo.com" },
+          { "label": "geoBoundaries (Türkiye provinces and districts)", "href": "https://www.geoboundaries.org" },
+          { "label": "OpenStreetMap contributors (ODbL)", "href": "https://www.openstreetmap.org/copyright" }
+        ]
+      },
+      {
+        "title": { "en": "Institutions and planned data sources", "tr": "Kurumlar ve planlanan veri kaynakları" },
+        "items": [
+          { "label": { "en": "Ministry of Agriculture and Forestry (ÇKS)", "tr": "Tarım ve Orman Bakanlığı (ÇKS)" }, "href": "https://www.tarimorman.gov.tr" },
+          { "label": { "en": "Turkish State Meteorological Service (MGM)", "tr": "Meteoroloji Genel Müdürlüğü (MGM)" }, "href": "https://www.mgm.gov.tr" },
+          { "label": { "en": "Turkish Statistical Institute (TÜİK)", "tr": "Türkiye İstatistik Kurumu (TÜİK)" }, "href": "https://www.tuik.gov.tr" },
+          { "label": { "en": "Wholesale market registry (HKS)", "tr": "Hal Kayıt Sistemi (HKS)" }, "href": "https://www.hal.gov.tr" },
+          { "label": { "en": "Land Registry and Cadastre (TKGM)", "tr": "Tapu ve Kadastro Genel Müdürlüğü (TKGM)" }, "href": "https://www.tkgm.gov.tr" },
+          { "label": "e-Devlet", "href": "https://www.turkiye.gov.tr" },
+          { "label": { "en": "Personal Data Protection Authority (KVKK)", "tr": "Kişisel Verileri Koruma Kurumu (KVKK)" }, "href": "https://www.kvkk.gov.tr" },
+          { "label": { "en": "Agricultural Insurance Pool (TARSİM)", "tr": "Tarım Sigortaları Havuzu (TARSİM)" }, "href": "https://www.tarsim.gov.tr" }
+        ]
+      },
+      {
+        "title": { "en": "Development tools", "tr": "Geliştirme araçları" },
+        "items": [
+          { "label": { "en": "Claude Code (AI pair programming)", "tr": "Claude Code (yapay zekâ destekli geliştirme)" }, "href": "https://claude.com/claude-code" },
+          { "label": "flutter_launcher_icons", "href": "https://pub.dev/packages/flutter_launcher_icons" },
+          { "label": "flutter_native_splash", "href": "https://pub.dev/packages/flutter_native_splash" }
+        ]
+      }
+    ]
+  },
+  "note": {
+    "en": "Dashboard recommendations are sample data until the scoring engine and the external data pipeline are built. The source code lives in a private repository.",
+    "tr": "Panodaki öneriler, puanlama motoru ve dış veri hattı kurulana kadar örnek veridir. Kaynak kod özel bir depoda tutuluyor."
+  }
+}

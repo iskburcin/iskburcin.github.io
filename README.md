@@ -15,6 +15,7 @@ All content lives in `/data/*.json`. Edit a JSON file, push, and the site update
 | Make the contact form send emails   | `contact.formEndpoint` in `data/site.json` (see below)     |
 | Update my CV                        | edit `data/cv.json`, open `/pages/cv.html?lang=en` (and `tr`), Print → Save as PDF into `assets/src/burcin-isik-cv-en.pdf` / `-tr.pdf` |
 | Edit my journey / timeline          | `data/timeline.json`                                       |
+| Update the Ekinci project docs     | `data/ekinci.json` (roadmap task: `status` done/doing/todo + `date`; one `log.days` entry per working day) |
 | Turn on the visitor counter         | free account at goatcounter.com → Settings: tick "Allow adding visitor counts on your website" → put your code in `"goatcounter"` in `data/site.json` |
 
 ### Blog posts
@@ -65,7 +66,7 @@ Then open http://localhost:5173.
 ## Structure
 ```
 index.html            bento home
-pages/                about, tech, world, memories, contact
+pages/                about, tech, world, memories, contact, ekinci (capstone project docs)
 assets/css/           main.css (tokens + shared), home.css, pages.css
 assets/js/            core.js (shared helpers) + one module per page
 data/                 all content (JSON)

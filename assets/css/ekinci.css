@@ -1,0 +1,162 @@
+/* Ekinci project docs (/pages/ekinci.html). Uses the site tokens; only the accent turns
+   Ekinci green inside the page, so header and footer keep the site colours. */
+
+.ekinci {
+  --accent: #477c36;
+  --accent-2: #7cb35f;
+  --accent-soft: #e1efd8;
+  --ek-warn: #b7791f;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .ekinci { --accent: #9fca86; --accent-2: #7cb35f; --accent-soft: #233a1d; --ek-warn: #e0b052; }
+}
+:root[data-theme="dark"] .ekinci { --accent: #9fca86; --accent-2: #7cb35f; --accent-soft: #233a1d; --ek-warn: #e0b052; }
+
+/* ===== Hero ===== */
+.ek-hero {
+  margin: 24px 0 18px; padding: clamp(24px, 4vw, 44px);
+  background: radial-gradient(120% 140% at 100% 0%, var(--accent-soft), transparent 55%), var(--surface);
+}
+.ek-eyebrow { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.ek-hero h1 { display: flex; align-items: center; gap: 14px; margin-top: 6px; }
+.ek-logo {
+  display: inline-grid; place-items: center; width: 0.95em; height: 0.95em; border-radius: 26%;
+  background: linear-gradient(135deg, #7cb35f, #5c9a47 55%, #39612d);
+}
+.ek-logo svg { width: 64%; height: 64%; fill: rgba(255, 255, 255, 0.2); stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ek-subtitle { font-family: var(--font-display); font-size: clamp(1.25rem, 2.6vw, 1.7rem); font-weight: 600; color: var(--text); margin-top: 4px; }
+.ek-intro { max-width: 75ch; margin-top: 12px; font-size: 1.05rem; }
+.ek-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 22px 0 4px; }
+.ek-stat { padding: 14px 16px; border-radius: var(--radius-sm); background: var(--surface-2); }
+.ek-stat dt { font-family: var(--font-display); font-size: 1.9rem; font-weight: 700; color: var(--accent); line-height: 1.1; }
+.ek-stat dd { font-size: 0.85rem; color: var(--muted); }
+.ek-updated { margin-top: 14px; font-size: 0.8rem; }
+
+/* ===== Table of contents ===== */
+.ek-toc {
+  position: sticky; top: 64px; z-index: 10; display: flex; gap: 6px; overflow-x: auto; padding: 10px 0;
+  background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(10px); scrollbar-width: none;
+}
+.ek-toc::-webkit-scrollbar { display: none; }
+.ek-toc .chip { white-space: nowrap; text-decoration: none; }
+.chip--link { cursor: pointer; }
+.chip--link:hover { color: var(--text); background: var(--accent-soft); }
+
+/* ===== Sections ===== */
+.ek-section, .ek-phase { scroll-margin-top: 130px; }
+.ek-section { margin-top: 56px; }
+.ek-head { margin-bottom: 18px; }
+.ek-head p { max-width: 75ch; margin-top: 8px; font-size: 1.02rem; }
+.ek-lead { max-width: 75ch; margin: 16px 0; }
+.ek-subhead { margin: 22px 0 12px; }
+.ek-note-small { margin-top: 12px; font-size: 0.88rem; }
+.card-grid > .card p { line-height: 1.65; }
+
+.ek-question { border-left: 5px solid var(--accent); padding: 22px 26px; }
+.ek-question-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.ek-question p { margin-top: 6px; font-family: var(--font-display); font-size: clamp(1.2rem, 2.4vw, 1.55rem); color: var(--text); line-height: 1.35; }
+
+/* request flow: nodes joined by arrows, wraps on small screens */
+.ek-flow { list-style: none; display: flex; flex-wrap: wrap; gap: 10px 34px; margin-bottom: 18px; }
+.ek-node {
+  position: relative; display: grid; gap: 2px; justify-items: start; min-width: 150px; flex: 1 1 150px;
+  padding: 14px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); box-shadow: var(--shadow);
+}
+.ek-node .card-icon { margin-bottom: 6px; width: 38px; height: 38px; font-size: 1rem; }
+.ek-node span:last-child { font-size: 0.82rem; color: var(--muted); }
+.ek-node:not(:last-child)::after {
+  content: "\f061"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; right: -24px; top: 50%;
+  transform: translateY(-50%); color: var(--accent-2);
+}
+.ek-formula {
+  margin-top: 16px; padding: 14px 18px; border-radius: var(--radius-sm); background: var(--accent-soft);
+  color: var(--text); font-family: var(--font-mono); font-size: 0.9rem; overflow-x: auto;
+}
+
+/* ===== Usage tabs ===== */
+.ek-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.ek-tab {
+  border: 1px solid var(--border); background: var(--surface); color: var(--muted); font: inherit; font-weight: 600;
+  padding: 9px 16px; border-radius: 999px; cursor: pointer;
+}
+.ek-tab:hover { color: var(--text); }
+.ek-tab[aria-selected="true"] { background: var(--accent); color: #fff; border-color: transparent; }
+.ek-guide { list-style: none; counter-reset: step; display: grid; gap: 14px; }
+.ek-guide li { counter-increment: step; position: relative; padding-left: 52px; }
+.ek-guide li::before {
+  content: counter(step); position: absolute; left: 0; top: 0; width: 36px; height: 36px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); font-weight: 700;
+}
+.ek-guide h3 { font-size: 1.15rem; }
+.ek-panel .ek-lead { margin-top: 0; }
+
+/* ===== Roadmap ===== */
+.ek-overall { display: grid; gap: 10px; margin-bottom: 12px; }
+.ek-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 16px; font-size: 0.85rem; color: var(--muted); }
+.ek-phases { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 440px), 1fr)); gap: var(--gap); }
+.ek-phase { display: grid; gap: 12px; align-content: start; border-top: 5px solid var(--border); }
+.ek-phase--active { border-top-color: var(--accent); }
+.ek-phase--next { border-top-color: var(--ek-warn); }
+.ek-phase-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.ek-when { font-size: 0.8rem; color: var(--muted); }
+.ek-badge { font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; white-space: nowrap; background: var(--surface-2); color: var(--muted); }
+.ek-badge--active { background: var(--accent); color: #fff; }
+.ek-badge--done { background: var(--ok); color: #fff; }
+.ek-badge--next { background: color-mix(in srgb, var(--ek-warn) 20%, transparent); color: var(--ek-warn); }
+
+.ek-progress { display: flex; align-items: center; gap: 12px; }
+.ek-bar { flex: 1; height: 8px; border-radius: 999px; background: var(--surface-2); overflow: hidden; }
+.ek-bar span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--accent-2), var(--accent)); }
+.ek-progress-text { font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+
+.ek-tasks { list-style: none; display: grid; gap: 2px; }
+.ek-task { display: grid; grid-template-columns: 22px 1fr; gap: 8px; padding: 7px 0; border-top: 1px solid var(--border); font-size: 0.93rem; }
+.ek-task:first-child { border-top: 0; }
+.ek-task-icon { padding-top: 2px; }
+.ek-task--done, .ek-task--done .ek-task-icon { color: var(--ok); }
+.ek-task--done .ek-task-main > span:first-child { color: var(--text); }
+.ek-task--doing, .ek-task--doing .ek-task-icon { color: var(--ek-warn); }
+.ek-task--todo .ek-task-icon { color: var(--muted); }
+.ek-task-main { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; color: var(--text); }
+.ek-date {
+  font-size: 0.72rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; white-space: nowrap;
+  background: color-mix(in srgb, var(--ok) 14%, transparent); color: var(--ok);
+}
+.ek-date--doing { background: color-mix(in srgb, var(--ek-warn) 16%, transparent); color: var(--ek-warn); }
+.ek-task-detail summary { cursor: pointer; list-style: none; }
+.ek-task-detail summary::-webkit-details-marker { display: none; }
+.ek-task-detail summary .ek-task-main::after {
+  content: "\f078"; font-family: "Font Awesome 6 Free"; font-weight: 900; font-size: 0.65rem; color: var(--accent); transition: transform 0.2s;
+}
+.ek-task-detail[open] summary .ek-task-main::after { transform: rotate(180deg); }
+.ek-task-detail p { margin-top: 6px; font-size: 0.88rem; }
+
+/* ===== Daily log (reuses the Journey timeline) ===== */
+.ek-log .tl-dot { top: 22px; }
+.ek-day { padding: 0; }
+.ek-day summary {
+  list-style: none; cursor: pointer; display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 16px 20px;
+}
+.ek-day summary::-webkit-details-marker { display: none; }
+.ek-day-date { grid-column: 1; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+.ek-day-title { grid-column: 1; font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; line-height: 1.2; }
+.ek-day-meta { grid-column: 2; grid-row: 1 / span 2; align-self: center; display: flex; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+.ek-day-toggle { margin-left: 6px; color: var(--accent); transition: transform 0.25s; }
+.ek-day[open] .ek-day-toggle { transform: rotate(180deg); }
+.ek-day-items { padding: 0 20px 18px 40px; display: grid; gap: 8px; color: var(--muted); }
+.ek-day-items li::marker { color: var(--accent-2); }
+
+/* ===== References ===== */
+.ek-refs ul { list-style: none; display: grid; gap: 6px; margin-top: 10px; }
+.ek-refs a { text-decoration: none; color: var(--text); font-size: 0.93rem; }
+.ek-refs a:hover { color: var(--accent); text-decoration: underline; }
+.ek-refs a i { font-size: 0.65rem; color: var(--muted); }
+.ek-footnote { margin-top: 40px; font-size: 0.88rem; }
+
+@media (max-width: 640px) {
+  .ek-node:not(:last-child)::after { content: "\f063"; right: auto; left: 50%; top: auto; bottom: -22px; transform: translateX(-50%); }
+  .ek-flow { gap: 30px; }
+  .ek-day summary { grid-template-columns: 1fr; }
+  .ek-day-meta { grid-column: 1; grid-row: auto; }
+  .ek-toc { top: 64px; }
+}

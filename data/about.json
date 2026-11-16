@@ -100,6 +100,35 @@
   ],
   "projects": [
     {
+      "title": "Ekinci",
+      "status": {
+        "en": "In progress",
+        "tr": "Devam ediyor"
+      },
+      "text": {
+        "en": "Our Computer Engineering capstone project: an AI-assisted planting planning platform that helps farmers in Türkiye decide what to plant, when and how much, with a Flutter app, a Next.js panel, an Express API and a local LLM.",
+        "tr": "Bilgisayar Mühendisliği bitirme projemiz: Türkiye'deki çiftçilerin ne, ne zaman ve ne kadar ekeceğine karar vermesine yardım eden; Flutter uygulaması, Next.js paneli, Express API ve yerel LLM'den oluşan yapay zekâ destekli bir ekim planlama platformu."
+      },
+      "tags": [
+        "Flutter",
+        "Next.js",
+        "Express",
+        "FastAPI",
+        "Ollama",
+        "PostgreSQL",
+        "Docker"
+      ],
+      "links": [
+        {
+          "label": {
+            "en": "Project docs",
+            "tr": "Proje dokümantasyonu"
+          },
+          "href": "/pages/ekinci.html"
+        }
+      ]
+    },
+    {
       "title": "Get-Your-Map",
       "text": {
         "en": "My graduation thesis: a full-stack platform that explores GitHub profiles and analyses code quality with native Tree-sitter parsing, complexity metrics and AI code reviews from local LLMs (Ollama).",
