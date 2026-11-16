@@ -1,5 +1,5 @@
 {
-  "_help": "socials with \"group\": \"coding\" show in the home page coding-profiles box; simpleIcon = slug from simpleicons.org. Any text can be a plain string (same in every language) or { \"en\": \"...\", \"tr\": \"...\" }.",
+  "_help": "goatcounter = your GoatCounter code (turns on the visitor counter; empty = off). socials with \"group\": \"coding\" show in the home page coding-profiles box; simpleIcon = slug from simpleicons.org. Any text can be a plain string (same in every language) or { \"en\": \"...\", \"tr\": \"...\" }.",
   "name": "Burçin Işık",
   "shortName": "Burçin",
   "role": {
@@ -14,6 +14,7 @@
   "location": { "en": "Alanya, Türkiye", "tr": "Alanya, Türkiye" },
   "timezone": "Europe/Istanbul",
   "githubUser": "iskburcin",
+  "goatcounter": "iskburcin",
   "cv": { "en": "/assets/src/burcin-isik-cv-en.pdf", "tr": "/assets/src/burcin-isik-cv-tr.pdf" },
   "cvPage": "/pages/cv.html",
   "email": "mrs.isikburcin@gmail.com",

@@ -159,7 +159,9 @@
       "type.milestone": "Milestone",
       "type.community": "Community",
       "about.journeyLink": "See my whole journey",
-      "home.hello": "Hi, I'm"
+      "home.hello": "Hi, I'm",
+      "home.visits": "site visits",
+      "ui.visits": "{n} visits"
     },
     "tr": {
       "title.home": "Burçin Işık",
@@ -306,7 +308,9 @@
       "type.milestone": "Dönüm noktası",
       "type.community": "Topluluk",
       "about.journeyLink": "Tüm yolculuğumu gör",
-      "home.hello": "Merhaba, ben"
+      "home.hello": "Merhaba, ben",
+      "home.visits": "site ziyareti",
+      "ui.visits": "{n} ziyaret"
     }
   }
 }

@@ -1,4 +1,4 @@
-import { renderShell, loadJSON, cachedFetchJSON, el, icon, linkAttrs, reveal, showError, timeIn, t as tr, L, runPage, pageInterval } from "./core.js";
+import { renderShell, loadJSON, cachedFetchJSON, loadVisitCount, el, icon, linkAttrs, reveal, showError, timeIn, t as tr, L, runPage, pageInterval } from "./core.js";
 import { loadPostIndex, loadPost, assetURL, formatDate } from "./posts.js";
 
 // GitHub's language colors for the repo list (only common ones).
@@ -102,6 +102,18 @@ const renderers = {
       el("span", { class: "tile-foot" }, time),
       el("span", { class: "tile-sub" }, tr("home.localTime"))
     );
+  },
+
+  // Total visits from GoatCounter; the box hides itself when the counter is off
+  visits(t, { site }) {
+    if (!site.goatcounter) return null;
+    const count = el("span", { class: "big-number" }, "–");
+    const node = el("div", { class: `tile tile--${t.size || "s"} tile--visits` },
+      el("span", { class: "tile-icon", style: { background: "#c26a3d" } }, icon("fa-regular fa-eye")),
+      el("span", { class: "tile-foot" }, count),
+      el("span", { class: "tile-sub" }, tr("home.visits")));
+    loadVisitCount(site).then((n) => (n == null ? node.remove() : (count.textContent = n)));
+    return node;
   },
 
   travel(t) {

@@ -193,8 +193,31 @@ function samePage(href) {
   return norm(new URL(href, location.origin).pathname) === norm(location.pathname);
 }
 
+/* ---------- Visitor counter (GoatCounter, no cookies) ----------
+   Set "goatcounter": "<your code>" in site.json to turn it on. */
+function startAnalytics(code) {
+  if (!code || document.querySelector("script[data-goatcounter]")) return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.src = "https://gc.zgo.at/count.js";
+  s.dataset.goatcounter = `https://${code}.goatcounter.com/count`;
+  document.head.append(s);
+}
+
+/** Total visits for the whole site, or null if the counter is off or unreachable. */
+export async function loadVisitCount(site) {
+  if (!site.goatcounter) return null;
+  try {
+    const data = await cachedFetchJSON(`https://${site.goatcounter}.goatcounter.com/counter/TOTAL.json`, 10);
+    return data.count ?? null; // already formatted, e.g. "1,234"
+  } catch {
+    return null;
+  }
+}
+
 export async function renderShell() {
   const [site] = await Promise.all([loadSite(), loadI18n()]);
+  startAnalytics(site.goatcounter);
   applyI18n();
   document.querySelectorAll(".site-header, .site-footer").forEach((n) => n.remove());
 
@@ -250,6 +273,11 @@ export async function renderShell() {
       )
     )
   );
+  // "👀 1,234 visits" in the footer, only when the counter is on
+  loadVisitCount(site).then((n) => {
+    if (n == null) return;
+    footer.querySelector(".wrap").append(el("span", { class: "visit-count" }, icon("fa-regular fa-eye"), " ", t("ui.visits", { n })));
+  });
 
   document.body.prepend(header);
   document.body.append(footer);

@@ -15,6 +15,7 @@ All content lives in `/data/*.json`. Edit a JSON file, push, and the site update
 | Make the contact form send emails   | `contact.formEndpoint` in `data/site.json` (see below)     |
 | Update my CV                        | edit `data/cv.json`, open `/pages/cv.html?lang=en` (and `tr`), Print → Save as PDF into `assets/src/burcin-isik-cv-en.pdf` / `-tr.pdf` |
 | Edit my journey / timeline          | `data/timeline.json`                                       |
+| Turn on the visitor counter         | free account at goatcounter.com → Settings: tick "Allow adding visitor counts on your website" → put your code in `"goatcounter"` in `data/site.json` |
 
 ### Blog posts
 1. Create a folder `posts/<post-name>/` with `tr.md` and/or `en.md`. Start each file with:

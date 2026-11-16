@@ -1,5 +1,5 @@
 {
-  "_help": "Each tile is one box on the home page. size: s = 1x1, w = 2 wide, t = 2 tall, l = 2x2. type: profile | social | profiles | blog | github | photo | note | travel | tech | clock | cv | link. Order in this list = order on the page. Texts can be { \"en\": \"...\", \"tr\": \"...\" }. profile: facts = [{icon, text}], buttons = [{label, href, icon, primary}] (href \"cv\" = the CV in the page language).",
+  "_help": "Each tile is one box on the home page. size: s = 1x1, w = 2 wide, t = 2 tall, l = 2x2. type: profile | visits | social | profiles | blog | github | photo | note | travel | tech | clock | cv | link. Order in this list = order on the page. Texts can be { \"en\": \"...\", \"tr\": \"...\" }. profile: facts = [{icon, text}], buttons = [{label, href, icon, primary}] (href \"cv\" = the CV in the page language).",
   "tiles": [
     {
       "type": "profile",
@@ -121,6 +121,10 @@
     {
       "type": "blog",
       "size": "w"
+    },
+    {
+      "type": "visits",
+      "size": "s"
     },
     {
       "type": "travel",
