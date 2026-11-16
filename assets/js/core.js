@@ -195,8 +195,13 @@ function samePage(href) {
 
 /* ---------- Visitor counter (GoatCounter, no cookies) ----------
    Set "goatcounter": "<your code>" in site.json to turn it on. */
+/* Count each page by its path only ("/pages/post.html", not "...?p=x"),
+   and "/index.html" as "/", so the list of pages stays fixed and known. */
+const pagePath = (p = location.pathname) => p.replace(/\/index\.html$/, "/") || "/";
+
 function startAnalytics(code) {
   if (!code || document.querySelector("script[data-goatcounter]")) return;
+  window.goatcounter = { path: () => pagePath() };
   const s = document.createElement("script");
   s.async = true;
   s.src = "https://gc.zgo.at/count.js";
@@ -204,15 +209,26 @@ function startAnalytics(code) {
   document.head.append(s);
 }
 
-/** Total visits for the whole site, or null if the counter is off or unreachable. */
-export async function loadVisitCount(site) {
-  if (!site.goatcounter) return null;
-  try {
-    const data = await cachedFetchJSON(`https://${site.goatcounter}.goatcounter.com/counter/TOTAL.json`, 10);
-    return data.count ?? null; // already formatted, e.g. "1,234"
-  } catch {
-    return null;
-  }
+// Pages that load the counter (nav pages are added from site.json).
+const COUNTED_PAGES = ["/", "/pages/memories.html", "/pages/post.html", "/pages/cv.html"];
+
+let visitCount = null;
+/** Total visits for the whole site, or null if the counter is off or unreachable.
+ *  GoatCounter's own TOTAL is cached for hours on their side, so instead we add up
+ *  the per-page counts (always fresh) and +1 for this visit, which GoatCounter
+ *  records a few seconds after the page loads. */
+export function loadVisitCount(site) {
+  if (!site.goatcounter) return Promise.resolve(null);
+  if (visitCount) return visitCount; // footer + home box share one lookup
+  const pages = [...new Set([...COUNTED_PAGES, ...site.nav.map((n) => pagePath(n.href))])];
+  const one = (p) =>
+    fetch(`https://${site.goatcounter}.goatcounter.com/counter/${encodeURIComponent(p)}.json`)
+      .then((r) => (r.ok ? r.json() : { count: "0" })) // 404 = page not visited yet
+      .then((d) => Number(String(d.count).replace(/\D/g, "")) || 0);
+  visitCount = Promise.all(pages.map(one))
+    .then((counts) => new Intl.NumberFormat(lang).format(counts.reduce((a, b) => a + b, 0) + 1))
+    .catch(() => null);
+  return visitCount;
 }
 
 export async function renderShell() {
