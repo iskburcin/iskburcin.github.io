@@ -86,7 +86,11 @@ async function main() {
   const caption = document.getElementById("jmap-caption");
   try {
     await renderShell();
-    const [data, { svg, W, H }] = await Promise.all([loadJSON("/data/timeline.json"), loadWorldSvg()]);
+    const [data, { svg, W, H }, admin] = await Promise.all([
+      loadJSON("/data/timeline.json"),
+      loadWorldSvg(),
+      loadJSON("/assets/src/tr-admin.json").catch(() => null), // Türkiye province + district borders
+    ]);
     const { places, groups = {} } = data;
     const project = makeProjection(svg, W, H);
 
@@ -182,8 +186,22 @@ async function main() {
     const pulse = svgEl("circle", { class: "j-pulse", r: 1 });
     const me = svgEl("circle", { class: "j-me", r: 1 });
     const label = svgEl("text", { class: "j-label" });
-    svg.append(full, done, markers, stopLayer, pulse, me, label);
     for (const id of ["TR", "PL"]) svg.querySelector(`[id="${id}"]`)?.classList.add("j-country");
+
+    // District and province borders (drawn once, under the route)
+    const districts = admin ? admin.districts.map((x) => svgEl("path", { class: "j-district", d: x.d, "data-name": x.n })) : [];
+    const provinces = admin ? admin.provinces.map((x) => svgEl("path", { class: "j-province", d: x.d })) : [];
+    svg.append(svgEl("g", { class: "j-admin" }, ...districts), svgEl("g", { class: "j-admin" }, ...provinces));
+    if (admin) document.getElementById("jmap-credit").textContent = admin.credit;
+
+    /** The district a map point falls in (uses the browser's own hit test). */
+    const districtAt = (p) => {
+      const pt = svg.createSVGPoint();
+      pt.x = p.x; pt.y = p.y;
+      return districts.find((d) => d.isPointInFill(pt)) || null;
+    };
+
+    svg.append(full, done, markers, stopLayer, pulse, me, label);
 
     let active = -1;
     function show(i) {
@@ -192,11 +210,14 @@ async function main() {
       items.forEach((n, k) => n?.classList.toggle("active", k === i));
       chapters.forEach((c) => c.node.head.classList.toggle("active", i >= c.first && i <= c.last));
       const r = routeIndex[i];
-      const here = route[r], prev = route[Math.max(0, r - 1)];
+      const here = route[r];
+      // frame this city + the previous step's city (same city -> close-up)
+      const prev = i > 0 && stepPlace[i - 1] !== stepPlace[i] ? pt(stepPlace[i - 1]) : here;
       const stops = (events[i].stops || []).map(pt);
 
       // zoom to: this city + the previous one + any side trips
-      const box = unionBoxes([here, prev, ...stops].map((p) => [p.x, p.y, 0, 0]), 0.35, 70);
+      // (a small minimum size lets nearby cities, e.g. in Marmara, get a close-up)
+      const box = unionBoxes([here, prev, ...stops].map((p) => [p.x, p.y, 0, 0]), 0.35, 9);
       animateViewBox(svg, box, 800);
 
       // sizes are in map units, so they follow the zoom
@@ -210,7 +231,12 @@ async function main() {
       label.textContent = here.name;
       done.setAttribute("points", ptsAttr(route.slice(0, r + 1)));
       stopLayer.replaceChildren(...stops.map((p) => svgEl("circle", { class: "j-stop", cx: p.x, cy: p.y, r: s * 0.011 })));
-      caption.replaceChildren(icon(TYPE_ICON[events[i].type]), " ", range(events[i]), " · ", here.name);
+      districts.forEach((d) => d.classList.remove("here"));
+      const dist = districtAt(here);
+      dist?.classList.add("here");
+      const dName = dist?.dataset.name;
+      caption.replaceChildren(icon(TYPE_ICON[events[i].type]), " ", range(events[i]), " · ", here.name,
+        dName && !here.name.startsWith(dName) ? ` (${dName})` : "");
     }
 
     /* Things the reader can scroll past: visible steps, plus the header of

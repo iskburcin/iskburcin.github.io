@@ -11,10 +11,13 @@ export async function loadWorldSvg() {
   return { svg, W, H };
 }
 
-export function svgEl(tag, attrs = {}, text) {
+export function svgEl(tag, attrs = {}, ...children) {
   const n = document.createElementNS(SVG_NS, tag);
   for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
-  if (text != null) n.textContent = text;
+  for (const c of children) {
+    if (c == null) continue;
+    if (c instanceof Node) n.append(c); else n.textContent = String(c);
+  }
   return n;
 }
 

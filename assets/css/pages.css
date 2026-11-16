@@ -337,3 +337,10 @@ button.chip .mini-flag { width: 18px; height: 12px; }
 .tl-story-date { font-size: 0.75rem; color: var(--muted); }
 .tl-story-sum { font-size: 0.88rem; color: var(--muted); }
 .tl-story-read { font-size: 0.82rem; font-weight: 600; color: var(--accent); }
+
+/* Journey map: district + province borders */
+.jmap path.j-district { fill: transparent; stroke: color-mix(in srgb, var(--text) 22%, transparent); stroke-width: 0.5px; vector-effect: non-scaling-stroke; }
+.jmap path.j-district.here { fill: color-mix(in srgb, #e0795b 35%, transparent); stroke: #e0795b; stroke-width: 1.5px; }
+.jmap path.j-province { fill: none; stroke: color-mix(in srgb, var(--text) 45%, transparent); stroke-width: 1px; vector-effect: non-scaling-stroke; pointer-events: none; }
+.jmap-credit { padding: 2px 6px 0; font-size: 0.68rem; color: var(--muted); opacity: 0.8; }
+@media (max-width: 900px) { .jmap-credit { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 0.62rem; } }
