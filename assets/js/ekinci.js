@@ -37,12 +37,14 @@ function hero(data) {
     el("p", { class: "ek-eyebrow" }, L(h.eyebrow)),
     el("h1", {}, leafMark(), h.title),
     el("p", { class: "ek-subtitle" }, L(h.subtitle)),
+    h.team && el("p", { class: "ek-team" }, icon("fa-solid fa-user-group"), " ", L(h.team)),
     el("p", { class: "ek-intro" }, L(h.intro)),
     el("div", { class: "chips" }, h.chips.map((c) => el("span", { class: "chip" }, L(c)))),
     el("dl", { class: "ek-stats" }, h.stats.map((s) =>
       el("div", { class: "ek-stat" }, el("dt", {}, s.value), el("dd", {}, L(s.label))))),
     el("div", { class: "row" },
-      el("a", { class: "btn btn--primary", href: "#usage" }, icon("fa-solid fa-book-open"), t("ekinci.jumpUsage")),
+      (h.links || []).map((l) => el("a", { class: "btn btn--primary", ...linkAttrs(l.href) }, icon(l.icon), L(l.label))),
+      el("a", { class: "btn", href: "#usage" }, icon("fa-solid fa-book-open"), t("ekinci.jumpUsage")),
       el("a", { class: "btn", href: "#roadmap" }, icon("fa-solid fa-list-check"), t("ekinci.jumpRoadmap")),
       el("a", { class: "btn", href: "#log" }, icon("fa-solid fa-calendar-days"), t("ekinci.jumpLog"))),
     el("p", { class: "ek-updated" }, t("ekinci.updated", { date: fmtDate(data.updated) }))

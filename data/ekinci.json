@@ -4,6 +4,10 @@
   "hero": {
     "eyebrow": { "en": "Computer Engineering · Capstone project · 2026", "tr": "Bilgisayar Mühendisliği · Bitirme projesi · 2026" },
     "title": "Ekinci",
+    "team": { "en": "Built by Burçin Işık and Arefa", "tr": "Geliştirenler: Burçin Işık ve Arefa" },
+    "links": [
+      { "label": { "en": "Source code", "tr": "Kaynak kod" }, "href": "https://github.com/iskburcin/agriculture-management-app", "icon": "fa-brands fa-github" }
+    ],
     "subtitle": {
       "en": "AI-assisted planting planning and crop diversity platform",
       "tr": "Akıllı Ekim Planlama ve Tarımsal Çeşitlilik Artırma Sistemi"
@@ -511,7 +515,7 @@
     ]
   },
   "note": {
-    "en": "Dashboard recommendations are sample data until the scoring engine and the external data pipeline are built. The source code lives in a private repository.",
-    "tr": "Panodaki öneriler, puanlama motoru ve dış veri hattı kurulana kadar örnek veridir. Kaynak kod özel bir depoda tutuluyor."
+    "en": "Dashboard recommendations are sample data until the scoring engine and the external data pipeline are built.",
+    "tr": "Panodaki öneriler, puanlama motoru ve dış veri hattı kurulana kadar örnek veridir."
   }
 }

@@ -121,8 +121,15 @@
       "links": [
         {
           "label": {
-            "en": "Project docs",
-            "tr": "Proje dokümantasyonu"
+            "en": "Source code",
+            "tr": "Kaynak kod"
+          },
+          "href": "https://github.com/iskburcin/agriculture-management-app"
+        },
+        {
+          "label": {
+            "en": "Project page & demo",
+            "tr": "Proje sayfası ve demo"
           },
           "href": "/pages/ekinci.html"
         }

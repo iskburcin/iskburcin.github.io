@@ -79,7 +79,6 @@
     { "label": { "en": "About", "tr": "Hakkımda" }, "href": "/pages/about.html" },
     { "label": { "en": "Journey", "tr": "Yolculuk" }, "href": "/pages/journey.html" },
     { "label": { "en": "Tech", "tr": "Teknoloji" }, "href": "/pages/tech.html" },
-    { "label": { "en": "Ekinci", "tr": "Ekinci" }, "href": "/pages/ekinci.html" },
     { "label": { "en": "My World", "tr": "Dünyam" }, "href": "/pages/world.html" },
     { "label": { "en": "Blog", "tr": "Blog" }, "href": "/pages/blog.html" },
     { "label": { "en": "Contact", "tr": "İletişim" }, "href": "/pages/contact.html" }
